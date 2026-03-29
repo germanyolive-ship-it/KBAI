@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KBAI زتونة | مراجعة سريعة قبل الامتحان</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap');
+  * { font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
+  code, .mono { font-family: 'JetBrains Mono', monospace; }
+  :root {
+    --primary: #1e40af;
+    --accent: #f59e0b;
+    --danger: #dc2626;
+    --success: #16a34a;
+    --purple: #7c3aed;
+    --bg: #f8fafc;
+    --card: #ffffff;
+  }
+  body { background: var(--bg); color: #1e293b; }
+  .nav-link { transition: all 0.2s; }
+  .nav-link:hover { color: var(--accent); }
+  .card { background: var(--card); border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); transition: box-shadow 0.2s; }
+  .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; }
+  .badge-red { background: #fee2e2; color: #dc2626; }
+  .badge-blue { background: #dbeafe; color: #1e40af; }
+  .badge-yellow { background: #fef9c3; color: #b45309; }
+  .badge-green { background: #dcfce7; color: #15803d; }
+  .badge-purple { background: #ede9fe; color: #7c3aed; }
+  .section-title { font-size: 1.6rem; font-weight: 900; border-right: 5px solid var(--accent); padding-right: 12px; margin-bottom: 1.2rem; }
+  .collapse-btn { cursor: pointer; user-select: none; }
+  .collapse-content { overflow: hidden; transition: max-height 0.35s ease; }
+  .essay-card { border-right: 4px solid var(--primary); }
+  .compare-table th { background: #1e40af; color: white; padding: 8px 12px; }
+  .compare-table td { padding: 8px 12px; }
+  .compare-table tr:nth-child(even) td { background: #f1f5f9; }
+  .compare-table { border-radius: 8px; overflow: hidden; width: 100%; font-size: 0.85rem; }
+  .mcq-hint { border-right: 3px solid var(--purple); background: #faf5ff; }
+  .hero-bg { background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%); }
+  .zatoona-badge { background: linear-gradient(135deg, #f59e0b, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .sticky-nav { position: sticky; top: 0; z-index: 100; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+  .def-card { border-top: 3px solid var(--accent); }
+  .trick-card { border-right: 4px solid var(--danger); background: #fff5f5; }
+  .nav-scroll { overflow-x: auto; white-space: nowrap; }
+  .nav-scroll::-webkit-scrollbar { height: 3px; }
+  .nav-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-in { animation: fadeIn 0.5s ease forwards; }
+  .highlight { background: #fef9c3; padding: 1px 5px; border-radius: 4px; font-weight: 700; }
+  .checklist-item input[type=checkbox]:checked + span { text-decoration: line-through; opacity: 0.5; }
+  .checklist-item { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .rule-if { background: #eff6ff; padding: 2px 8px; border-radius: 4px; color: #1e40af; font-weight: 700; }
+  .rule-then { background: #f0fdf4; padding: 2px 8px; border-radius: 4px; color: #15803d; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav px-4 py-3">
+  <div class="max-w-6xl mx-auto flex items-center justify-between gap-4">
+    <div class="font-black text-blue-800 text-lg">🧠 KBAI زتونة</div>
+    <div class="nav-scroll flex gap-3 text-sm font-semibold text-slate-600">
+      <a href="#exam-format" class="nav-link px-3 py-1 rounded-full hover:bg-blue-50">الامتحان</a>
+      <a href="#how-to-study" class="nav-link px-3 py-1 rounded-full hover:bg-blue-50">أذاكر إزاي</a>
+      <a href="#essays" class="nav-link px-3 py-1 rounded-full hover:bg-blue-50">Essays</a>
+      <a href="#definitions" class="nav-link px-3 py-1 rounded-full hover:bg-blue-50">Definitions</a>
+      <a href="#comparisons" class="nav-link px-3 py-1 rounded-full hover:bg-blue-50">مقارنات</a>
+      <a href="#mcq" class="nav-link px-3 py-1 rounded-full hover:bg-blue-50">MCQ</a>
+      <a href="#tricks" class="nav-link px-3 py-1 rounded-full hover:bg-blue-50">تركات</a>
+      <a href="#final" class="nav-link px-3 py-1 rounded-full hover:bg-yellow-50 text-yellow-700">الزتونة 🍋</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-bg text-white py-14 px-4 fade-in">
+  <div class="max-w-3xl mx-auto text-center">
+    <div class="text-5xl mb-3">🧠</div>
+    <h1 class="text-4xl font-black mb-2">KBAI Quick Revision</h1>
+    <p class="text-2xl font-bold mb-4 text-yellow-300">زتونة KBAI قبل الامتحان</p>
+    <p class="text-blue-200 text-base max-w-xl mx-auto">للطالب اللي فاضله وقت قليل — كل المادة في صفحة واحدة. ابدأ دلوقتي واتشغل على الأهم أول.</p>
+    <div class="flex flex-wrap justify-center gap-3 mt-6">
+      <span class="badge badge-yellow">⏱ 30-60 دقيقة كفاية</span>
+      <span class="badge badge-green">✅ Essay + MCQ + Definitions</span>
+      <span class="badge badge-red">🔥 First 6 Essays = أهم حاجة</span>
+    </div>
+  </div>
+</section>
+
+<!-- EXAM FORMAT -->
+<section id="exam-format" class="py-10 px-4">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-clipboard-list text-blue-700 ml-2"></i>شكل الامتحان</h2>
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="card p-5 text-center">
+        <div class="text-3xl mb-2">📝</div>
+        <div class="font-black text-lg text-blue-800">Essay Questions</div>
+        <div class="text-sm text-slate-600 mt-2">أسئلة مقالية — تحتاج فهم وشرح</div>
+        <div class="mt-3 badge badge-red">أهم جزء في الامتحان</div>
+      </div>
+      <div class="card p-5 text-center">
+        <div class="text-3xl mb-2">📖</div>
+        <div class="font-black text-lg text-blue-800">Definitions</div>
+        <div class="text-sm text-slate-600 mt-2">تعريفات — ممكن تيجي جوه MCQ</div>
+        <div class="mt-3 badge badge-yellow">مهمة</div>
+      </div>
+      <div class="card p-5 text-center">
+        <div class="text-3xl mb-2">🔘</div>
+        <div class="font-black text-lg text-blue-800">MCQ</div>
+        <div class="text-sm text-slate-600 mt-2">اختيار من متعدد — بيعتمد على فهم المفاهيم</div>
+        <div class="mt-3 badge badge-green">فهم مش حفظ</div>
+      </div>
+    </div>
+    <div class="card p-5 mt-5 bg-amber-50 border border-amber-200">
+      <div class="font-black text-amber-800 mb-3"><i class="fa-solid fa-triangle-exclamation ml-2"></i>مهم جداً اعرفه</div>
+      <ul class="space-y-2 text-sm">
+        <li class="flex items-start gap-2"><span class="text-red-500 font-bold mt-1">🔴</span><span>أول <strong>6 essay</strong> مهمين جداً — ركز عليهم أول حاجة</span></li>
+        <li class="flex items-start gap-2"><span class="text-yellow-500 font-bold mt-1">🟡</span><span>الـ essays اللي بعدهم أقل أهمية — بس لو لحقت اتكلم فيهم</span></li>
+        <li class="flex items-start gap-2"><span class="text-blue-500 font-bold mt-1">🔵</span><span>الـ definitions مش هتيجي "define the following" مباشرة — هتيجي <strong>جوه سؤال</strong></span></li>
+        <li class="flex items-start gap-2"><span class="text-green-500 font-bold mt-1">🟢</span><span>مفيش scenario مباشر — بس ممكن يوصفوا موقف ويسألوا "ايه نوع النظام ده؟"</span></li>
+        <li class="flex items-start gap-2"><span class="text-purple-500 font-bold mt-1">🟣</span><span>الأسئلة بصياغة تانية — لو فاهم الفكرة هتعرف تجاوب</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO STUDY -->
+<section id="how-to-study" class="py-10 px-4 bg-slate-50">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-rocket text-blue-700 ml-2"></i>أذاكر إزاي بسرعة؟</h2>
+    <div class="grid md:grid-cols-4 gap-4">
+      <div class="card p-5 text-center border-t-4 border-red-500">
+        <div class="text-2xl font-black text-red-600 mb-2">① أول</div>
+        <div class="font-bold">أول 6 Essays</div>
+        <div class="text-xs text-slate-500 mt-1">الأهم في الامتحان — افهم الفكرة مش تحفظ</div>
+      </div>
+      <div class="card p-5 text-center border-t-4 border-yellow-500">
+        <div class="text-2xl font-black text-yellow-600 mb-2">② تاني</div>
+        <div class="font-bold">Definitions</div>
+        <div class="text-xs text-slate-500 mt-1">كل term وتعريفه + مثال واحد</div>
+      </div>
+      <div class="card p-5 text-center border-t-4 border-blue-500">
+        <div class="text-2xl font-black text-blue-600 mb-2">③ تالت</div>
+        <div class="font-bold">المقارنات</div>
+        <div class="text-xs text-slate-500 mt-1">الفروق بين المفاهيم المتشابهة</div>
+      </div>
+      <div class="card p-5 text-center border-t-4 border-green-500">
+        <div class="text-2xl font-black text-green-600 mb-2">④ أخيراً</div>
+        <div class="font-bold">MCQ Hints</div>
+        <div class="text-xs text-slate-500 mt-1">pattern recognition للأسئلة</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPORTANT ESSAYS -->
+<section id="essays" class="py-10 px-4">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-star text-yellow-500 ml-2"></i>أهم 6 Essay <span class="badge badge-red mr-2">الأكثر أهمية</span></h2>
+
+    <!-- Essay 1 -->
+    <div class="card essay-card p-5 mb-4">
+      <div class="flex items-center justify-between mb-3 collapse-btn" onclick="toggle('e1')">
+        <div>
+          <span class="badge badge-red ml-2">1</span>
+          <span class="font-black text-base">What is Knowledge-Based AI (KBAI) and its role in AI?</span>
+          <div class="text-xs text-slate-500 mt-1">ممكن ييجي: "Explain KBAI" / "What makes KBAI different?" / "Define KBAI and give examples"</div>
+        </div>
+        <i class="fa-solid fa-chevron-down text-slate-400"></i>
+      </div>
+      <div class="collapse-content" id="e1" style="max-height:600px">
+        <div class="bg-blue-50 rounded-lg p-4 text-sm space-y-2">
+          <div><span class="font-bold text-blue-700">الفكرة بسرعة:</span> KBAI هو فرع من AI بيستخدم knowledge واضحة ومخزنة (rules, logic, ontologies) عشان يعمل reasoning وياخد قرارات — مش بيتعلم من data زي Machine Learning.</div>
+          <div><span class="font-bold text-blue-700">الزتونة:</span> <span class="highlight">KBAI = KB (facts + rules) + Inference Engine + Explanation Facility</span></div>
+          <div><span class="font-bold text-blue-700">كلمات لازم تكتبها:</span>
+            <div class="flex flex-wrap gap-2 mt-1">
+              <span class="badge badge-purple">Symbolic AI</span>
+              <span class="badge badge-blue">Explicit Knowledge</span>
+              <span class="badge badge-blue">Inference Engine</span>
+              <span class="badge badge-blue">Explainable Reasoning</span>
+              <span class="badge badge-green">MYCIN</span>
+              <span class="badge badge-yellow">Knowledge Base</span>
+            </div>
+          </div>
+          <div><span class="font-bold text-blue-700">مثال الامتحان:</span> MYCIN = medical expert system بتشخص bacterial infections باستخدام ~600 rule + بيشرح سبب القرار</div>
+          <div class="bg-white rounded p-3 text-xs border">
+            <strong>KBAI ⊂ AI:</strong> هو subset من AI بس بيركز على symbolic, knowledge-driven, explainable reasoning<br>
+            <strong>مقارنة سريعة:</strong> KBAI = transparent "IF fever AND cough THEN flu" | Data-driven AI = black-box neural network
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Essay 2 -->
+    <div class="card essay-card p-5 mb-4">
+      <div class="flex items-center justify-between mb-3 collapse-btn" onclick="toggle('e2')">
+        <div>
+          <span class="badge badge-red ml-2">2</span>
+          <span class="font-black text-base">Intelligent Agents & how knowledge improves problem solving</span>
+          <div class="text-xs text-slate-500 mt-1">ممكن ييجي: "What is a rational agent?" / "How does knowledge help agents?" / "Explain agent architecture"</div>
+        </div>
+        <i class="fa-solid fa-chevron-down text-slate-400"></i>
+      </div>
+      <div class="collapse-content" id="e2" style="max-height:600px">
+        <div class="bg-blue-50 rounded-lg p-4 text-sm space-y-2">
+          <div><span class="font-bold text-blue-700">الفكرة بسرعة:</span> Intelligent Agent هو نظام بياخد percepts من البيئة ويعمل actions عشان يحقق goals. الـ knowledge بتخليه يستنتج معلومات مش مرئية وياخد قرارات ذكية.</div>
+          <div><span class="font-bold text-blue-700">الزتونة:</span> <span class="highlight">Agent = Perceive → Reason using KB → Act</span></div>
+          <div><span class="font-bold text-blue-700">خصائص الـ Agent:</span>
+            <div class="grid grid-cols-2 gap-2 mt-2">
+              <div class="bg-white rounded p-2 text-xs"><strong>Autonomy</strong> — شغال من غير تدخل بشري</div>
+              <div class="bg-white rounded p-2 text-xs"><strong>Rationality</strong> — بياخد أحسن قرار متاح</div>
+              <div class="bg-white rounded p-2 text-xs"><strong>Reactivity</strong> — بيرد على تغيرات البيئة</div>
+              <div class="bg-white rounded p-2 text-xs"><strong>Proactiveness</strong> — بيخطط لتحقيق goals</div>
+            </div>
+          </div>
+          <div><span class="font-bold text-blue-700">كلمات لازم تكتبها:</span>
+            <div class="flex flex-wrap gap-2 mt-1">
+              <span class="badge badge-purple">Rational Agent</span>
+              <span class="badge badge-blue">PEAS Framework</span>
+              <span class="badge badge-blue">Percepts / Actions</span>
+              <span class="badge badge-green">Knowledge Base</span>
+              <span class="badge badge-yellow">Inference Engine</span>
+            </div>
+          </div>
+          <div class="bg-white rounded p-3 text-xs border">
+            <strong>لماذا الـ Knowledge مهمة؟</strong><br>
+            بدون knowledge: blind search — بيجرب كل احتمال ← ببطء وعشوائية<br>
+            مع knowledge: informed reasoning ← بيختصر الـ search space بشكل كبير<br>
+            مثال: مع rule "Fever ∧ Cough → Flu" الـ agent بيشخص بسرعة بدل ما يجرب 100 مرض
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Essay 3 -->
+    <div class="card essay-card p-5 mb-4">
+      <div class="flex items-center justify-between mb-3 collapse-btn" onclick="toggle('e3')">
+        <div>
+          <span class="badge badge-red ml-2">3</span>
+          <span class="font-black text-base">Compare Symbolic AI vs. Neural/Data-Driven AI</span>
+          <div class="text-xs text-slate-500 mt-1">ممكن ييجي: "Symbolic vs Neural" / "KBAI vs ML" / "When to use which approach?"</div>
+        </div>
+        <i class="fa-solid fa-chevron-down text-slate-400"></i>
+      </div>
+      <div class="collapse-content" id="e3" style="max-height:700px">
+        <div class="bg-blue-50 rounded-lg p-4 text-sm space-y-3">
+          <div><span class="font-bold text-blue-700">الفكرة بسرعة:</span> Symbolic AI بيفكر بـ rules وlogic وشفاف. Data-Driven AI بيتعلم من data لكن "black box".</div>
+          <table class="compare-table w-full text-xs">
+            <thead><tr><th>Feature</th><th>Symbolic AI</th><th>Data-Driven AI</th></tr></thead>
+            <tbody>
+              <tr><td class="font-semibold">Knowledge Source</td><td>Human-defined rules</td><td>Learned from data</td></tr>
+              <tr><td class="font-semibold">Data Needed</td><td>❌ قليل</td><td>✅ كتير جداً</td></tr>
+              <tr><td class="font-semibold">Explainability</td><td>✅ عالي — واضح</td><td>❌ Black box</td></tr>
+              <tr><td class="font-semibold">Best For</td><td>Law, Medicine, Rules</td><td>Images, Speech, NLP</td></tr>
+              <tr><td class="font-semibold">Example</td><td>MYCIN Expert System</td><td>Deep Learning / GPT</td></tr>
+            </tbody>
+          </table>
+          <div><span class="font-bold text-blue-700">الزتونة:</span> Symbolic = <span class="highlight">thinks with rules</span> | Data-Driven = <span class="highlight">learns from examples</span></div>
+          <div class="bg-white rounded p-3 text-xs border"><strong>Modern Trend:</strong> Hybrid/Neuro-Symbolic AI = بيجمع الاتنين — Neural بيعمل perception والـ Symbolic بيعمل reasoning</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Essay 4 -->
+    <div class="card essay-card p-5 mb-4">
+      <div class="flex items-center justify-between mb-3 collapse-btn" onclick="toggle('e4')">
+        <div>
+          <span class="badge badge-red ml-2">4</span>
+          <span class="font-black text-base">Knowledge Representation (KR) — role in intelligent reasoning</span>
+          <div class="text-xs text-slate-500 mt-1">ممكن ييجي: "Why is KR important?" / "Methods of KR" / "Critically analyze KR in AI"</div>
+        </div>
+        <i class="fa-solid fa-chevron-down text-slate-400"></i>
+      </div>
+      <div class="collapse-content" id="e4" style="max-height:700px">
+        <div class="bg-blue-50 rounded-lg p-4 text-sm space-y-2">
+          <div><span class="font-bold text-blue-700">الفكرة بسرعة:</span> KR هو إزاي بنخزن المعرفة بشكل رسمي عشان الكمبيوتر يقدر يستخدمها في reasoning. من غيره الـ AI مش هيعرف يتكلم عن العالم.</div>
+          <div><span class="font-bold text-blue-700">الزتونة:</span> <span class="highlight">KR = backbone of intelligent systems</span></div>
+          <div><span class="font-bold text-blue-700">Techniques (اتذكرهم):</span>
+            <div class="grid grid-cols-2 gap-2 mt-2">
+              <div class="bg-white rounded p-2 text-xs"><strong>Logic</strong> — propositional + first-order logic</div>
+              <div class="bg-white rounded p-2 text-xs"><strong>Semantic Networks</strong> — nodes + edges</div>
+              <div class="bg-white rounded p-2 text-xs"><strong>Frames</strong> — structured objects + slots</div>
+              <div class="bg-white rounded p-2 text-xs"><strong>Production Rules</strong> — IF-THEN</div>
+              <div class="bg-white rounded p-2 text-xs"><strong>Ontologies</strong> — formal domain concepts</div>
+              <div class="bg-white rounded p-2 text-xs"><strong>Hybrid</strong> — combination</div>
+            </div>
+          </div>
+          <div><span class="font-bold text-blue-700">Requirements للـ KR:</span> Expressiveness · Inference Support · Efficiency · Consistency</div>
+          <div class="bg-white rounded p-3 text-xs border">
+            <strong>Trade-off مهم:</strong> Rich representation (logic) → أكتر expressiveness بس أبطأ | Rule-based → أسرع بس أقل expressiveness
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Essay 5 -->
+    <div class="card essay-card p-5 mb-4">
+      <div class="flex items-center justify-between mb-3 collapse-btn" onclick="toggle('e5')">
+        <div>
+          <span class="badge badge-red ml-2">5</span>
+          <span class="font-black text-base">Knowledge, Search & Rational Decision Making</span>
+          <div class="text-xs text-slate-500 mt-1">ممكن ييجي: "Relationship between knowledge and search" / "How knowledge reduces search?"</div>
+        </div>
+        <i class="fa-solid fa-chevron-down text-slate-400"></i>
+      </div>
+      <div class="collapse-content" id="e5" style="max-height:600px">
+        <div class="bg-blue-50 rounded-lg p-4 text-sm space-y-2">
+          <div><span class="font-bold text-blue-700">الفكرة بسرعة:</span> الـ knowledge بتقلل الـ search space وبتخلي الـ agent يلاقي الحل أسرع وبطريقة rational.</div>
+          <div><span class="font-bold text-blue-700">الزتونة:</span></div>
+          <div class="bg-white rounded p-3 text-xs border">
+            <strong>بدون knowledge:</strong> يجرب كل الحالات = O(n) كبير<br>
+            <strong>مع knowledge:</strong> يقطع نص الـ search space = O(n/2) أو أقل<br><br>
+            مثال: نظام تشخيص طبي بدون knowledge = بيجرب 100 مرض | مع rule "Fever ∧ Cough → respiratory" = بيجرب 5 أمراض بس
+          </div>
+          <div><span class="font-bold text-blue-700">Rational Decision Making:</span> Rational ≠ Correct — يعني: أحسن قرار ممكن بناءً على المعلومات المتاحة</div>
+          <div><span class="font-bold text-blue-700">كلمات لازم تكتبها:</span>
+            <div class="flex flex-wrap gap-2 mt-1">
+              <span class="badge badge-blue">State-Space Search</span>
+              <span class="badge badge-blue">Heuristic Knowledge</span>
+              <span class="badge badge-purple">Rational Agent</span>
+              <span class="badge badge-green">Performance Measure</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Essay 6 -->
+    <div class="card essay-card p-5 mb-4">
+      <div class="flex items-center justify-between mb-3 collapse-btn" onclick="toggle('e6')">
+        <div>
+          <span class="badge badge-red ml-2">6</span>
+          <span class="font-black text-base">Compare Logical, Semantic Networks & Frames as KR techniques</span>
+          <div class="text-xs text-slate-500 mt-1">ممكن ييجي: "Compare 3 KR methods" / "Expressiveness & efficiency of KR" / "Real-world applicability"</div>
+        </div>
+        <i class="fa-solid fa-chevron-down text-slate-400"></i>
+      </div>
+      <div class="collapse-content" id="e6" style="max-height:700px">
+        <div class="bg-blue-50 rounded-lg p-4 text-sm space-y-3">
+          <div><span class="font-bold text-blue-700">الفكرة بسرعة:</span> كل technique ليها مميزات — Logic أقوى في reasoning، Semantic Networks أوضح للعلاقات، Frames أنسب للـ structured objects.</div>
+          <table class="compare-table w-full text-xs">
+            <thead><tr><th>Technique</th><th>Expressiveness</th><th>Efficiency</th><th>Real-World</th></tr></thead>
+            <tbody>
+              <tr><td class="font-semibold">Logic (FOL)</td><td>🔥 عالي جداً</td><td>🐢 بطيء</td><td>Theorem proving</td></tr>
+              <tr><td class="font-semibold">Semantic Networks</td><td>متوسط</td><td>⚡ سريع</td><td>Inheritance, relationships</td></tr>
+              <tr><td class="font-semibold">Frames</td><td>متوسط-عالي</td><td>⚡ سريع</td><td>Objects, expert systems</td></tr>
+              <tr><td class="font-semibold">Production Rules</td><td>متوسط</td><td>⚡ سريع</td><td>Expert systems, actions</td></tr>
+              <tr><td class="font-semibold">Ontologies</td><td>🔥 عالي</td><td>متوسط</td><td>Semantic web, reasoning</td></tr>
+            </tbody>
+          </table>
+          <div class="bg-white rounded p-3 text-xs border">
+            <strong>مثال Semantic Network:</strong> Bird → is-a → Animal | Bird → has → Wings<br>
+            <strong>مثال Frame:</strong> Car: {type: vehicle, wheels: 4, fuel: gasoline}<br>
+            <strong>مثال Logic:</strong> ∀x(Human(x) → Mortal(x))
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LESS IMPORTANT ESSAYS -->
+<section class="py-8 px-4 bg-slate-50">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title text-slate-600"><i class="fa-solid fa-clock text-slate-400 ml-2"></i>لو لحقت — Essays التانية <span class="badge badge-yellow mr-2">أقل أهمية</span></h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="card p-4">
+        <div class="font-bold text-sm mb-1">7. Architecture of a Knowledge-Based System</div>
+        <div class="text-xs text-slate-600">الزتونة: KB + Inference Engine + Explanation Facility = نظام KBAI كامل</div>
+        <div class="text-xs text-blue-600 mt-1">مثال: MYCIN — KB تحتوي على 600 rule + Inference Engine بـ backward chaining + Explanation Facility</div>
+      </div>
+      <div class="card p-4">
+        <div class="font-bold text-sm mb-1">8. KB Agent vs Simple Reflex Agent</div>
+        <div class="text-xs text-slate-600">الزتونة: KB Agent = يحتفظ بمعرفة عن العالم | Simple Reflex = يرد مباشرة على الـ input بدون تفكير</div>
+        <div class="text-xs text-blue-600 mt-1">مثال Simple Reflex: الروبوت الفراشة يشوف عائق → يلف | KB Agent: يخطط ويستنتج</div>
+      </div>
+      <div class="card p-4">
+        <div class="font-bold text-sm mb-1">9. Scope of AI and how KBAI contributes</div>
+        <div class="text-xs text-slate-600">الزتونة: AI واسع (search, ML, NLP, robotics) — KBAI هو subset symbolic منه يركز على knowledge + reasoning</div>
+      </div>
+      <div class="card p-4">
+        <div class="font-bold text-sm mb-1">10. Types of Intelligent Agents</div>
+        <div class="text-xs text-slate-600">الزتونة: Simple Reflex → Model-Based → Goal-Based → Utility-Based → Learning Agents (كل واحد أذكى من اللي قبله)</div>
+      </div>
+      <div class="card p-4">
+        <div class="font-bold text-sm mb-1">11. Historical Evolution of KBAI</div>
+        <div class="text-xs text-slate-600">الزتونة: Logic (60s) → Expert Systems (70-80s) → Ontologies (90-2000s) → ML dominance (2010s) → Hybrid AI (2015-present)</div>
+      </div>
+      <div class="card p-4">
+        <div class="font-bold text-sm mb-1">12. Deduction vs Induction vs Abduction</div>
+        <div class="text-xs text-slate-600">الزتونة: Deduction = General→Specific (certain) | Induction = Specific→General (probable) | Abduction = Observation→Best Explanation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEFINITIONS -->
+<section id="definitions" class="py-10 px-4">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-book-open text-blue-700 ml-2"></i>أهم Definitions</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Knowledge</span>
+          <span class="badge badge-yellow">MCQ ⚡</span>
+        </div>
+        <div class="text-sm">معلومة اتنظمت وفُهمت عشان تُستخدم في اتخاذ قرار ذكي</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: "لو المريض عنده حرارة وسعال → يشتبه في إنفلونزا"</div>
+        <div class="text-xs text-blue-600 mt-1 mono">Data → Information → Knowledge</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Knowledge Base (KB)</span>
+          <span class="badge badge-red">مهم جداً</span>
+        </div>
+        <div class="text-sm">مستودع منظم من facts وrules وrelationships بتمثل knowledge في domain معين</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: Medical KB فيها أمراض + أعراض + علاجات</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Inference Engine</span>
+          <span class="badge badge-red">مهم جداً</span>
+        </div>
+        <div class="text-sm">المحرك اللي بيستنتج معرفة جديدة من الـ KB الموجودة عن طريق الـ reasoning</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: بيطبق backward chaining عشان يشخص السكري</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Expert System</span>
+          <span class="badge badge-yellow">MCQ ⚡</span>
+        </div>
+        <div class="text-sm">نظام KBAI بيحاكي خبرة الإنسان في domain محدد = KB + Inference Engine</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: MYCIN — بيشخص bacterial infections</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Declarative Knowledge</span>
+          <span class="badge badge-blue">مهم</span>
+        </div>
+        <div class="text-sm">معرفة بالحقائق والعلاقات — "knowing THAT"</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: "كل الطيور ليها أجنحة" — يُخزن في frames/ontologies</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Procedural Knowledge</span>
+          <span class="badge badge-blue">مهم</span>
+        </div>
+        <div class="text-sm">معرفة بكيفية تنفيذ المهام — "knowing HOW"</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: خطوات حل معادلة تربيعية — يُخزن في production rules</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Explicit Knowledge</span>
+          <span class="badge badge-green">MCQ</span>
+        </div>
+        <div class="text-sm">معرفة ممكن تُكتب وتُخزن — واضحة وقابلة للترميز</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: قوانين قانونية، بروتوكولات طبية</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Tacit Knowledge</span>
+          <span class="badge badge-green">MCQ</span>
+        </div>
+        <div class="text-sm">معرفة ضمنية وتجريبية — صعب ترميزها</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: الطباخ الشاطر اللي بيوازن النكهات من غير وصفة</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Ontology</span>
+          <span class="badge badge-red">مهم جداً</span>
+        </div>
+        <div class="text-sm">تمثيل رسمي للمفاهيم والعلاقات والـ properties في domain محدد</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: Medical ontology: Diseases → Symptoms → Treatments</div>
+        <div class="text-xs text-blue-600 mt-1">≠ Taxonomy: taxonomy = hierarchy بس | ontology = + relationships + constraints</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Semantic Network</span>
+          <span class="badge badge-red">مهم جداً</span>
+        </div>
+        <div class="text-sm">graph بيمثل مفاهيم كـ nodes وعلاقاتهم كـ edges</div>
+        <div class="text-xs text-slate-500 mt-1 mono">Bird → is-a → Animal | Bird → has → Wings</div>
+        <div class="text-xs text-blue-600 mt-1">بيدعم inheritance: لو Bird is-a Animal فـ Bird بيورث خصائص Animal</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Frame</span>
+          <span class="badge badge-yellow">MCQ ⚡</span>
+        </div>
+        <div class="text-sm">هيكل بيانات بيمثل object أو concept باستخدام slots وattributes</div>
+        <div class="text-xs text-slate-500 mt-1 mono">Car: {"{type: vehicle, wheels: 4, fuel: gasoline}"}</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Production Rule</span>
+          <span class="badge badge-red">مهم جداً</span>
+        </div>
+        <div class="text-sm">جملة IF-THEN بتمثل procedural knowledge وبتأتمت الـ reasoning</div>
+        <div class="text-xs text-slate-500 mt-1 mono">IF Temperature &gt; 30°C THEN TurnOn(AC)</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Forward Chaining</span>
+          <span class="badge badge-red">مهم جداً</span>
+        </div>
+        <div class="text-sm">Data-driven reasoning — بيبدأ من الـ facts المعروفة ويستنتج conclusions</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: شوف أعراض → استنتج أمراض محتملة</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Backward Chaining</span>
+          <span class="badge badge-red">مهم جداً</span>
+        </div>
+        <div class="text-sm">Goal-driven reasoning — بيبدأ من الـ goal ويتحقق من الـ facts اللي بتدعمه</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: "هل المريض عنده سكري؟" → تحقق من الأعراض والتحاليل</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Non-Monotonic Reasoning</span>
+          <span class="badge badge-blue">مهم</span>
+        </div>
+        <div class="text-sm">reasoning بيُعيد تقييم نفسه لو جاء معلومة جديدة تناقض الاستنتاجات القديمة</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: "Tweety طيرة → يطير" لكن لما اكتشفنا إنه بطريق → "Tweety مش بيطير"</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Utility-Based Agent</span>
+          <span class="badge badge-yellow">MCQ ⚡</span>
+        </div>
+        <div class="text-sm">agent بيختار actions باستخدام utility function عشان يُعظّم الفائدة المتوقعة</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: Smart thermostat بيوازن الراحة وتوفير الطاقة</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Model-Based Agent</span>
+          <span class="badge badge-yellow">MCQ ⚡</span>
+        </div>
+        <div class="text-sm">agent بيحتفظ بـ internal model عن العالم عشان ياخد قرارات</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: Self-driving car عنده model للطريق والعوائق وقواعد المرور</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Explanation Facility</span>
+          <span class="badge badge-blue">مهم</span>
+        </div>
+        <div class="text-sm">component في KBAI بيشرح ليه النظام وصل لقرار معين بطريقة يفهمها الإنسان</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: MYCIN بيقول "المريض عنده bacterial infection لأن الحرارة + WBC + symptom X"</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">CSP (Constraint Satisfaction)</span>
+          <span class="badge badge-green">MCQ</span>
+        </div>
+        <div class="text-sm">مشكلة بتحتاج تعيّن قيم لمتغيرات مع احترام constraints معينة</div>
+        <div class="text-xs text-slate-500 mt-1">مثال: جدول محاضرات — مش محاضرتين في نفس القاعة في نفس الوقت</div>
+        <div class="text-xs text-blue-600 mt-1">مكوناته: Variables + Domains + Constraints</div>
+      </div>
+
+      <div class="card def-card p-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-black text-blue-800">Rational Agent</span>
+          <span class="badge badge-red">مهم جداً</span>
+        </div>
+        <div class="text-sm">agent بيختار الـ action اللي يُعظّم performance بناءً على المعلومات المتاحة</div>
+        <div class="text-xs text-slate-500 mt-1">⚠️ Rational ≠ Correct — يعني أحسن قرار ممكن، مش لازم صح</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISONS -->
+<section id="comparisons" class="py-10 px-4 bg-slate-50">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-scale-balanced text-blue-700 ml-2"></i>أهم المقارنات</h2>
+
+    <!-- KB vs KBS vs AI vs KBAI -->
+    <div class="card p-5 mb-6">
+      <div class="font-black text-base mb-3 collapse-btn" onclick="toggle('cmp1')"><i class="fa-solid fa-chevron-down ml-2 text-slate-400"></i>KB vs KBS vs AI vs KBAI <span class="badge badge-red mr-2">الأهم</span></div>
+      <div class="collapse-content" id="cmp1" style="max-height:500px">
+        <div class="overflow-x-auto">
+          <table class="compare-table w-full">
+            <thead><tr><th>Course</th><th>Focus</th><th>Example</th><th>Key Difference</th></tr></thead>
+            <tbody>
+              <tr><td class="font-bold">Knowledge Bases (KB)</td><td>تخزين واسترجاع knowledge</td><td>DBpedia, SPARQL queries</td><td>تخزين فقط — بدون reasoning</td></tr>
+              <tr><td class="font-bold">KBS</td><td>KB + reasoning عشان حل مشاكل</td><td>MYCIN, Expert Systems</td><td>أضاف reasoning فوق الـ KB</td></tr>
+              <tr><td class="font-bold">AI (General)</td><td>ذكاء اصطناعي عام</td><td>Siri, AlphaGo, ChatGPT</td><td>يشمل symbolic و data-driven</td></tr>
+              <tr><td class="font-bold">KBAI</td><td>AI بمعرفة explicit + reasoning</td><td>IBM Watson, Course Advisor</td><td>Symbolic AI + KB + Explainability</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Symbolic vs Data-Driven -->
+    <div class="card p-5 mb-6">
+      <div class="font-black text-base mb-3 collapse-btn" onclick="toggle('cmp2')"><i class="fa-solid fa-chevron-down ml-2 text-slate-400"></i>Symbolic AI vs Data-Driven AI <span class="badge badge-red mr-2">مهم جداً</span></div>
+      <div class="collapse-content" id="cmp2" style="max-height:500px">
+        <div class="overflow-x-auto">
+          <table class="compare-table w-full">
+            <thead><tr><th>Feature</th><th>Symbolic AI</th><th>Data-Driven AI</th></tr></thead>
+            <tbody>
+              <tr><td>Knowledge</td><td>Rules + Logic (explicit)</td><td>Learned from data</td></tr>
+              <tr><td>Data Needed</td><td>❌ قليل</td><td>✅ كتير جداً</td></tr>
+              <tr><td>Explainability</td><td>✅ عالي — شفاف</td><td>❌ Black box</td></tr>
+              <tr><td>Reasoning</td><td>Forward / Backward chaining</td><td>Gradient descent</td></tr>
+              <tr><td>Best For</td><td>Medicine, Law, Rules</td><td>Images, NLP, Speech</td></tr>
+              <tr><td>Weakness</td><td>Brittle, hard to scale</td><td>Biased, unexplainable</td></tr>
+              <tr><td>Example</td><td>MYCIN Expert System</td><td>Deep Learning (AlphaGo)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forward vs Backward Chaining -->
+    <div class="card p-5 mb-6">
+      <div class="font-black text-base mb-3 collapse-btn" onclick="toggle('cmp3')"><i class="fa-solid fa-chevron-down ml-2 text-slate-400"></i>Forward Chaining vs Backward Chaining <span class="badge badge-red mr-2">مهم جداً</span></div>
+      <div class="collapse-content" id="cmp3" style="max-height:400px">
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div class="bg-blue-50 rounded-lg p-4">
+            <div class="font-black text-blue-700 mb-2">⏩ Forward Chaining</div>
+            <div class="font-semibold">Data-driven reasoning</div>
+            <div class="text-slate-600 mt-1">بيبدأ من الـ facts وبيشتغل للـ conclusion</div>
+            <div class="mono text-xs bg-white rounded p-2 mt-2">Facts → Rules → Conclusion</div>
+            <div class="text-xs mt-2">مثال: شوف أعراض → استنتج المرض</div>
+            <div class="badge badge-blue mt-2">مناسب لـ: monitoring, planning</div>
+          </div>
+          <div class="bg-green-50 rounded-lg p-4">
+            <div class="font-black text-green-700 mb-2">⏪ Backward Chaining</div>
+            <div class="font-semibold">Goal-driven reasoning</div>
+            <div class="text-slate-600 mt-1">بيبدأ من الـ goal ويتحقق من الـ facts</div>
+            <div class="mono text-xs bg-white rounded p-2 mt-2">Goal → Check Rules → Check Facts</div>
+            <div class="text-xs mt-2">مثال: "المريض عنده سكري؟" → تحقق من الأعراض</div>
+            <div class="badge badge-green mt-2">مناسب لـ: diagnosis, proving</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Declarative vs Procedural -->
+    <div class="card p-5 mb-6">
+      <div class="font-black text-base mb-3 collapse-btn" onclick="toggle('cmp4')"><i class="fa-solid fa-chevron-down ml-2 text-slate-400"></i>Declarative vs Procedural Knowledge</div>
+      <div class="collapse-content" id="cmp4" style="max-height:400px">
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div class="bg-purple-50 rounded-lg p-4">
+            <div class="font-black text-purple-700 mb-2">📚 Declarative</div>
+            <div>"Knowing THAT" — حقائق وعلاقات</div>
+            <div class="text-xs mt-2">يُخزن في: Frames, Ontologies, Semantic Networks</div>
+            <div class="text-xs mt-1 bg-white rounded p-2 mono">"All birds have wings"</div>
+          </div>
+          <div class="bg-orange-50 rounded-lg p-4">
+            <div class="font-black text-orange-700 mb-2">⚙️ Procedural</div>
+            <div>"Knowing HOW" — كيفية تنفيذ مهمة</div>
+            <div class="text-xs mt-2">يُخزن في: Production Rules, Scripts</div>
+            <div class="text-xs mt-1 bg-white rounded p-2 mono">IF Temp&gt;30 THEN TurnOnAC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Explicit vs Tacit -->
+    <div class="card p-5 mb-6">
+      <div class="font-black text-base mb-3 collapse-btn" onclick="toggle('cmp5')"><i class="fa-solid fa-chevron-down ml-2 text-slate-400"></i>Explicit vs Tacit Knowledge</div>
+      <div class="collapse-content" id="cmp5" style="max-height:400px">
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div class="bg-blue-50 rounded-lg p-4">
+            <div class="font-black text-blue-700 mb-2">📄 Explicit</div>
+            <div>واضحة وممكن تُخزن وتُشارك</div>
+            <div class="text-xs mt-2">مثال: قوانين قانونية، بروتوكولات طبية</div>
+            <div class="badge badge-blue mt-2">قابل للـ encoding في KB</div>
+          </div>
+          <div class="bg-yellow-50 rounded-lg p-4">
+            <div class="font-black text-yellow-700 mb-2">🧠 Tacit</div>
+            <div>ضمنية وتجريبية — صعب ترميزها</div>
+            <div class="text-xs mt-2">مثال: طباخ بيوازن النكهات | قيادة عربية</div>
+            <div class="badge badge-yellow mt-2">صعب encode في KB</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deduction vs Induction vs Abduction -->
+    <div class="card p-5 mb-6">
+      <div class="font-black text-base mb-3 collapse-btn" onclick="toggle('cmp6')"><i class="fa-solid fa-chevron-down ml-2 text-slate-400"></i>Deduction vs Induction vs Abduction</div>
+      <div class="collapse-content" id="cmp6" style="max-height:500px">
+        <div class="overflow-x-auto">
+          <table class="compare-table w-full">
+            <thead><tr><th>Reasoning</th><th>Process</th><th>Example</th><th>Certainty</th></tr></thead>
+            <tbody>
+              <tr><td class="font-bold text-blue-700">Deduction (استنتاج)</td><td>General Rule → Specific Case → Conclusion</td><td>All humans mortal + Socrates human → Mortal</td><td>✅ 100% لو Premises صحيحة</td></tr>
+              <tr><td class="font-bold text-green-700">Induction (استقراء)</td><td>Specific Observations → General Rule</td><td>100 بجع أبيض → كل البجع أبيض</td><td>⚠️ Probable, not certain</td></tr>
+              <tr><td class="font-bold text-purple-700">Abduction (استدلال)</td><td>Observation → Best Explanation</td><td>الشارع مبلول → على الأرجح اتمطر</td><td>❓ Most likely, may be wrong</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="bg-blue-50 rounded p-3 mt-3 text-xs">
+          <strong>في AI:</strong> Deduction → rule-based/expert systems | Induction → machine learning | Abduction → medical diagnosis, fault detection
+        </div>
+      </div>
+    </div>
+
+    <!-- Ontology vs Semantic Network vs Frame -->
+    <div class="card p-5 mb-6">
+      <div class="font-black text-base mb-3 collapse-btn" onclick="toggle('cmp7')"><i class="fa-solid fa-chevron-down ml-2 text-slate-400"></i>Ontology vs Semantic Network vs Frame</div>
+      <div class="collapse-content" id="cmp7" style="max-height:400px">
+        <div class="overflow-x-auto">
+          <table class="compare-table w-full">
+            <thead><tr><th>Technique</th><th>Structure</th><th>Best For</th><th>Example</th></tr></thead>
+            <tbody>
+              <tr><td class="font-bold">Ontology</td><td>Concepts + Relations + Constraints</td><td>Domain modeling, Semantic Web</td><td>OWL, Medical ontology</td></tr>
+              <tr><td class="font-bold">Semantic Network</td><td>Nodes (concepts) + Edges (relations)</td><td>Inheritance, relationships</td><td>Bird→is-a→Animal</td></tr>
+              <tr><td class="font-bold">Frame</td><td>Slots (attributes) + Values</td><td>Object representation</td><td>Car: {wheels:4, fuel:gas}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MCQ HINTS -->
+<section id="mcq" class="py-10 px-4">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-bullseye text-purple-600 ml-2"></i>MCQ Hints — Pattern Recognition</h2>
+    <p class="text-sm text-slate-500 mb-5">مش bank of questions — ده pattern recognition. لو شفت الكلمة دي في سؤال، الإجابة غالباً كده 👇</p>
+    <div class="grid md:grid-cols-2 gap-3">
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">IF–THEN rule</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Production Rule / Expert System</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">goal-driven reasoning</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Backward Chaining</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">data-driven reasoning</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Forward Chaining</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">nodes + edges + concepts</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Semantic Network</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">internal world model</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Model-Based Agent</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">maximize benefit / utility</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Utility-Based Agent</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">responds directly to stimulus</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Simple Reflex Agent</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">slots + attributes + values</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Frame</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">formal domain concepts + relations</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Ontology</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">conclusion may be overridden</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Non-Monotonic Reasoning</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">explain why a decision was made</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Explanation Facility</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">variables + domains + constraints</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">CSP</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">KBAI primary goal</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Symbolic reasoning (NOT random search)</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">general → specific (certain)</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Deduction</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">specific observations → general rule</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Induction (Machine Learning)</span>
+        </div>
+      </div>
+
+      <div class="mcq-hint rounded-lg p-4 text-sm">
+        <div class="flex items-start gap-2">
+          <span class="rule-if">best explanation for observation</span>
+          <span class="text-slate-400">→</span>
+          <span class="rule-then">Abduction</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MCQ Sample Questions -->
+    <div class="mt-6 card p-5">
+      <div class="font-black mb-4">🎯 Sample MCQ من ملف المراجعة</div>
+      <div class="space-y-4 text-sm">
+        <div class="bg-slate-50 rounded p-3">
+          <div class="font-semibold">1. Artificial Intelligence aims to:</div>
+          <div class="text-slate-600 text-xs mt-1">A) think like humans ✅ &nbsp; B) store large data &nbsp; C) design hardware &nbsp; D) build networks</div>
+        </div>
+        <div class="bg-slate-50 rounded p-3">
+          <div class="font-semibold">2. Knowledge-Based AI primarily relies on:</div>
+          <div class="text-slate-600 text-xs mt-1">A) random search &nbsp; B) symbolic reasoning ✅ &nbsp; C) genetic algorithms &nbsp; D) clustering</div>
+        </div>
+        <div class="bg-slate-50 rounded p-3">
+          <div class="font-semibold">3. The component storing facts and rules is the:</div>
+          <div class="text-slate-600 text-xs mt-1">A) interface &nbsp; B) agent &nbsp; C) knowledge base ✅ &nbsp; D) sensor</div>
+        </div>
+        <div class="bg-slate-50 rounded p-3">
+          <div class="font-semibold">4. The reasoning component is the:</div>
+          <div class="text-slate-600 text-xs mt-1">A) inference engine ✅ &nbsp; B) actuator &nbsp; C) memory bus &nbsp; D) sensor</div>
+        </div>
+        <div class="bg-slate-50 rounded p-3">
+          <div class="font-semibold">5. A robot maintains an internal map and updates it. What type of agent?</div>
+          <div class="text-slate-600 text-xs mt-1">A) Simple Reflex &nbsp; B) Model-Based Agent ✅ &nbsp; C) Goal-Based &nbsp; D) Utility-Based</div>
+        </div>
+        <div class="bg-slate-50 rounded p-3">
+          <div class="font-semibold">6. "Bird → is-a → Animal" is an example of:</div>
+          <div class="text-slate-600 text-xs mt-1">A) Frame &nbsp; B) Production Rule &nbsp; C) Semantic Network ✅ &nbsp; D) Ontology</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR TRICKS -->
+<section id="tricks" class="py-10 px-4 bg-red-50">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title text-red-700"><i class="fa-solid fa-bomb text-red-500 ml-2"></i>تركات الدكتور</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+
+      <div class="trick-card card p-4">
+        <div class="font-bold text-red-700 mb-2">⚠️ Rational ≠ Correct</div>
+        <div class="text-sm">Rational يعني: أحسن قرار بناءً على المعلومات المتاحة<br>مش لازم يكون صح دايماً</div>
+      </div>
+
+      <div class="trick-card card p-4">
+        <div class="font-bold text-red-700 mb-2">⚠️ KBAI ≠ AI (General)</div>
+        <div class="text-sm">KBAI هو subset من AI — مش كل AI هو KBAI<br>Data-driven AI (Deep Learning) مش KBAI</div>
+      </div>
+
+      <div class="trick-card card p-4">
+        <div class="font-bold text-red-700 mb-2">⚠️ Ontology ≠ Taxonomy</div>
+        <div class="text-sm">Taxonomy = hierarchy بس (parent/child)<br>Ontology = hierarchy + relationships + constraints + reasoning</div>
+      </div>
+
+      <div class="trick-card card p-4">
+        <div class="font-bold text-red-700 mb-2">⚠️ KB ≠ KBS ≠ KBAI</div>
+        <div class="text-sm">KB = storage only | KBS = KB + reasoning | KBAI = KBS + AI techniques + explainability</div>
+      </div>
+
+      <div class="trick-card card p-4">
+        <div class="font-bold text-red-700 mb-2">⚠️ Forward ≠ Backward</div>
+        <div class="text-sm">Forward = بدأ من data → وصل للـ goal (data-driven)<br>Backward = بدأ من goal → رجع للـ data (goal-driven)</div>
+      </div>
+
+      <div class="trick-card card p-4">
+        <div class="font-bold text-red-700 mb-2">⚠️ لو شافوا MYCIN في MCQ</div>
+        <div class="text-sm">الإجابة دايماً Expert System / Knowledge-Based System<br>ومش هو "self-driving car" 😅</div>
+      </div>
+
+      <div class="trick-card card p-4">
+        <div class="font-bold text-red-700 mb-2">⚠️ Non-Monotonic = قابل للتعديل</div>
+        <div class="text-sm">لو الـ conclusion ممكن يتغير بمعلومة جديدة → Non-Monotonic<br>Tweety بيطير → اكتشفنا إنه بطريق → مش بيطير</div>
+      </div>
+
+      <div class="trick-card card p-4">
+        <div class="font-bold text-red-700 mb-2">⚠️ لو السؤال قال "explain reasoning"</div>
+        <div class="text-sm">فوراً فكر في Explanation Facility — دي مميزة KBAI على Data-Driven AI</div>
+      </div>
+
+      <div class="trick-card card p-4">
+        <div class="font-bold text-red-700 mb-2">⚠️ CSP مش نوع من Agent</div>
+        <div class="text-sm">CSP هو نوع مشكلة مش نوع agent<br>بيُستخدم في scheduling, planning, constraint-based reasoning</div>
+      </div>
+
+      <div class="trick-card card p-4">
+        <div class="font-bold text-red-700 mb-2">⚠️ Simple Reflex Agent = بدون memory</div>
+        <div class="text-sm">بيرد على الـ stimulus الحالي فقط — مفيش history أو internal state<br>عكسه: Model-Based Agent عنده internal model</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL ZATOONA -->
+<section id="final" class="py-10 px-4">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-lemon text-yellow-500 ml-2"></i><span class="zatoona-badge">الزتونة النهائية 🍋</span></h2>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-8">
+      <!-- Top 10 Definitions -->
+      <div class="card p-5 border-t-4 border-yellow-400">
+        <div class="font-black text-yellow-700 mb-3">📌 أهم 10 Definitions</div>
+        <ol class="space-y-1 text-sm">
+          <li><span class="badge badge-red ml-1">1</span> Knowledge Base (KB)</li>
+          <li><span class="badge badge-red ml-1">2</span> Inference Engine</li>
+          <li><span class="badge badge-red ml-1">3</span> Expert System</li>
+          <li><span class="badge badge-red ml-1">4</span> Forward Chaining</li>
+          <li><span class="badge badge-red ml-1">5</span> Backward Chaining</li>
+          <li><span class="badge badge-yellow ml-1">6</span> Semantic Network</li>
+          <li><span class="badge badge-yellow ml-1">7</span> Ontology</li>
+          <li><span class="badge badge-yellow ml-1">8</span> Production Rule</li>
+          <li><span class="badge badge-yellow ml-1">9</span> Rational Agent</li>
+          <li><span class="badge badge-blue ml-1">10</span> Explanation Facility</li>
+        </ol>
+      </div>
+
+      <!-- Top 5 Comparisons -->
+      <div class="card p-5 border-t-4 border-blue-400">
+        <div class="font-black text-blue-700 mb-3">🔄 أهم 5 مقارنات</div>
+        <ol class="space-y-2 text-sm">
+          <li><span class="badge badge-red ml-1">1</span> Symbolic AI vs Data-Driven AI</li>
+          <li><span class="badge badge-red ml-1">2</span> KB vs KBS vs AI vs KBAI</li>
+          <li><span class="badge badge-red ml-1">3</span> Forward vs Backward Chaining</li>
+          <li><span class="badge badge-yellow ml-1">4</span> Declarative vs Procedural</li>
+          <li><span class="badge badge-yellow ml-1">5</span> Deduction vs Induction vs Abduction</li>
+        </ol>
+      </div>
+
+      <!-- Top 6 Essay Ideas -->
+      <div class="card p-5 border-t-4 border-green-400">
+        <div class="font-black text-green-700 mb-3">✍️ أهم 6 Essay Ideas</div>
+        <ol class="space-y-2 text-sm">
+          <li><span class="badge badge-red ml-1">1</span> What is KBAI + Examples</li>
+          <li><span class="badge badge-red ml-1">2</span> Intelligent Agents + Role of Knowledge</li>
+          <li><span class="badge badge-red ml-1">3</span> Symbolic vs Neural AI</li>
+          <li><span class="badge badge-red ml-1">4</span> Knowledge Representation + Methods</li>
+          <li><span class="badge badge-red ml-1">5</span> Knowledge + Search + Rationality</li>
+          <li><span class="badge badge-red ml-1">6</span> Compare 3 KR Techniques</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Final Checklist -->
+    <div class="card p-6 bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200">
+      <div class="font-black text-xl text-blue-800 mb-4"><i class="fa-solid fa-check-double ml-2"></i>Checklist قبل الامتحان</div>
+      <div class="grid md:grid-cols-2 gap-3 text-sm">
+        <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span>✅ عارف KBAI = KB + Inference Engine + Explanation Facility</span></label>
+        <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span>✅ عارف الفرق بين Forward وBackward Chaining</span></label>
+        <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span>✅ عارف الفرق بين Symbolic AI وData-Driven AI</span></label>
+        <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span>✅ عارف MYCIN = Expert System = KB + Inference Engine</span></label>
+        <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span>✅ عارف Semantic Network = nodes + edges</span></label>
+        <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span>✅ عارف Frame = slots + attributes + values</span></label>
+        <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span>✅ عارف Ontology أكبر من Taxonomy</span></label>
+        <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span>✅ عارف Rational Agent ≠ Always Correct</span></label>
+        <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span>✅ عارف Deduction vs Induction vs Abduction</span></label>
+        <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span>✅ عارف Non-Monotonic Reasoning = قابل للتعديل</span></label>
+        <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span>✅ قرأت أهم 6 essay وفهمت الفكرة الأساسية</span></label>
+        <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span>✅ اتمرنت على الـ MCQ hints</span></label>
+      </div>
+      <div class="mt-5 text-center">
+        <div class="text-2xl font-black text-blue-800">Good luck! 🎉</div>
+        <div class="text-slate-500 text-sm mt-1">انت قادر — روح الامتحان بثقة 💪</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-6 px-4 text-center text-xs text-slate-400 border-t">
+  <div>KBAI Quick Revision — مبني على ملفات المحاضرات والمراجعة</div>
+  <div class="mt-1">Knowledge Base · Inference Engine · Explainable AI · بالتوفيق يا بطل 🍋</div>
+</footer>
+
+<script>
+  function toggle(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (el.style.maxHeight === '0px' || el.style.maxHeight === '') {
+      el.style.maxHeight = '1000px';
+    } else {
+      el.style.maxHeight = '0px';
+    }
+  }
+
+  // Open first essay by default
+  document.addEventListener('DOMContentLoaded', () => {
+    ['e1'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.maxHeight = '0px';
+    });
+    // Open all comparisons by default on desktop
+    ['cmp1','cmp2','cmp3'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el && window.innerWidth > 768) el.style.maxHeight = '500px';
+      else if (el) el.style.maxHeight = '0px';
+    });
+    ['cmp4','cmp5','cmp6','cmp7'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.maxHeight = '0px';
+    });
+    ['e2','e3','e4','e5','e6'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.maxHeight = '0px';
+    });
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+</body>
+</html>

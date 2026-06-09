@@ -91,6 +91,13 @@ body{background:var(--bg);color:#1e293b}
       <a href="#definitions" class="nav-pill" data-section="definitions">📖 Definitions</a>
       <a href="#comparisons" class="nav-pill" data-section="comparisons">🔄 مقارنات</a>
       <a href="#mcq" class="nav-pill" data-section="mcq">🎯 MCQ</a>
+      <a href="#logic" class="nav-pill" data-section="logic">🔣 Logic</a>
+      <a href="#rules" class="nav-pill" data-section="rules">📋 Rule-Based</a>
+      <a href="#expertsystems" class="nav-pill" data-section="expertsystems">🤖 Expert Systems</a>
+      <a href="#ka" class="nav-pill" data-section="ka">🧲 Knowledge Acq.</a>
+      <a href="#ke" class="nav-pill" data-section="ke">⚙️ Knowledge Eng.</a>
+      <a href="#ontologies" class="nav-pill" data-section="ontologies">🕸️ Ontologies</a>
+      <a href="#uncertainty" class="nav-pill" data-section="uncertainty">🎲 Uncertainty</a>
       <a href="#tricks" class="nav-pill" data-section="tricks">⚠️ تركات</a>
       <a href="#night" class="nav-pill night-pill" data-section="night">🌙 ليلة الامتحان</a>
     </div>
@@ -706,6 +713,1703 @@ body{background:var(--bg);color:#1e293b}
   </div>
 </section>
 
+<!-- LOGIC FOUNDATIONS -->
+<section id="logic" class="py-10 px-4">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-square-root-variable text-purple-600 ml-2"></i>Logic Foundations <span class="badge b-red mr-2">🔥 من الـ PDF</span></h2>
+
+    <!-- Propositional Logic Basics -->
+    <div class="card mb-5 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('log1',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#7c3aed;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Propositional Logic Basics + Logical Connectives</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-purple">MCQ</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink:0"></i>
+      </div>
+      <div class="collapse-content" id="log1" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="zatoona-box">Proposition = جملة بتاخد قيمة إما True أو False — مش أكتر</div>
+          <div class="text-sm"><span class="kw-blue">Propositional Logic</span> = أبسط نوع من اللوجيك — بيتعامل مع statements ليها truth value.</div>
+          <div class="text-xs font-bold text-slate-600 mb-1">مثال:</div>
+          <div class="mono text-xs bg-slate-50 rounded p-2">P: "It is raining." | Q: "The road is wet."</div>
+
+          <div class="text-xs font-bold text-slate-600 mb-1">Logical Connectives:</div>
+          <div class="overflow-x-auto">
+            <table style="width:100%;font-size:.8rem;border-collapse:collapse;border-radius:8px;overflow:hidden">
+              <thead><tr style="background:#7c3aed;color:#fff"><th style="padding:7px 10px">Symbol</th><th style="padding:7px 10px">Name</th><th style="padding:7px 10px">Meaning</th><th style="padding:7px 10px">Example</th></tr></thead>
+              <tbody>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px" class="mono font-bold">¬P</td><td style="padding:7px 10px">NOT</td><td style="padding:7px 10px">Negation</td><td style="padding:7px 10px">"It is NOT raining"</td></tr>
+                <tr><td style="padding:7px 10px" class="mono font-bold">P ∧ Q</td><td style="padding:7px 10px">AND</td><td style="padding:7px 10px">Conjunction</td><td style="padding:7px 10px">"Raining AND cold"</td></tr>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px" class="mono font-bold">P ∨ Q</td><td style="padding:7px 10px">OR</td><td style="padding:7px 10px">Disjunction</td><td style="padding:7px 10px">"Raining OR windy"</td></tr>
+                <tr><td style="padding:7px 10px" class="mono font-bold">P ⊕ Q</td><td style="padding:7px 10px">XOR</td><td style="padding:7px 10px">Exclusive OR</td><td style="padding:7px 10px">"Either raining OR windy, not both"</td></tr>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px" class="mono font-bold">P → Q</td><td style="padding:7px 10px">Implies</td><td style="padding:7px 10px">Conditional</td><td style="padding:7px 10px">"If raining → road is wet"</td></tr>
+                <tr><td style="padding:7px 10px" class="mono font-bold">P ↔ Q</td><td style="padding:7px 10px">Biconditional</td><td style="padding:7px 10px">If and only if</td><td style="padding:7px 10px">"Raining iff road is wet"</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="bg-red-50 border border-red-200 rounded p-3 text-xs">
+            <strong class="text-red-700">⚠️ تركة مهمة — Implication vs Equivalence:</strong><br>
+            <span class="mono">P → Q</span> ≠ <span class="mono">Q → P</span> (One-directional)<br>
+            <span class="mono">P ↔ Q</span> = الاتنين في كل الاتجاهات (Two-directional)<br>
+            مثال: "لو اتمطر → الشارع مبلول" ≠ "لو الشارع مبلول → اتمطر"
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Syntax vs Semantics + WFF + Truth Types -->
+    <div class="card mb-5 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('log2',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#7c3aed;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Syntax vs Semantics · WFF · Tautology · Contradiction · Contingency</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم</span><span class="badge b-purple">MCQ</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink:0"></i>
+      </div>
+      <div class="collapse-content" id="log2" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="grid md:grid-cols-2 gap-3">
+            <div class="bg-blue-50 rounded-lg p-3 text-xs">
+              <div class="font-black text-blue-700 mb-2">📐 Syntax</div>
+              <div>قواعد تكوين الـ expressions الصح — بتهتم بالـ <span class="kw-blue">structure</span> مش المعنى</div>
+              <div class="mono bg-white rounded p-2 mt-2">P ∧ Q → ✅ valid<br>∧ PQ → ❌ invalid</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 text-xs">
+              <div class="font-black text-green-700 mb-2">🧠 Semantics</div>
+              <div>بتهتم بالـ <span class="kw-green">meaning</span> وقيمة الـ truth للـ expression</div>
+              <div class="mono bg-white rounded p-2 mt-2">P=T, Q=F → P ∧ Q = F</div>
+            </div>
+          </div>
+          <div class="bg-purple-50 rounded p-3 text-xs border border-purple-200">
+            <strong class="text-purple-700">Well-Formed Formula (WFF):</strong> expression مبنية صح على حسب قواعد الـ syntax<br>
+            <span class="mono">P → WFF ✅ | (P ∧ Q) → R → WFF ✅</span>
+          </div>
+          <div class="text-xs font-bold text-slate-600">أنواع الـ Logical Statements:</div>
+          <div class="grid grid-cols-3 gap-2 text-xs">
+            <div class="bg-green-50 rounded p-3 text-center border border-green-200">
+              <div class="font-black text-green-700 mb-1">Tautology</div>
+              <div class="text-slate-600 mb-2">دايماً True</div>
+              <div class="mono">P ∨ ¬P</div>
+            </div>
+            <div class="bg-red-50 rounded p-3 text-center border border-red-200">
+              <div class="font-black text-red-700 mb-1">Contradiction</div>
+              <div class="text-slate-600 mb-2">دايماً False</div>
+              <div class="mono">P ∧ ¬P</div>
+            </div>
+            <div class="bg-yellow-50 rounded p-3 text-center border border-yellow-200">
+              <div class="font-black text-yellow-700 mb-1">Contingency</div>
+              <div class="text-slate-600 mb-2">أحياناً T أحياناً F</div>
+              <div class="mono">P ∧ Q</div>
+            </div>
+          </div>
+          <div class="bg-amber-50 rounded p-3 text-xs border border-amber-200">
+            <strong>Logical Equivalence:</strong> تعبيرين متساويين لو ليهم نفس قيم الـ truth في كل الحالات<br>
+            <div class="mono mt-1">P → Q ≡ ¬P ∨ Q</div>
+          </div>
+          <div class="bg-slate-50 rounded p-3 text-xs">
+            <strong>Entailment (⊨):</strong> A ⊨ B يعني: لما A تكون صح، B لازم تكون صح<br>
+            <div class="mono mt-1">P ∧ Q ⊨ P &nbsp; (لو الاتنين صح → P لازم صح)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Truth Tables -->
+    <div class="card mb-5 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('log3',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#7c3aed;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Truth Tables — الأساسية + أهم تمارين الـ PDF</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-purple">MCQ</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink:0"></i>
+      </div>
+      <div class="collapse-content" id="log3" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-4">
+          <!-- Basic Truth Tables -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+            <div>
+              <div class="font-bold text-center text-blue-700 mb-1">AND (∧)</div>
+              <table style="width:100%;border-collapse:collapse;font-size:.75rem">
+                <thead><tr style="background:#1e40af;color:#fff"><th style="padding:4px">P</th><th style="padding:4px">Q</th><th style="padding:4px">P∧Q</th></tr></thead>
+                <tbody>
+                  <tr style="background:#f8fafc"><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;color:#15803d;font-weight:bold">T</td></tr>
+                  <tr><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;color:#dc2626;font-weight:bold">F</td></tr>
+                  <tr style="background:#f8fafc"><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;color:#dc2626;font-weight:bold">F</td></tr>
+                  <tr><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;color:#dc2626;font-weight:bold">F</td></tr>
+                </tbody>
+              </table>
+              <div class="text-xs text-slate-500 mt-1 text-center">True فقط لو الاتنين T</div>
+            </div>
+            <div>
+              <div class="font-bold text-center text-green-700 mb-1">OR (∨)</div>
+              <table style="width:100%;border-collapse:collapse;font-size:.75rem">
+                <thead><tr style="background:#15803d;color:#fff"><th style="padding:4px">P</th><th style="padding:4px">Q</th><th style="padding:4px">P∨Q</th></tr></thead>
+                <tbody>
+                  <tr style="background:#f8fafc"><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;color:#15803d;font-weight:bold">T</td></tr>
+                  <tr><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;color:#15803d;font-weight:bold">T</td></tr>
+                  <tr style="background:#f8fafc"><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;color:#15803d;font-weight:bold">T</td></tr>
+                  <tr><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;color:#dc2626;font-weight:bold">F</td></tr>
+                </tbody>
+              </table>
+              <div class="text-xs text-slate-500 mt-1 text-center">False فقط لو الاتنين F</div>
+            </div>
+            <div>
+              <div class="font-bold text-center text-red-700 mb-1">NOT (¬)</div>
+              <table style="width:100%;border-collapse:collapse;font-size:.75rem">
+                <thead><tr style="background:#dc2626;color:#fff"><th style="padding:4px">P</th><th style="padding:4px">¬P</th></tr></thead>
+                <tbody>
+                  <tr style="background:#f8fafc"><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;color:#dc2626;font-weight:bold">F</td></tr>
+                  <tr><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;color:#15803d;font-weight:bold">T</td></tr>
+                </tbody>
+              </table>
+              <div class="text-xs text-slate-500 mt-1 text-center">عكس القيمة</div>
+            </div>
+            <div>
+              <div class="font-bold text-center text-purple-700 mb-1">IMPLIES (→)</div>
+              <table style="width:100%;border-collapse:collapse;font-size:.75rem">
+                <thead><tr style="background:#7c3aed;color:#fff"><th style="padding:4px">P</th><th style="padding:4px">Q</th><th style="padding:4px">P→Q</th></tr></thead>
+                <tbody>
+                  <tr style="background:#f8fafc"><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;color:#15803d;font-weight:bold">T</td></tr>
+                  <tr><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;color:#dc2626;font-weight:bold">F</td></tr>
+                  <tr style="background:#f8fafc"><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;color:#15803d;font-weight:bold">T</td></tr>
+                  <tr><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;color:#15803d;font-weight:bold">T</td></tr>
+                </tbody>
+              </table>
+              <div class="text-xs text-red-600 font-bold mt-1 text-center">False بس لو P=T و Q=F!</div>
+            </div>
+          </div>
+
+          <!-- Exercises from PDF -->
+          <div class="text-sm font-black text-slate-700">📝 تمارين مهمة من الـ PDF:</div>
+          <div class="grid md:grid-cols-2 gap-3">
+            <!-- Ex 3 -->
+            <div class="bg-slate-50 rounded-lg p-3">
+              <div class="font-bold text-xs mb-2">تمرين 3: <span class="mono">¬P ∧ Q</span></div>
+              <table style="width:100%;border-collapse:collapse;font-size:.75rem">
+                <thead><tr style="background:#334155;color:#fff"><th style="padding:4px">P</th><th style="padding:4px">Q</th><th style="padding:4px">¬P</th><th style="padding:4px">¬P∧Q</th></tr></thead>
+                <tbody>
+                  <tr style="background:#f8fafc"><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;color:#dc2626;font-weight:bold">F</td></tr>
+                  <tr><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;color:#dc2626;font-weight:bold">F</td></tr>
+                  <tr style="background:#f8fafc"><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;color:#15803d;font-weight:bold">T</td></tr>
+                  <tr><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;color:#dc2626;font-weight:bold">F</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Ex 7 Equivalence -->
+            <div class="bg-slate-50 rounded-lg p-3">
+              <div class="font-bold text-xs mb-2">تمرين 7: <span class="mono">P → Q ≡ ¬P ∨ Q</span> ✅ Equivalent</div>
+              <table style="width:100%;border-collapse:collapse;font-size:.75rem">
+                <thead><tr style="background:#334155;color:#fff"><th style="padding:4px">P</th><th style="padding:4px">Q</th><th style="padding:4px">P→Q</th><th style="padding:4px">¬P</th><th style="padding:4px">¬P∨Q</th></tr></thead>
+                <tbody>
+                  <tr style="background:#f8fafc"><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;font-weight:bold">T</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;font-weight:bold">T</td></tr>
+                  <tr><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;font-weight:bold;color:#dc2626">F</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;font-weight:bold;color:#dc2626">F</td></tr>
+                  <tr style="background:#f8fafc"><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;font-weight:bold">T</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;font-weight:bold">T</td></tr>
+                  <tr><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;font-weight:bold">T</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;font-weight:bold">T</td></tr>
+                </tbody>
+              </table>
+              <div class="text-xs text-green-700 font-bold mt-1">الـ columns متطابقة → Logically Equivalent ✅</div>
+            </div>
+            <!-- Ex 10 Tautology -->
+            <div class="bg-slate-50 rounded-lg p-3">
+              <div class="font-bold text-xs mb-2">تمرين 10: <span class="mono">(P→Q) ∨ (Q→P)</span> — Tautology?</div>
+              <table style="width:100%;border-collapse:collapse;font-size:.75rem">
+                <thead><tr style="background:#334155;color:#fff"><th style="padding:4px">P</th><th style="padding:4px">Q</th><th style="padding:4px">P→Q</th><th style="padding:4px">Q→P</th><th style="padding:4px">Final</th></tr></thead>
+                <tbody>
+                  <tr style="background:#f8fafc"><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;color:#15803d;font-weight:bold">T</td></tr>
+                  <tr><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;color:#dc2626">F</td><td style="padding:4px;text-align:center;color:#15803d">T</td><td style="padding:4px;text-align:center;color:#15803d;font-weight:bold">T</td></tr>
+                  <tr style="background:#f8fafc"><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">T</td><td style="padding:4px;text-align:center;color:#15803d">T</td><td style="padding:4px;text-align:center;color:#dc2626">F</td><td style="padding:4px;text-align:center;color:#15803d;font-weight:bold">T</td></tr>
+                  <tr><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center">F</td><td style="padding:4px;text-align:center;color:#15803d">T</td><td style="padding:4px;text-align:center;color:#15803d">T</td><td style="padding:4px;text-align:center;color:#15803d;font-weight:bold">T</td></tr>
+                </tbody>
+              </table>
+              <div class="text-xs text-green-700 font-bold mt-1">دايماً True → ✅ Tautology</div>
+            </div>
+            <!-- Ex Logic Tracing -->
+            <div class="bg-amber-50 rounded-lg p-3 border border-amber-200">
+              <div class="font-bold text-xs mb-2 text-amber-800">Logic Tracing: <span class="mono">P=T, Q=F, R=T</span> → Evaluate <span class="mono">(P∧Q)→R</span></div>
+              <div class="text-xs space-y-1">
+                <div><span class="badge b-blue">Step 1</span> <span class="mono">P∧Q = T∧F = F</span></div>
+                <div><span class="badge b-green">Step 2</span> <span class="mono">F→R = F→T = T</span></div>
+                <div class="font-bold text-green-700">Final Answer: TRUE ✅</div>
+                <div class="text-slate-500 mt-1">لأن الـ implication بتكون False بس لو P=T و Q=F</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inference Rules -->
+    <div class="card mb-5 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('log4',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#7c3aed;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">4</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Inference Rules — 8 قواعد أساسية</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-purple">MCQ</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink:0"></i>
+      </div>
+      <div class="collapse-content" id="log4" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="zatoona-box">Inference Rules = بتستنتج معرفة جديدة من حقائق معروفة</div>
+          <div class="grid md:grid-cols-2 gap-3">
+            <div class="bg-blue-50 rounded-lg p-3 text-xs border border-blue-200">
+              <div class="font-black text-blue-700 mb-2">1. Modus Ponens</div>
+              <div class="mono bg-white rounded p-2 mb-2">P → Q, P ⇒ Q</div>
+              <div class="text-slate-600">لو اتمطر → الشارع مبلول<br>اتمطر → إذن الشارع مبلول ✅</div>
+            </div>
+            <div class="bg-red-50 rounded-lg p-3 text-xs border border-red-200">
+              <div class="font-black text-red-700 mb-2">2. Modus Tollens</div>
+              <div class="mono bg-white rounded p-2 mb-2">P → Q, ¬Q ⇒ ¬P</div>
+              <div class="text-slate-600">لو اتمطر → الشارع مبلول<br>الشارع مش مبلول → إذن ما اتمطرش</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 text-xs border border-green-200">
+              <div class="font-black text-green-700 mb-2">3. Hypothetical Syllogism</div>
+              <div class="mono bg-white rounded p-2 mb-2">P → Q, Q → R ⇒ P → R</div>
+              <div class="text-slate-600">سلسلة استنتاج — chain of implications</div>
+            </div>
+            <div class="bg-yellow-50 rounded-lg p-3 text-xs border border-yellow-200">
+              <div class="font-black text-yellow-700 mb-2">4. Disjunctive Syllogism</div>
+              <div class="mono bg-white rounded p-2 mb-2">P ∨ Q, ¬P ⇒ Q</div>
+              <div class="text-slate-600">لو P أو Q — وP مش صح → إذن Q</div>
+            </div>
+            <div class="bg-purple-50 rounded-lg p-3 text-xs border border-purple-200">
+              <div class="font-black text-purple-700 mb-2">5. Addition</div>
+              <div class="mono bg-white rounded p-2 mb-2">P ⇒ P ∨ Q</div>
+              <div class="text-slate-600">لو P صح → P أو أي حاجة تانية صح</div>
+            </div>
+            <div class="bg-slate-100 rounded-lg p-3 text-xs">
+              <div class="font-black text-slate-700 mb-2">6. Simplification</div>
+              <div class="mono bg-white rounded p-2 mb-2">P ∧ Q ⇒ P</div>
+              <div class="text-slate-600">لو الاتنين صح → كل واحد بيبقى صح</div>
+            </div>
+            <div class="bg-slate-100 rounded-lg p-3 text-xs">
+              <div class="font-black text-slate-700 mb-2">7. Conjunction</div>
+              <div class="mono bg-white rounded p-2 mb-2">P, Q ⇒ P ∧ Q</div>
+              <div class="text-slate-600">لو P صح وQ صح → (P ∧ Q) صح</div>
+            </div>
+            <div class="bg-orange-50 rounded-lg p-3 text-xs border border-orange-200">
+              <div class="font-black text-orange-700 mb-2">8. Resolution ⭐</div>
+              <div class="mono bg-white rounded p-2 mb-2">(P ∨ Q), (¬P ∨ R) ⇒ (Q ∨ R)</div>
+              <div class="text-slate-600">مهم جداً في الـ automated reasoning وإثبات الـ theorems</div>
+            </div>
+          </div>
+
+          <!-- Pattern hints for inference rules -->
+          <div class="bg-amber-50 border border-amber-200 rounded p-3 text-xs">
+            <div class="font-black text-amber-800 mb-2">⚡ Pattern Recognition — Inference Rules:</div>
+            <div class="grid md:grid-cols-2 gap-1">
+              <div class="hint-row"><span class="hint-if">P→Q, P</span><span class="hint-arrow">→</span><span class="hint-then">Modus Ponens → Q</span></div>
+              <div class="hint-row"><span class="hint-if">P→Q, ¬Q</span><span class="hint-arrow">→</span><span class="hint-then">Modus Tollens → ¬P</span></div>
+              <div class="hint-row"><span class="hint-if">P→Q, Q→R</span><span class="hint-arrow">→</span><span class="hint-then">Hyp. Syllogism → P→R</span></div>
+              <div class="hint-row"><span class="hint-if">P∨Q, ¬P</span><span class="hint-arrow">→</span><span class="hint-then">Disj. Syllogism → Q</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logic Tracing Problems from PDF -->
+    <div class="card mb-5 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('log5',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#7c3aed;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">5</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Logic Tracing Problems من الـ PDF — أهم 5 مسائل</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink:0"></i>
+      </div>
+      <div class="collapse-content" id="log5" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-4">
+
+          <!-- Problem 3 Entailment -->
+          <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+            <div class="font-black text-blue-700 mb-2 text-sm">🔷 Problem 3: Entailment Verification</div>
+            <div class="mono text-xs bg-white rounded p-2 mb-2">(P→Q), (Q→R) ⊨ (P→R)</div>
+            <div class="text-xs space-y-1 text-slate-700">
+              <div><span class="badge b-blue">Step 1</span> P→Q ≡ ¬P∨Q | Q→R ≡ ¬Q∨R</div>
+              <div><span class="badge b-blue">Step 2</span> Apply Resolution on Q: ¬P∨Q + ¬Q∨R → ¬P∨R</div>
+              <div><span class="badge b-green">Conclusion</span> ¬P∨R ≡ P→R ✅ Entailment holds</div>
+            </div>
+          </div>
+
+          <!-- Problem 5 De Morgan -->
+          <div class="bg-red-50 rounded-lg p-4 border border-red-200">
+            <div class="font-black text-red-700 mb-2 text-sm">🔴 Problem 5: Multi-Level Negation (De Morgan's Law)</div>
+            <div class="mono text-xs bg-white rounded p-2 mb-2">¬[(P→Q) ∧ (Q→R)]</div>
+            <div class="text-xs space-y-1 text-slate-700">
+              <div><span class="badge b-red">Step 1</span> Expand: ¬[(¬P∨Q) ∧ (¬Q∨R)]</div>
+              <div><span class="badge b-red">Step 2</span> De Morgan: ¬(A∧B) ≡ ¬A∨¬B</div>
+              <div><span class="badge b-red">Step 3</span> = ¬(¬P∨Q) ∨ ¬(¬Q∨R)</div>
+              <div><span class="badge b-red">Step 4</span> Simplify: (P∧¬Q) ∨ (Q∧¬R)</div>
+              <div class="font-bold text-red-700"><span class="badge b-red">Final</span> <span class="mono">(P∧¬Q) ∨ (Q∧¬R)</span></div>
+            </div>
+          </div>
+
+          <!-- Problem 7 Biconditional -->
+          <div class="bg-purple-50 rounded-lg p-4 border border-purple-200">
+            <div class="font-black text-purple-700 mb-2 text-sm">🟣 Problem 7: Implication Trap</div>
+            <div class="mono text-xs bg-white rounded p-2 mb-2">(P→Q) ∧ (Q→P) = ?</div>
+            <div class="text-xs space-y-1 text-slate-700">
+              <div><span class="badge b-purple">Step 1</span> Expand: (¬P∨Q) ∧ (¬Q∨P)</div>
+              <div><span class="badge b-purple">Step 2</span> Recognize pattern</div>
+              <div class="font-bold text-purple-700"><span class="badge b-purple">Final</span> هذا يساوي <span class="mono">P ↔ Q</span> (Biconditional)</div>
+            </div>
+          </div>
+
+          <!-- Problem 9 Resolution -->
+          <div class="bg-green-50 rounded-lg p-4 border border-green-200">
+            <div class="font-black text-green-700 mb-2 text-sm">🟢 Problem 9: Resolution-Based Proof</div>
+            <div class="mono text-xs bg-white rounded p-2 mb-2">(P∨Q), (¬P∨R), (¬Q∨R) ⊨ R</div>
+            <div class="text-xs space-y-1 text-slate-700">
+              <div><span class="badge b-green">Step 1</span> Resolve (P∨Q) + (¬P∨R) → (Q∨R)</div>
+              <div><span class="badge b-green">Step 2</span> Resolve (Q∨R) + (¬Q∨R) → R∨R = R</div>
+              <div class="font-bold text-green-700"><span class="badge b-green">Proven</span> R ✅ باستخدام Resolution</div>
+            </div>
+          </div>
+
+          <!-- Problem 10 Key Problem -->
+          <div class="bg-amber-50 rounded-lg p-4 border-2 border-amber-400">
+            <div class="font-black text-amber-800 mb-2 text-sm">⭐ Problem 10 — المسألة الأهم من الـ PDF (ص٥٠)</div>
+            <div class="mono text-xs bg-white rounded p-2 mb-2">[(P→Q) ∧ (R→S) ∧ (P∨R)] → (Q∨S)</div>
+            <div class="text-xs space-y-2 text-slate-700">
+              <div><span class="badge b-yellow">Structure</span> Antecedent: (P→Q) ∧ (R→S) ∧ (P∨R) | Consequent: Q∨S</div>
+              <div><span class="badge b-yellow">Step 1</span> Expand: (¬P∨Q) ∧ (¬R∨S) ∧ (P∨R)</div>
+              <div><span class="badge b-yellow">Step 2</span> Case Analysis:</div>
+              <div class="mr-4">• لو P=T → من (P→Q): Q=T → (Q∨S)=T ✅</div>
+              <div class="mr-4">• لو R=T → من (R→S): S=T → (Q∨S)=T ✅</div>
+              <div class="mr-4">• لو P=F و R=F → (P∨R)=F → الـ antecedent=F → الـ implication=T ✅</div>
+              <div class="font-black text-amber-800 text-center mt-2 bg-amber-100 rounded p-2">🎯 في كل الحالات = TRUE → TAUTOLOGY ✅</div>
+            </div>
+          </div>
+
+          <!-- De Morgan Laws Summary -->
+          <div class="bg-slate-100 rounded p-3 text-xs">
+            <div class="font-black text-slate-700 mb-2">📌 De Morgan's Laws — لازم تحفظهم:</div>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="mono bg-white rounded p-2">¬(A ∧ B) ≡ ¬A ∨ ¬B</div>
+              <div class="mono bg-white rounded p-2">¬(A ∨ B) ≡ ¬A ∧ ¬B</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOL: First-Order Logic -->
+    <div class="card mb-5 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('log6',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">6</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">First-Order Logic (FOL) — المحتوى كامل</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">FOL</span><span class="badge b-purple">MCQ</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink:0"></i>
+      </div>
+      <div class="collapse-content" id="log6" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-4">
+
+          <div class="zatoona-box">FOL = Predicate Logic — بتتكلم عن objects وعلاقاتها، مش بس propositions زي الـ Propositional Logic</div>
+
+          <!-- Why FOL? -->
+          <div class="bg-red-50 rounded-lg p-3 text-xs border border-red-200">
+            <div class="font-black text-red-700 mb-2">❌ ليه Propositional Logic مش كافية؟</div>
+            <div class="text-slate-700 mb-2">مثلاً: "كل الناس فانية" — في Propositional Logic محتاج تكتب:</div>
+            <div class="mono bg-white rounded p-2 mb-1">P₁: Socrates is mortal<br>P₂: Plato is mortal<br>P₃: Aristotle is mortal...</div>
+            <div class="text-red-700 font-bold">→ Inefficient + Not scalable + مفيش abstraction!</div>
+            <div class="text-green-700 font-bold mt-2">✅ FOL بتعبر عنها بجملة واحدة: ∀x(Human(x) → Mortal(x))</div>
+          </div>
+
+          <!-- FOL Elements -->
+          <div class="text-xs font-black text-slate-700 mb-1">🧱 عناصر FOL:</div>
+          <div class="grid md:grid-cols-2 gap-3">
+            <div class="bg-blue-50 rounded-lg p-3 text-xs border border-blue-200">
+              <div class="font-black text-blue-700 mb-1">Predicate — خاصية أو علاقة</div>
+              <div class="mono bg-white rounded p-2">Human(x) → x is human<br>Loves(x,y) → x loves y<br>Greater(x,y) → x &gt; y</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 text-xs border border-green-200">
+              <div class="font-black text-green-700 mb-1">Constants — objects محددة</div>
+              <div class="mono bg-white rounded p-2">a: Socrates<br>b: Plato<br>Human(Socrates) ✅</div>
+            </div>
+            <div class="bg-purple-50 rounded-lg p-3 text-xs border border-purple-200">
+              <div class="font-black text-purple-700 mb-1">Variables — unspecified objects</div>
+              <div class="mono bg-white rounded p-2">x, y, z<br>Human(x) — x غير محدد</div>
+            </div>
+            <div class="bg-amber-50 rounded-lg p-3 text-xs border border-amber-200">
+              <div class="font-black text-amber-700 mb-1">Functions — بتعمل map من object لـ object</div>
+              <div class="mono bg-white rounded p-2">Father(x) → father of x<br>Age(Socrates) = 30</div>
+            </div>
+          </div>
+
+          <!-- Quantifiers -->
+          <div class="text-xs font-black text-slate-700 mb-1">🔢 Quantifiers:</div>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="bg-blue-50 rounded-lg p-3 text-xs border border-blue-200">
+              <div class="font-black text-blue-700 mb-1">∀ Universal — "for all"</div>
+              <div class="mono bg-white rounded p-2 mb-1">∀x(Human(x) → Mortal(x))</div>
+              <div class="text-slate-600">كل الناس فانية</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 text-xs border border-green-200">
+              <div class="font-black text-green-700 mb-1">∃ Existential — "there exists"</div>
+              <div class="mono bg-white rounded p-2 mb-1">∃x Human(x)</div>
+              <div class="text-slate-600">في على الأقل إنسان واحد</div>
+            </div>
+          </div>
+
+          <!-- Quantifier Order Warning -->
+          <div class="bg-red-50 border-2 border-red-400 rounded p-3 text-xs">
+            <div class="font-black text-red-700 mb-2">⚠️ تركة كبيرة — ترتيب الـ Quantifiers مهم جداً!</div>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="bg-white rounded p-2">
+                <div class="font-bold text-blue-700 mb-1">∀x ∃y Loves(x,y)</div>
+                <div class="text-slate-600">كل شخص بيحب حد ما</div>
+                <div class="text-green-700 font-bold">(Everyone loves someone)</div>
+              </div>
+              <div class="bg-white rounded p-2">
+                <div class="font-bold text-red-700 mb-1">∃x ∀y Loves(x,y)</div>
+                <div class="text-slate-600">في شخص بيحب الكل</div>
+                <div class="text-red-700 font-bold">(Someone loves everyone)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Negation of Quantifiers -->
+          <div class="bg-purple-50 rounded-lg p-3 text-xs border border-purple-200">
+            <div class="font-black text-purple-700 mb-2">🔄 Negation of Quantifiers:</div>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="mono bg-white rounded p-2 text-center">¬[∀x P(x)] ≡ ∃x ¬P(x)</div>
+              <div class="mono bg-white rounded p-2 text-center">¬[∃x P(x)] ≡ ∀x ¬P(x)</div>
+            </div>
+            <div class="text-slate-600 mt-2">مثال: ¬[كل الطيور تطير] = في طيرة ما بتطيرش ✅</div>
+          </div>
+
+          <!-- Translation Table -->
+          <div class="text-xs font-black text-slate-700 mb-1">📝 Translation Patterns — English → FOL:</div>
+          <div class="overflow-x-auto">
+            <table style="width:100%;font-size:.78rem;border-collapse:collapse;border-radius:8px;overflow:hidden">
+              <thead><tr style="background:#1e40af;color:#fff"><th style="padding:8px 10px;text-align:right">English</th><th style="padding:8px 10px">FOL Pattern</th><th style="padding:8px 10px">مثال</th></tr></thead>
+              <tbody>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">All A are B</td><td style="padding:7px 10px" class="mono">∀x(A(x) → B(x))</td><td style="padding:7px 10px">All cats are animals</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:700">Some A are B</td><td style="padding:7px 10px" class="mono">∃x(A(x) ∧ B(x))</td><td style="padding:7px 10px">Some students are smart</td></tr>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Not all A are B</td><td style="padding:7px 10px" class="mono">∃x(A(x) ∧ ¬B(x))</td><td style="padding:7px 10px">Not all birds can fly</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:700">If...then (conditional)</td><td style="padding:7px 10px" class="mono">P → Q</td><td style="padding:7px 10px">If raining → wet road</td></tr>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Everyone has something</td><td style="padding:7px 10px" class="mono">∀x ∃y R(x,y)</td><td style="padding:7px 10px">Every student has teacher</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:700">Someone relates to all</td><td style="padding:7px 10px" class="mono">∃x ∀y R(x,y)</td><td style="padding:7px 10px">Someone loves everyone</td></tr>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Exactly one</td><td style="padding:7px 10px" class="mono">∃x P(x) ∧ ∀y(P(y)→y=x)</td><td style="padding:7px 10px">There is exactly one president</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Key Examples -->
+          <div class="text-xs font-black text-slate-700 mb-1">✏️ أمثلة مهمة من الـ Exercises:</div>
+          <div class="grid md:grid-cols-2 gap-3">
+            <div class="bg-slate-50 rounded-lg p-3 text-xs">
+              <div class="font-bold mb-1">Every student has a teacher:</div>
+              <div class="mono bg-white rounded p-2">∀x(Student(x) →<br> ∃y(Teacher(y) ∧ Teaches(y,x)))</div>
+            </div>
+            <div class="bg-slate-50 rounded-lg p-3 text-xs">
+              <div class="font-bold mb-1">No one can be their own parent:</div>
+              <div class="mono bg-white rounded p-2">∀x ¬Parent(x,x)</div>
+            </div>
+            <div class="bg-slate-50 rounded-lg p-3 text-xs">
+              <div class="font-bold mb-1">A person is adult iff age ≥ 18:</div>
+              <div class="mono bg-white rounded p-2">∀x(Adult(x) ↔ Age(x) ≥ 18)</div>
+            </div>
+            <div class="bg-slate-50 rounded-lg p-3 text-xs">
+              <div class="font-bold mb-1">If two friends → they know each other:</div>
+              <div class="mono bg-white rounded p-2">∀x∀y(Friends(x,y) →<br> (Knows(x,y) ∧ Knows(y,x)))</div>
+            </div>
+          </div>
+
+          <!-- Tips -->
+          <div class="bg-amber-50 border border-amber-200 rounded p-3 text-xs">
+            <div class="font-black text-amber-800 mb-2">⚡ كلمات مفتاحية:</div>
+            <div class="grid md:grid-cols-3 gap-1">
+              <div class="hint-row"><span class="hint-if">All / Every</span><span class="hint-arrow">→</span><span class="hint-then">∀ + Implication →</span></div>
+              <div class="hint-row"><span class="hint-if">Some / There exists</span><span class="hint-arrow">→</span><span class="hint-then">∃ + Conjunction ∧</span></div>
+              <div class="hint-row"><span class="hint-if">If...then</span><span class="hint-arrow">→</span><span class="hint-then">→ implication</span></div>
+              <div class="hint-row"><span class="hint-if">If and only if</span><span class="hint-arrow">→</span><span class="hint-then">↔ biconditional</span></div>
+              <div class="hint-row"><span class="hint-if">No one / Never</span><span class="hint-arrow">→</span><span class="hint-then">∀x ¬P(x)</span></div>
+              <div class="hint-row"><span class="hint-if">Not all</span><span class="hint-arrow">→</span><span class="hint-then">∃x ¬P(x)</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- CNF Conversion -->
+    <div class="card mb-5 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('log7',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">7</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">CNF — Conjunctive Normal Form + Skolemization</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">FOL</span><span class="badge b-purple">MCQ</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink:0"></i>
+      </div>
+      <div class="collapse-content" id="log7" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-4">
+
+          <div class="zatoona-box">CNF = AND من بره، OR من جوه — (A∨B) ∧ (C∨D) ∧ (E)</div>
+
+          <!-- What is CNF -->
+          <div class="grid md:grid-cols-3 gap-3 text-xs">
+            <div class="bg-green-50 rounded-lg p-3 border border-green-200">
+              <div class="font-black text-green-700 mb-1">✅ CNF</div>
+              <div class="mono bg-white rounded p-2">(P∨Q) ∧ (¬R∨S)<br>(¬P∨Q∨R)</div>
+              <div class="text-slate-500 mt-1">AND of clauses, each clause is OR of literals</div>
+            </div>
+            <div class="bg-red-50 rounded-lg p-3 border border-red-200">
+              <div class="font-black text-red-700 mb-1">❌ Not CNF</div>
+              <div class="mono bg-white rounded p-2">P∨(Q∧R)<br>(P∧Q)∨R</div>
+              <div class="text-slate-500 mt-1">OR من بره AND من جوه — لازم تعكس!</div>
+            </div>
+            <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+              <div class="font-black text-blue-700 mb-1">Terminology</div>
+              <div class="text-slate-700 space-y-1">
+                <div><span class="kw-blue">Literal</span>: P أو ¬P</div>
+                <div><span class="kw-green">Clause</span>: OR of literals</div>
+                <div><span class="kw">CNF</span>: AND of clauses</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 Steps -->
+          <div class="text-xs font-black text-slate-700 mb-1">6 خطوات تحويل FOL إلى CNF:</div>
+          <div class="space-y-2 text-xs">
+            <div class="flex gap-3 items-start bg-slate-50 rounded p-2">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white font-black flex items-center justify-center text-xs">1</span>
+              <div><span class="font-black">Remove Implications</span> — <span class="mono">P→Q ≡ ¬P∨Q</span> | <span class="mono">P↔Q ≡ (¬P∨Q)∧(P∨¬Q)</span></div>
+            </div>
+            <div class="flex gap-3 items-start bg-slate-50 rounded p-2">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white font-black flex items-center justify-center text-xs">2</span>
+              <div><span class="font-black">Move Negation Inward</span> — De Morgan: <span class="mono">¬(A∧B) → ¬A∨¬B</span> | <span class="mono">¬(A∨B) → ¬A∧¬B</span> | <span class="mono">¬¬A → A</span></div>
+            </div>
+            <div class="flex gap-3 items-start bg-slate-50 rounded p-2">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white font-black flex items-center justify-center text-xs">3</span>
+              <div><span class="font-black">Standardize Variables</span> — كل متغير يبقى فريد، ما تكررش نفس الاسم</div>
+            </div>
+            <div class="flex gap-3 items-start bg-amber-50 rounded p-2 border border-amber-200">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-amber-500 text-white font-black flex items-center justify-center text-xs">4</span>
+              <div>
+                <span class="font-black text-amber-700">Skolemization</span> — شيل الـ ∃ بالاستبدال:
+                <div class="grid grid-cols-2 gap-2 mt-1">
+                  <div class="bg-white rounded p-2"><div class="font-bold mb-1">Case A: ∃ alone</div><div class="mono">∃x P(x) → P(a)</div><div class="text-slate-500">a = Skolem constant</div></div>
+                  <div class="bg-white rounded p-2"><div class="font-bold mb-1">Case B: ∃ depends on ∀</div><div class="mono">∀x∃y Loves(x,y) → Loves(x,f(x))</div><div class="text-slate-500">f(x) = Skolem function</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start bg-slate-50 rounded p-2">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white font-black flex items-center justify-center text-xs">5</span>
+              <div><span class="font-black">Drop Universal Quantifiers</span> — الـ ∀ بتتفترض automatically في CNF clauses</div>
+            </div>
+            <div class="flex gap-3 items-start bg-slate-50 rounded p-2">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-600 text-white font-black flex items-center justify-center text-xs">6</span>
+              <div><span class="font-black">Distribute OR over AND</span> — <span class="mono">P∨(Q∧R) → (P∨Q)∧(P∨R)</span></div>
+            </div>
+          </div>
+
+          <!-- Worked Examples -->
+          <div class="text-xs font-black text-slate-700 mb-1">✏️ أمثلة محلولة:</div>
+          <div class="space-y-3">
+            <div class="bg-blue-50 rounded-lg p-3 text-xs border border-blue-200">
+              <div class="font-black text-blue-700 mb-2">Example 1: ∀x(Human(x) → Mortal(x))</div>
+              <div class="space-y-1 text-slate-700">
+                <div><span class="badge b-blue">Step 1</span> Remove →: <span class="mono">∀x(¬Human(x) ∨ Mortal(x))</span></div>
+                <div><span class="badge b-blue">Step 2-4</span> No changes needed</div>
+                <div><span class="badge b-blue">Step 5</span> Drop ∀: <span class="mono font-bold text-blue-800">¬Human(x) ∨ Mortal(x)</span></div>
+              </div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 text-xs border border-green-200">
+              <div class="font-black text-green-700 mb-2">Example 2: ∀x(Man(x) ∧ Rich(x) → Happy(x))</div>
+              <div class="space-y-1 text-slate-700">
+                <div><span class="badge b-green">Step 1</span> Remove →: <span class="mono">∀x(¬(Man(x) ∧ Rich(x)) ∨ Happy(x))</span></div>
+                <div><span class="badge b-green">Step 2</span> De Morgan: <span class="mono">∀x(¬Man(x) ∨ ¬Rich(x) ∨ Happy(x))</span></div>
+                <div><span class="badge b-green">Step 5</span> Drop ∀: <span class="mono font-bold text-green-800">¬Man(x) ∨ ¬Rich(x) ∨ Happy(x)</span></div>
+              </div>
+            </div>
+            <div class="bg-amber-50 rounded-lg p-3 text-xs border border-amber-200">
+              <div class="font-black text-amber-700 mb-2">Example 3 (Skolem): ∀x(Student(x) → ∃y(Teacher(y) ∧ Teaches(y,x)))</div>
+              <div class="space-y-1 text-slate-700">
+                <div><span class="badge b-yellow">Step 1</span> Remove →: <span class="mono">∀x(¬Student(x) ∨ ∃y(Teacher(y) ∧ Teaches(y,x)))</span></div>
+                <div><span class="badge b-yellow">Step 4</span> Skolemize y depends on x: <span class="mono">y = f(x)</span></div>
+                <div><span class="badge b-yellow">Result</span> <span class="mono">∀x(¬Student(x) ∨ (Teacher(f(x)) ∧ Teaches(f(x),x)))</span></div>
+                <div><span class="badge b-yellow">Step 6</span> Distribute: <span class="mono font-bold text-amber-800">(¬Student(x) ∨ Teacher(f(x))) ∧ (¬Student(x) ∨ Teaches(f(x),x))</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Common Mistakes -->
+          <div class="bg-red-50 border border-red-200 rounded p-3 text-xs">
+            <div class="font-black text-red-700 mb-2">⚠️ أغلاط شائعة في CNF:</div>
+            <div class="space-y-2">
+              <div class="bg-white rounded p-2"><span class="kw-red">Mistake 1</span> نسيان إزالة الـ implication أولاً — لازم تشيل → قبل أي حاجة</div>
+              <div class="bg-white rounded p-2"><span class="kw-red">Mistake 2</span> Skolemization غلط: <span class="mono">∀x∃y P(x,y)</span> → الصح <span class="mono">P(x,f(x))</span> مش <span class="mono">P(x,a)</span></div>
+              <div class="bg-white rounded p-2"><span class="kw-red">Mistake 3</span> نسيان توزيع OR على AND في آخر خطوة</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Inference Mechanisms -->
+    <div class="card mb-5 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('log8',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">8</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Inference Mechanisms — أنواعها + Forward vs Backward</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-orange">Expert Systems</span><span class="badge b-purple">MCQ</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink:0"></i>
+      </div>
+      <div class="collapse-content" id="log8" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-4">
+
+          <div class="zatoona-box">Inference Mechanisms = محرك التفكير في الـ KBAI — بدونها الـ KB مجرد storage مش reasoning</div>
+
+          <!-- Definition -->
+          <div class="bg-slate-50 rounded-lg p-3 text-xs border border-slate-200">
+            <div class="font-black text-slate-700 mb-2">📖 تعريف:</div>
+            <div class="text-slate-700">الـ Inference Mechanisms هي الـ reasoning procedures اللي الـ KBAI systems بتستخدمها عشان تستنتج conclusions من الـ stored knowledge. هي "thinking engine" في الـ expert systems وكل الـ symbolic AI.</div>
+          </div>
+
+          <!-- Forward vs Backward Chaining -->
+          <div class="text-xs font-black text-slate-700 mb-1">⚡ Forward Chaining vs Backward Chaining:</div>
+          <div class="grid md:grid-cols-2 gap-3">
+            <div class="bg-blue-50 rounded-lg p-4 text-xs border-2 border-blue-300">
+              <div class="font-black text-blue-700 mb-2 text-sm">🔵 Forward Chaining</div>
+              <div class="mono bg-white rounded p-2 mb-2 text-center font-black">Data → Goal</div>
+              <div class="space-y-1 text-slate-700">
+                <div><span class="kw-blue">Start:</span> من الـ facts المتاحة</div>
+                <div><span class="kw-blue">Direction:</span> بيطبق rules للوصول لـ conclusions</div>
+                <div><span class="kw-blue">Use case:</span> لما عندك بيانات وعايز تكتشف conclusions</div>
+                <div class="mt-2 bg-white rounded p-2"><strong>مثال:</strong><br>Facts: "مريض عنده حرارة، كحة"<br>Rule: حرارة + كحة → انفلوانزا<br>Conclusion: مريض بالانفلوانزا ✅</div>
+              </div>
+              <div class="mt-2 text-green-700 font-black">يُعرف بـ: Data-Driven / Bottom-Up</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-4 text-xs border-2 border-green-300">
+              <div class="font-black text-green-700 mb-2 text-sm">🟢 Backward Chaining</div>
+              <div class="mono bg-white rounded p-2 mb-2 text-center font-black">Goal → Data</div>
+              <div class="space-y-1 text-slate-700">
+                <div><span class="kw-green">Start:</span> من الـ goal المطلوب</div>
+                <div><span class="kw-green">Direction:</span> بيرجع للوراء يثبت الشروط</div>
+                <div><span class="kw-green">Use case:</span> لما عندك هدف وعايز تثبته</div>
+                <div class="mt-2 bg-white rounded p-2"><strong>مثال:</strong><br>Goal: "هل المريض عنده انفلوانزا؟"<br>Rule: انفلوانزا ← حرارة + كحة<br>Check: هل عنده حرارة؟ هل عنده كحة؟</div>
+              </div>
+              <div class="mt-2 text-blue-700 font-black">يُعرف بـ: Goal-Driven / Top-Down</div>
+            </div>
+          </div>
+
+          <!-- Comparison Table -->
+          <div class="overflow-x-auto">
+            <table style="width:100%;font-size:.78rem;border-collapse:collapse;border-radius:8px;overflow:hidden">
+              <thead><tr style="background:#1e40af;color:#fff"><th style="padding:8px 12px">Feature</th><th style="padding:8px 12px">Forward Chaining</th><th style="padding:8px 12px">Backward Chaining</th></tr></thead>
+              <tbody>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Starting Point</td><td style="padding:7px 10px;color:#1e40af">Facts / Data</td><td style="padding:7px 10px;color:#15803d">Goal / Hypothesis</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:700">Direction</td><td style="padding:7px 10px;color:#1e40af">Bottom-Up</td><td style="padding:7px 10px;color:#15803d">Top-Down</td></tr>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Driven by</td><td style="padding:7px 10px;color:#1e40af">Data-Driven</td><td style="padding:7px 10px;color:#15803d">Goal-Driven</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:700">Best for</td><td style="padding:7px 10px;color:#1e40af">Diagnosis, Monitoring</td><td style="padding:7px 10px;color:#15803d">Planning, Proving goals</td></tr>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Example system</td><td style="padding:7px 10px;color:#1e40af">Production Rules (CLIPS)</td><td style="padding:7px 10px;color:#15803d">Prolog</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Types of Inference -->
+          <div class="text-xs font-black text-slate-700 mb-1">🔍 أنواع الـ Inference:</div>
+          <div class="grid md:grid-cols-3 gap-3 text-xs">
+            <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+              <div class="font-black text-blue-700 mb-1">Deduction (استنتاج)</div>
+              <div class="text-slate-600 mb-2">من عام لـ خاص — Certain conclusion</div>
+              <div class="mono bg-white rounded p-2">All men are mortal<br>Socrates is a man<br>→ Socrates is mortal</div>
+              <div class="text-green-700 font-bold mt-1">✅ 100% certain</div>
+            </div>
+            <div class="bg-amber-50 rounded-lg p-3 border border-amber-200">
+              <div class="font-black text-amber-700 mb-1">Induction (استقراء)</div>
+              <div class="text-slate-600 mb-2">من خاص لـ عام — Probable conclusion</div>
+              <div class="mono bg-white rounded p-2">Socrates is mortal<br>Plato is mortal<br>→ All men are mortal?</div>
+              <div class="text-amber-700 font-bold mt-1">⚠️ Probable, not certain</div>
+            </div>
+            <div class="bg-purple-50 rounded-lg p-3 border border-purple-200">
+              <div class="font-black text-purple-700 mb-1">Abduction (استحسان)</div>
+              <div class="text-slate-600 mb-2">Best explanation for observed facts</div>
+              <div class="mono bg-white rounded p-2">Road is wet<br>If rain → road wet<br>→ It probably rained</div>
+              <div class="text-purple-700 font-bold mt-1">🔍 Best guess</div>
+            </div>
+          </div>
+
+          <!-- Modus Ponens in context -->
+          <div class="bg-amber-50 border border-amber-200 rounded p-3 text-xs">
+            <div class="font-black text-amber-800 mb-2">⚡ Pattern Recognition — في MCQ شوف الـ Pattern:</div>
+            <div class="grid md:grid-cols-2 gap-1">
+              <div class="hint-row"><span class="hint-if">Data → بدأ من facts</span><span class="hint-arrow">→</span><span class="hint-then">Forward Chaining</span></div>
+              <div class="hint-row"><span class="hint-if">Goal → بيثبت hypothesis</span><span class="hint-arrow">→</span><span class="hint-then">Backward Chaining</span></div>
+              <div class="hint-row"><span class="hint-if">عام → خاص (certain)</span><span class="hint-arrow">→</span><span class="hint-then">Deduction</span></div>
+              <div class="hint-row"><span class="hint-if">خاص → عام (probable)</span><span class="hint-arrow">→</span><span class="hint-then">Induction</span></div>
+              <div class="hint-row"><span class="hint-if">MYCIN / Expert Diagnosis</span><span class="hint-arrow">→</span><span class="hint-then">Backward Chaining</span></div>
+              <div class="hint-row"><span class="hint-if">Production Rules</span><span class="hint-arrow">→</span><span class="hint-then">Forward Chaining</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RULE-BASED KR -->
+<section id="rules" class="py-10 px-4">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-code-branch text-blue-700 ml-2"></i>Rule-Based Knowledge Representation <span class="badge b-red mr-2">🔥 مهم جداً</span></h2>
+
+    <!-- Definition -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('rule1',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Production Rules — IF–THEN + مكونات النظام</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">Essay</span><span class="badge b-purple">MCQ</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="rule1" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="zatoona-box">Rule-Based KR = الطريقة اللي بتمثل فيها المعرفة كـ IF–THEN rules — أبسط وأوضح طريقة في الـ KBAI</div>
+          <div class="bg-slate-50 rounded-lg p-3 text-xs border border-slate-200">
+            <div class="font-black text-slate-700 mb-2">📖 Production Rule:</div>
+            <div class="mono bg-white rounded p-2 text-center font-black mb-2">IF &lt;condition&gt; THEN &lt;action / conclusion&gt;</div>
+            <div class="grid md:grid-cols-3 gap-2 text-xs">
+              <div class="bg-blue-50 rounded p-2"><span class="kw-blue">Medical:</span><br>IF fever AND cough THEN flu</div>
+              <div class="bg-green-50 rounded p-2"><span class="kw-green">Loan:</span><br>IF income_high AND credit_good THEN approve</div>
+              <div class="bg-amber-50 rounded p-2"><span class="kw">Smart Home:</span><br>IF motion AND night THEN lights_on</div>
+            </div>
+          </div>
+          <div class="text-xs font-black text-slate-700 mb-1">🏗️ مكونات الـ Rule-Based System:</div>
+          <div class="grid md:grid-cols-3 gap-3 text-xs">
+            <div class="bg-blue-50 rounded-lg p-3 border-2 border-blue-300">
+              <div class="font-black text-blue-700 mb-1">📚 Rule Base</div>
+              <div class="text-slate-600">مخزن الـ IF–THEN rules</div>
+              <div class="mono bg-white rounded p-2 mt-1">IF fever THEN infection<br>IF infection THEN test</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 border-2 border-green-300">
+              <div class="font-black text-green-700 mb-1">💾 Working Memory</div>
+              <div class="text-slate-600">الـ facts الحالية المعروفة</div>
+              <div class="mono bg-white rounded p-2 mt-1">fever = true<br>cough = true</div>
+            </div>
+            <div class="bg-amber-50 rounded-lg p-3 border-2 border-amber-300">
+              <div class="font-black text-amber-700 mb-1">⚙️ Inference Engine</div>
+              <div class="text-slate-600">بيطبق الـ rules على الـ facts</div>
+              <div class="mono bg-white rounded p-2 mt-1">Match → Fire → Add facts</div>
+            </div>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded p-3 text-xs">
+            <div class="font-black text-amber-800 mb-1">⚠️ Rule Base vs Knowledge Base:</div>
+            <div><span class="kw-blue">Knowledge Base</span> = أكبر — فيها facts + rules + frames + ontologies</div>
+            <div class="mt-1"><span class="kw-green">Rule Base</span> = جزء منها — بس الـ IF–THEN rules</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conflict Resolution -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('rule2',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Conflict Resolution — لما أكثر من Rule تنطبق</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-purple">MCQ</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="rule2" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="bg-slate-50 rounded p-3 text-xs border border-slate-200">
+            <div class="font-black mb-1">مثال — الـ 3 rules كلهم ممكن ينطبقوا:</div>
+            <div class="mono bg-white rounded p-2">Facts: fever + cough<br>R1: IF fever THEN infection<br>R2: IF cough THEN cold<br>R3: IF fever AND cough THEN flu</div>
+            <div class="text-orange-700 font-bold mt-1">→ الـ System يختار مين؟ → Conflict Resolution</div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-2 text-xs">
+            <div class="hint-row"><span class="hint-if">1. Specificity</span><span class="hint-arrow">→</span><span class="hint-then">أكثر conditions تفوز — R3 (fever+cough) قبل R1 (fever بس)</span></div>
+            <div class="hint-row"><span class="hint-if">2. Priority / Salience</span><span class="hint-arrow">→</span><span class="hint-then">كل rule ليها رقم أهمية — الأعلى يشتغل أول</span></div>
+            <div class="hint-row"><span class="hint-if">3. Recency</span><span class="hint-arrow">→</span><span class="hint-then">الـ rule اللي بتطابق أحدث facts</span></div>
+            <div class="hint-row"><span class="hint-if">4. Rule Order</span><span class="hint-arrow">→</span><span class="hint-then">أول rule في القائمة تشتغل</span></div>
+          </div>
+          <div class="bg-blue-50 rounded p-3 text-xs border border-blue-200">
+            <div class="font-black text-blue-800 mb-1">🔥 الأهم في الامتحان = Specificity:</div>
+            <div>دايماً الـ rule اللي عندها أكثر conditions (أكثر تخصص) بتتقدم — لأنها بتغطي الحالة أدق.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Advantages & Limitations -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('rule3',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Advantages vs Limitations — Rule-Based Systems</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">Essay</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="rule3" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3">
+          <div class="grid md:grid-cols-2 gap-4 text-xs">
+            <div class="bg-green-50 rounded-lg p-4 border-2 border-green-300">
+              <div class="font-black text-green-700 mb-2 text-sm">✅ Advantages</div>
+              <div class="space-y-1">
+                <div class="flex gap-2"><span class="kw-green flex-shrink-0">Easy to understand</span><span class="text-slate-600">بشري readable</span></div>
+                <div class="flex gap-2"><span class="kw-green flex-shrink-0">Modular</span><span class="text-slate-600">تضيف أو تحذف rule بسهولة</span></div>
+                <div class="flex gap-2"><span class="kw-green flex-shrink-0">Transparent</span><span class="text-slate-600">تقدر تشرح القرار</span></div>
+                <div class="flex gap-2"><span class="kw-green flex-shrink-0">Expert knowledge</span><span class="text-slate-600">بيحاكي تفكير الخبير</span></div>
+              </div>
+            </div>
+            <div class="bg-red-50 rounded-lg p-4 border-2 border-red-300">
+              <div class="font-black text-red-700 mb-2 text-sm">❌ Limitations</div>
+              <div class="space-y-1">
+                <div class="flex gap-2"><span class="kw-red flex-shrink-0">Rule explosion</span><span class="text-slate-600">نظام كبير = آلاف الـ rules</span></div>
+                <div class="flex gap-2"><span class="kw-red flex-shrink-0">Uncertainty</span><span class="text-slate-600">صعب يتعامل مع معلومات ناقصة</span></div>
+                <div class="flex gap-2"><span class="kw-red flex-shrink-0">No auto-learning</span><span class="text-slate-600">مبيتعلمش لوحده من data</span></div>
+                <div class="flex gap-2"><span class="kw-red flex-shrink-0">Maintenance</span><span class="text-slate-600">صعب تحديث آلاف الـ rules</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERT SYSTEMS -->
+<section id="expertsystems" class="py-10 px-4 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-robot text-blue-700 ml-2"></i>Expert Systems <span class="badge b-red mr-2">🔥 مهم جداً</span></h2>
+
+    <!-- Definition + Components -->
+    <div class="card essay-card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('es1',this)">
+        <div class="essay-num hot">★</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">تعريف + مكونات Expert System</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">Essay</span><span class="badge b-purple">MCQ</span></div>
+          <div class="text-xs text-slate-400 mt-1">ممكن ييجي: \"What is an expert system?\" · \"Explain MYCIN\" · \"Components of ES\"</div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="es1" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="zatoona-box">Expert System = Knowledge of experts + Reasoning engine + Explanation capability — بيحل مشاكل في domain ضيق زي الطبيب أو المهندس</div>
+          <div class="text-xs font-black text-slate-700 mb-1">🏗️ المكونات الـ 6:</div>
+          <div class="grid md:grid-cols-2 gap-2 text-xs">
+            <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+              <div class="font-black text-blue-700 mb-1">1. Knowledge Base</div>
+              <div class="text-slate-600">Facts + rules + heuristics</div>
+              <div class="mono bg-white rounded p-1 mt-1">IF fever AND cough THEN flu</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 border border-green-200">
+              <div class="font-black text-green-700 mb-1">2. Inference Engine</div>
+              <div class="text-slate-600">يطبق الـ rules (Forward / Backward)</div>
+            </div>
+            <div class="bg-amber-50 rounded-lg p-3 border border-amber-200">
+              <div class="font-black text-amber-700 mb-1">3. Working Memory</div>
+              <div class="text-slate-600">الـ facts الحالية للحالة</div>
+              <div class="mono bg-white rounded p-1 mt-1">fever=true, age=45</div>
+            </div>
+            <div class="bg-purple-50 rounded-lg p-3 border border-purple-200">
+              <div class="font-black text-purple-700 mb-1">4. Explanation System</div>
+              <div class="text-slate-600">يشرح ليه وصل للقرار ده</div>
+              <div class="mono bg-white rounded p-1 mt-1">\"Flu because: fever+cough → R1\"</div>
+            </div>
+            <div class="bg-slate-50 rounded-lg p-3 border border-slate-200">
+              <div class="font-black text-slate-700 mb-1">5. User Interface</div>
+              <div class="text-slate-600">واجهة المستخدم</div>
+            </div>
+            <div class="bg-red-50 rounded-lg p-3 border border-red-200">
+              <div class="font-black text-red-700 mb-1">6. Knowledge Acquisition Module</div>
+              <div class="text-slate-600">بيساعد في إدخال المعرفة من الخبراء</div>
+            </div>
+          </div>
+          <div class="bg-blue-50 rounded p-3 text-xs border border-blue-200">
+            <div class="font-black text-blue-800 mb-1">🔥 MYCIN — المثال الأشهر:</div>
+            <div>نظام طبي لـ bacterial infections — 600 rule — بيشخص ويشرح القرار — أول Expert System ناجح تجارياً</div>
+            <div class="mt-1 font-bold">مثال Rule: IF fever AND WBC_high THEN bacterial_infection_likely</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Advantages & Limitations -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('es2',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Advantages vs Limitations + Expert System vs ML</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">Essay</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="es2" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="grid md:grid-cols-2 gap-4 text-xs">
+            <div class="bg-green-50 rounded-lg p-4 border-2 border-green-300">
+              <div class="font-black text-green-700 mb-2">✅ Advantages</div>
+              <div class="space-y-1 text-slate-700">
+                <div>✔ <span class="kw-green">24/7 Availability</span> — مش بيتعب</div>
+                <div>✔ <span class="kw-green">Consistency</span> — نفس القرار دايماً</div>
+                <div>✔ <span class="kw-green">Speed</span> — أسرع من البشر في التكرار</div>
+                <div>✔ <span class="kw-green">Preserve Expertise</span> — بيخلّد معرفة الخبراء</div>
+                <div>✔ <span class="kw-green">Training Tool</span> — بيعلّم الموظفين الجدد</div>
+              </div>
+            </div>
+            <div class="bg-red-50 rounded-lg p-4 border-2 border-red-300">
+              <div class="font-black text-red-700 mb-2">❌ Limitations</div>
+              <div class="space-y-1 text-slate-700">
+                <div>✘ <span class="kw-red">Narrow Scope</span> — بشتغل في domain بس</div>
+                <div>✘ <span class="kw-red">Knowledge Bottleneck</span> — صعب تستخرج tacit knowledge</div>
+                <div>✘ <span class="kw-red">Maintenance</span> — الـ rules بتتقادم</div>
+                <div>✘ <span class="kw-red">No Common Sense</span> — برره البرمجة</div>
+                <div>✘ <span class="kw-red">No Auto-Learning</span> — مبيتعلمش لوحده</div>
+              </div>
+            </div>
+          </div>
+          <!-- ES vs ML Table -->
+          <div class="overflow-x-auto">
+            <table style="width:100%;font-size:.78rem;border-collapse:collapse;border-radius:8px;overflow:hidden">
+              <thead><tr style="background:#1e40af;color:#fff"><th style="padding:8px 10px">Feature</th><th style="padding:8px 10px">Expert System</th><th style="padding:8px 10px">Machine Learning</th></tr></thead>
+              <tbody>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Knowledge Source</td><td style="padding:7px 10px;color:#1e40af">Human experts</td><td style="padding:7px 10px;color:#15803d">Data</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:700">Transparency</td><td style="padding:7px 10px;color:#1e40af">High — يشرح</td><td style="padding:7px 10px;color:#dc2626">Often low — black-box</td></tr>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Adaptation</td><td style="padding:7px 10px;color:#dc2626">Manual updates</td><td style="padding:7px 10px;color:#15803d">Learns patterns</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:700">Best For</td><td style="padding:7px 10px;color:#1e40af">Policies, diagnosis</td><td style="padding:7px 10px;color:#15803d">Prediction, patterns</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="bg-amber-50 rounded p-3 text-xs border border-amber-200">
+            <div class="font-black text-amber-800 mb-1">💡 Modern Hybrid Systems:</div>
+            <div>Fraud Detection = <span class="kw-blue">ML score</span> + <span class="kw-green">Business rules</span> — الاتنين مع بعض</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KNOWLEDGE ACQUISITION -->
+<section id="ka" class="py-10 px-4">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-magnet text-blue-700 ml-2"></i>Knowledge Acquisition <span class="badge b-red mr-2">🔥 مهم جداً</span></h2>
+
+    <!-- Definition -->
+    <div class="card essay-card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('ka1',this)">
+        <div class="essay-num">1</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">تعريف + مصادر المعرفة + دور الـ Knowledge Engineer</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">Essay</span><span class="badge b-purple">MCQ</span></div>
+          <div class="text-xs text-slate-400 mt-1">ممكن ييجي: \"What is KA?\" · \"Role of knowledge engineer\" · \"Sources of knowledge\"</div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="ka1" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="zatoona-box">KA = عملية استخراج المعرفة من الخبراء والمصادر وتحويلها لـ rules/facts/ontologies يستخدمها الـ AI — أصعب مرحلة في بناء الـ KBAI</div>
+          <div class="grid md:grid-cols-2 gap-3 text-xs">
+            <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+              <div class="font-black text-blue-700 mb-2">📡 مصادر المعرفة:</div>
+              <div class="space-y-1 text-slate-700">
+                <div>👨‍⚕️ <span class="kw-blue">Human Experts</span> — أطباء، مهندسين، محامين</div>
+                <div>📄 <span class="kw-blue">Documents</span> — manuals, policies, textbooks</div>
+                <div>🗄️ <span class="kw-blue">Databases</span> — historical data reveals patterns</div>
+                <div>📡 <span class="kw-blue">Sensors / IoT</span> — temperature, pressure</div>
+                <div>🔄 <span class="kw-blue">Existing Systems</span> — legacy software logic</div>
+              </div>
+            </div>
+            <div class="bg-amber-50 rounded-lg p-3 border border-amber-200">
+              <div class="font-black text-amber-700 mb-2">🧑‍💼 دور الـ Knowledge Engineer:</div>
+              <div class="space-y-1 text-slate-700">
+                <div>✔ بيعمل interviews مع الخبراء</div>
+                <div>✔ بيستخرج طرق الـ reasoning</div>
+                <div>✔ بيحوّل المعرفة لـ rules/models</div>
+                <div>✔ بيختبر سلوك النظام</div>
+                <div>✔ بيعمل update للـ knowledge base</div>
+              </div>
+              <div class="bg-white rounded p-2 mt-2 text-xs font-bold text-amber-800">الـ Knowledge Engineer = الجسر بين الخبير و الـ AI system</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Elicitation Techniques -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('ka2',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Knowledge Elicitation Techniques — 6 طرق</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">Essay</span></div>
+          <div class="text-xs text-slate-400 mt-1">ممكن ييجي: \"Compare interviews vs observation\" · \"Elicitation techniques\"</div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="ka2" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3">
+          <div class="grid md:grid-cols-2 gap-3 text-xs">
+            <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+              <div class="font-black text-blue-700 mb-1">1. Interviews <span class="badge b-blue mr-1">الأكثر شيوعاً</span></div>
+              <div class="text-slate-600 mb-1">أسئلة مباشرة للخبير — structured أو unstructured</div>
+              <div class="text-green-700">✔ Rich detail, Direct</div>
+              <div class="text-red-700">✘ Time-consuming, Tacit knowledge يُنسى</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 border border-green-200">
+              <div class="font-black text-green-700 mb-1">2. Observation</div>
+              <div class="text-slate-600 mb-1">بتشوف الخبير وهو بيشتغل — بتلاحظ الـ sequence</div>
+              <div class="mono bg-white rounded p-1 text-xs">Check power → Listen → Test motor</div>
+            </div>
+            <div class="bg-purple-50 rounded-lg p-3 border border-purple-200">
+              <div class="font-black text-purple-700 mb-1">3. Think-Aloud Protocol</div>
+              <div class="text-slate-600">الخبير بيشرح تفكيره وهو بيشتغل</div>
+              <div class="mono bg-white rounded p-1 text-xs mt-1">\"I see shadow → I suspect infection\"</div>
+            </div>
+            <div class="bg-amber-50 rounded-lg p-3 border border-amber-200">
+              <div class="font-black text-amber-700 mb-1">4. Questionnaires</div>
+              <div class="text-slate-600">مفيدة لما في خبراء كتير — survey</div>
+              <div class="mono bg-white rounded p-1 text-xs mt-1">Survey 50 teachers about risk factors</div>
+            </div>
+            <div class="bg-slate-50 rounded-lg p-3 border border-slate-200">
+              <div class="font-black text-slate-700 mb-1">5. Document Analysis</div>
+              <div class="text-slate-600">دراسة manuals, logs, policies</div>
+            </div>
+            <div class="bg-red-50 rounded-lg p-3 border border-red-200">
+              <div class="font-black text-red-700 mb-1">6. Machine Learning from Data</div>
+              <div class="text-slate-600">الـ system بيتعلم لوحده من data</div>
+              <div class="mono bg-white rounded p-1 text-xs mt-1">Train on 1000s fraud cases</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Challenges + Validation -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('ka3',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Challenges + Validation of Knowledge</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">Essay</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="ka3" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="grid md:grid-cols-2 gap-4 text-xs">
+            <div>
+              <div class="font-black text-red-700 mb-2">⚠️ التحديات الـ 7:</div>
+              <div class="space-y-1">
+                <div class="hint-row"><span class="hint-if">Tacit Knowledge</span><span class="hint-arrow">→</span><span class="hint-then">الخبير بيعرف بس مش عارف يشرح</span></div>
+                <div class="hint-row"><span class="hint-if">Knowledge Bottleneck</span><span class="hint-arrow">→</span><span class="hint-then">الخبراء مشغولين وغاليين</span></div>
+                <div class="hint-row"><span class="hint-if">Changing Knowledge</span><span class="hint-arrow">→</span><span class="hint-then">القوانين الطبية والقانونية بتتغير</span></div>
+                <div class="hint-row"><span class="hint-if">Contradictory Experts</span><span class="hint-arrow">→</span><span class="hint-then">Doctor A قال X، Doctor B قال Y</span></div>
+                <div class="hint-row"><span class="hint-if">Incomplete Knowledge</span><span class="hint-arrow">→</span><span class="hint-then">الخبير بينسى الحالات النادرة</span></div>
+                <div class="hint-row"><span class="hint-if">Complexity</span><span class="hint-arrow">→</span><span class="hint-then">domain كبير = آلاف rules</span></div>
+                <div class="hint-row"><span class="hint-if">Bias</span><span class="hint-arrow">→</span><span class="hint-then">حكم الخبير ممكن يكون متحيز</span></div>
+              </div>
+            </div>
+            <div>
+              <div class="font-black text-green-700 mb-2">✅ Validation Methods:</div>
+              <div class="space-y-2">
+                <div class="bg-green-50 rounded p-2 border border-green-200"><span class="kw-green">Expert Review</span> — الخبير يراجع الـ rules</div>
+                <div class="bg-blue-50 rounded p-2 border border-blue-200"><span class="kw-blue">Test Cases</span> — input حالة حقيقية وقارن النتيجة</div>
+                <div class="bg-amber-50 rounded p-2 border border-amber-200"><span class="kw">Consistency Checking</span> — كشف التناقضات في الـ rules</div>
+                <div class="bg-purple-50 rounded p-2 border border-purple-200"><span class="kw-purple">Coverage Testing</span> — تأكد إن كل الحالات المهمة مغطاة</div>
+                <div class="bg-red-50 rounded p-2 border border-red-200"><span class="kw-red">Performance Metrics</span> — Accuracy, Precision, Recall</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded p-3 text-xs">
+            <div class="font-black text-amber-800 mb-1">⚡ Validation Example — Loan Rules:</div>
+            <div class="mono bg-white rounded p-2">R1: IF income_high AND credit_good THEN approve<br>R2: IF debt_high THEN reject<br>Test Case: income_high + credit_good + debt_high → CONFLICT! → Need priority or redesign</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KNOWLEDGE ENGINEERING PROCESS -->
+<section id="ke" class="py-10 px-4 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-gears text-blue-700 ml-2"></i>Knowledge Engineering Process <span class="badge b-red mr-2">🔥 مهم جداً</span></h2>
+
+    <!-- 8 Stages -->
+    <div class="card essay-card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('ke1',this)">
+        <div class="essay-num hot">★</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">الـ 8 Stages + Human-in-the-Loop</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">Essay</span><span class="badge b-purple">MCQ</span></div>
+          <div class="text-xs text-slate-400 mt-1">ممكن ييجي: \"Stages of KE\" · \"What is human-in-the-loop?\"</div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="ke1" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="zatoona-box">KE Process = الطريقة المنظمة لبناء KBAI systems — مش بس برمجة rules، ده discipline كامل من الاستخراج للتحقق للصيانة</div>
+          <div class="grid md:grid-cols-2 gap-2 text-xs">
+            <div class="bg-blue-50 rounded-lg p-3 border-2 border-blue-300">
+              <div class="font-black text-blue-800 mb-2">📋 الـ 8 Stages:</div>
+              <div class="space-y-1">
+                <div class="flex gap-2"><span class="kw-blue flex-shrink-0">1. Problem ID</span><span>حدد الـ domain والهدف والمستخدمين</span></div>
+                <div class="flex gap-2"><span class="kw-blue flex-shrink-0">2. KA</span><span>اجمع المعرفة من الخبراء والمصادر</span></div>
+                <div class="flex gap-2"><span class="kw-blue flex-shrink-0">3. Conceptualization</span><span>نظّم المعرفة في concepts وrelationships</span></div>
+                <div class="flex gap-2"><span class="kw-blue flex-shrink-0">4. Formalization</span><span>حوّلها لـ rules/ontologies/frames</span></div>
+                <div class="flex gap-2"><span class="kw-blue flex-shrink-0">5. Implementation</span><span>ابن الـ UI والـ inference engine</span></div>
+                <div class="flex gap-2"><span class="kw-blue flex-shrink-0">6. Validation</span><span>تحقق من الدقة والصحة</span></div>
+                <div class="flex gap-2"><span class="kw-blue flex-shrink-0">7. Deployment</span><span>استخدام النظام في البيئة الحقيقية</span></div>
+                <div class="flex gap-2"><span class="kw-blue flex-shrink-0">8. Maintenance</span><span>تحديث الـ rules لما تتغير المعرفة</span></div>
+              </div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 border-2 border-green-300">
+              <div class="font-black text-green-800 mb-2">👥 Human-in-the-Loop:</div>
+              <div class="text-slate-700 mb-2">البشر لازم يكونوا موجودين في كل مراحل الـ KBAI — مش مجرد تصميم ثم ترك</div>
+              <div class="space-y-1">
+                <div><span class="kw-green">Acquisition</span> — بيقدّموا الـ expertise</div>
+                <div><span class="kw-green">Design</span> — بيبنوا الـ rules</div>
+                <div><span class="kw-green">Validation</span> — بيختبروا النتائج</div>
+                <div><span class="kw-green">Deployment</span> — بيراقبوا الاستخدام</div>
+                <div><span class="kw-green">Maintenance</span> — بيحدّثوا المعرفة</div>
+              </div>
+              <div class="bg-white rounded p-2 mt-2 font-bold text-green-800">KBAI بيدعم الخبير — مش بيستغني عنه!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottleneck + Pitfalls -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('ke2',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#dc2626;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">!</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Knowledge Bottleneck + Common Pitfalls</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">Essay</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="ke2" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="bg-red-50 border-2 border-red-300 rounded-lg p-3 text-xs">
+            <div class="font-black text-red-700 mb-2">🚧 Knowledge Acquisition Bottleneck — المشكلة الأكبر:</div>
+            <div class="grid md:grid-cols-2 gap-2">
+              <div class="space-y-1 text-slate-700">
+                <div>✘ الخبراء مشغولين وغاليين</div>
+                <div>✘ Tacit knowledge — بيعرفوا بس مش بيقدروا يشرحوا</div>
+                <div>✘ بينسوا الحالات النادرة</div>
+                <div>✘ خبيرين ممكن يتعارضوا</div>
+              </div>
+              <div class="bg-white rounded p-2">
+                <div class="font-bold text-green-700 mb-1">كيف نقلل الـ Bottleneck:</div>
+                <div>• استخدام خبراء متعددين</div>
+                <div>• مراقبة الشغل الفعلي</div>
+                <div>• تحليل الحالات التاريخية</div>
+                <div>• iterative refinement</div>
+              </div>
+            </div>
+          </div>
+          <div class="text-xs font-black text-slate-700 mb-1">⚠️ الـ Common Pitfalls الـ 6:</div>
+          <div class="grid md:grid-cols-2 gap-2 text-xs">
+            <div class="trick-card card p-3"><div class="font-bold text-red-700 mb-1">Pitfall 1: Over-Automation</div><div class="text-slate-600">\"النظام موجود مفيش حاجة للخبراء\" — خطأ! الخبراء لازم يراجعوا</div></div>
+            <div class="trick-card card p-3"><div class="font-bold text-red-700 mb-1">Pitfall 2: Over-Simplified Rules</div><div class="text-slate-600">IF fever THEN infection — أوسع من اللازم — محتاج conditions أكثر</div></div>
+            <div class="trick-card card p-3"><div class="font-bold text-red-700 mb-1">Pitfall 3: Ignoring Rare Cases</div><div class="text-slate-600">Loan system بيجاهل patterns الغش</div></div>
+            <div class="trick-card card p-3"><div class="font-bold text-red-700 mb-1">Pitfall 4: No Explanation Module</div><div class="text-slate-600">المستخدمين مش بيثقوا في قرارات مش مشروحة</div></div>
+            <div class="trick-card card p-3"><div class="font-bold text-red-700 mb-1">Pitfall 5: No Maintenance Plan</div><div class="text-slate-600">القوانين الضريبية والطبية بتتغير — لازم update</div></div>
+            <div class="trick-card card p-3"><div class="font-bold text-red-700 mb-1">Pitfall 6: Single Expert</div><div class="text-slate-600">خبير واحد = bias محتمل — لازم خبراء متعددين</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verification vs Validation -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('ke3',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Verification vs Validation — الفرق المهم</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-purple">MCQ</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="ke3" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="grid md:grid-cols-2 gap-4 text-xs">
+            <div class="bg-blue-50 rounded-lg p-4 border-2 border-blue-300">
+              <div class="font-black text-blue-700 mb-2 text-sm">🔧 Verification</div>
+              <div class="mono bg-white rounded p-2 mb-2 text-center font-black">\"Did we build the system correctly?\"</div>
+              <div class="space-y-1 text-slate-700">
+                <div>✔ هل الـ rules syntactically صح؟</div>
+                <div>✔ هل الـ inference engine شغّال؟</div>
+                <div>✔ في loops؟ في contradictions؟</div>
+              </div>
+              <div class="bg-white rounded p-2 mt-2">مثال: R1: IF A THEN B + R2: IF B THEN A = Potential Loop!</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-4 border-2 border-green-300">
+              <div class="font-black text-green-700 mb-2 text-sm">✅ Validation</div>
+              <div class="mono bg-white rounded p-2 mb-2 text-center font-black">\"Did we build the correct system?\"</div>
+              <div class="space-y-1 text-slate-700">
+                <div>✔ هل القرارات دقيقة؟</div>
+                <div>✔ هل الـ outputs منطقية؟</div>
+                <div>✔ هل بيوافق خبراء حقيقيين؟</div>
+              </div>
+              <div class="bg-white rounded p-2 mt-2">مثال: 100 medical cases → system وافق الأطباء في 92 حالة (92%)</div>
+            </div>
+          </div>
+          <div class="overflow-x-auto">
+            <table style="width:100%;font-size:.78rem;border-collapse:collapse;border-radius:8px;overflow:hidden">
+              <thead><tr style="background:#1e40af;color:#fff"><th style="padding:8px 10px">Aspect</th><th style="padding:8px 10px">Verification</th><th style="padding:8px 10px">Validation</th></tr></thead>
+              <tbody>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Focus</td><td style="padding:7px 10px;color:#1e40af">Correct construction</td><td style="padding:7px 10px;color:#15803d">Correct usefulness</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:700">Question</td><td style="padding:7px 10px;color:#1e40af">Built right?</td><td style="padding:7px 10px;color:#15803d">Right thing built?</td></tr>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Example</td><td style="padding:7px 10px;color:#1e40af">Rule syntax works</td><td style="padding:7px 10px;color:#15803d">Diagnosis accurate</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONTOLOGIES -->
+<section id="ontologies" class="py-10 px-4">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-diagram-project text-blue-700 ml-2"></i>Ontologies <span class="badge b-red mr-2">🔥 مهم جداً</span></h2>
+
+    <!-- Definition + Components -->
+    <div class="card essay-card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('ont1',this)">
+        <div class="essay-num hot">1</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">تعريف Ontology + مكوناتها</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">Essay</span><span class="badge b-purple">MCQ</span></div>
+          <div class="text-xs text-slate-400 mt-1">ممكن ييجي: "Define ontology" · "Ontology components" · "Ontology vs Database"</div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="ont1" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="zatoona-box">Ontology = <span class="kw-blue">Concepts</span> + <span class="kw-green">Relationships</span> + <span class="kw-red">Constraints (Axioms)</span> — بتحدد معنى الكلمات عشان الآلة تفهم وتعمل reasoning</div>
+
+          <div class="text-xs font-black text-slate-700 mb-1">🧱 المكونات الأساسية:</div>
+          <div class="grid md:grid-cols-2 gap-2 text-xs">
+            <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+              <div class="font-black text-blue-700 mb-1">1. Classes (Concepts)</div>
+              <div class="text-slate-600">تمثل categories من الـ objects</div>
+              <div class="mono bg-white rounded p-1 mt-1">Animal → Mammal → Dog<br>Person, Disease, Doctor</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 border border-green-200">
+              <div class="font-black text-green-700 mb-1">2. Individuals (Instances)</div>
+              <div class="text-slate-600">Objects محددة</div>
+              <div class="mono bg-white rounded p-1 mt-1">John (Person)<br>COVID-19 (Disease)</div>
+            </div>
+            <div class="bg-purple-50 rounded-lg p-3 border border-purple-200">
+              <div class="font-black text-purple-700 mb-1">3. Properties (Relationships)</div>
+              <div class="text-slate-600">Object: تربط entities | Data: تربط entity بقيمة</div>
+              <div class="mono bg-white rounded p-1 mt-1">treats(Doctor→Patient)<br>age(Person→25)</div>
+            </div>
+            <div class="bg-amber-50 rounded-lg p-3 border border-amber-200">
+              <div class="font-black text-amber-700 mb-1">4. Axioms (Rules/Constraints)</div>
+              <div class="text-slate-600">قواعد منطقية</div>
+              <div class="mono bg-white rounded p-1 mt-1">All doctors are persons<br>Patient can have multi diseases</div>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 rounded p-3 text-xs border border-blue-200">
+            <div class="font-black text-blue-800 mb-1">💡 مثال عملي — Healthcare:</div>
+            <div class="mono bg-white rounded p-2">Flu → hasSymptom → fever<br>Flu → hasSymptom → cough<br>Patient_John → hasSymptom → fever+cough<br><span class="text-green-700">→ Inference: John needs isolation (ViralDisease)</span></div>
+          </div>
+
+          <div class="flex flex-wrap gap-1">
+            <span class="badge b-purple">Formal Specification</span>
+            <span class="badge b-blue">Shared Understanding</span>
+            <span class="badge b-green">Inference Support</span>
+            <span class="badge b-yellow">Semantic Web</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ontology vs Database -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('ont2',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Ontology vs Database — الفرق الجوهري</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-purple">MCQ</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="ont2" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="overflow-x-auto">
+            <table style="width:100%;font-size:.78rem;border-collapse:collapse;border-radius:8px;overflow:hidden">
+              <thead><tr style="background:#1e40af;color:#fff"><th style="padding:8px 10px">Feature</th><th style="padding:8px 10px">Ontology</th><th style="padding:8px 10px">Database</th></tr></thead>
+              <tbody>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Purpose</td><td style="padding:7px 10px;color:#1e40af">Meaning + Reasoning</td><td style="padding:7px 10px;color:#15803d">Data Storage</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:700">Structure</td><td style="padding:7px 10px;color:#1e40af">Semantic relationships</td><td style="padding:7px 10px;color:#15803d">Tables (fixed schema)</td></tr>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Inference</td><td style="padding:7px 10px;color:#1e40af">✅ Supported</td><td style="padding:7px 10px;color:#dc2626">❌ Limited</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:700">Flexibility</td><td style="padding:7px 10px;color:#1e40af">High</td><td style="padding:7px 10px;color:#15803d">Fixed</td></tr>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Example</td><td style="padding:7px 10px;color:#1e40af">hasDisease(John, Flu) → isolation</td><td style="padding:7px 10px;color:#15803d">Row: John | Flu</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="zatoona-box">الـ Database بتخزن data — الـ Ontology بتخزن <span class="kw-blue">meaning + relationships + reasoning rules</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Semantic Web + Technologies -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('ont3',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Ontologies + الـ Semantic Web</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم</span><span class="badge b-blue">Essay</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="ont3" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="text-sm">الـ Semantic Web هدفه إن الـ web data تبقى <span class="kw-blue">machine-understandable</span> مش بس human-readable.</div>
+          <div class="grid md:grid-cols-3 gap-2 text-xs">
+            <div class="bg-blue-50 rounded-lg p-3 border border-blue-200 text-center">
+              <div class="font-black text-blue-700 mb-1 text-base">RDF</div>
+              <div class="text-slate-600">Triples: subject–predicate–object</div>
+              <div class="mono bg-white rounded p-1 mt-1">John → hasDisease → Flu</div>
+            </div>
+            <div class="bg-purple-50 rounded-lg p-3 border border-purple-200 text-center">
+              <div class="font-black text-purple-700 mb-1 text-base">OWL</div>
+              <div class="text-slate-600">Ontology modeling language</div>
+              <div class="mono bg-white rounded p-1 mt-1">Classes, Properties, Axioms</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 border border-green-200 text-center">
+              <div class="font-black text-green-700 mb-1 text-base">SPARQL</div>
+              <div class="text-slate-600">Querying knowledge graphs</div>
+              <div class="mono bg-white rounded p-1 mt-1">SELECT ?x WHERE {...}</div>
+            </div>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 rounded p-3 text-xs">
+            <div class="font-black text-amber-800 mb-1">🔍 مثال Search Engine:</div>
+            <div>Query: "Doctors treating flu in Alexandria"<br>الـ Ontology بتفهم: flu = disease → يربطها بـ doctors → يفلتر بـ location<br>→ <span class="kw-green">نتيجة ذكية مش مجرد keyword matching</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Studies -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('ont4',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">4</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Case Studies — 3 تطبيقات عملية</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-yellow">⚡ مهم</span><span class="badge b-blue">Essay</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="ont4" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="grid md:grid-cols-3 gap-3 text-xs">
+            <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+              <div class="font-black text-blue-700 mb-2">🏥 Medical Ontology</div>
+              <div class="text-slate-600 mb-1">دعم التشخيص والعلاج</div>
+              <div class="mono bg-white rounded p-1 mb-1">Flu → fever+cough<br>→ Patient needs isolation</div>
+              <div class="text-green-700">✔ Structured diagnosis<br>✔ Automated reasoning</div>
+            </div>
+            <div class="bg-amber-50 rounded-lg p-3 border border-amber-200">
+              <div class="font-black text-amber-700 mb-2">🛒 E-Commerce Ontology</div>
+              <div class="text-slate-600 mb-1">تحسين البحث والتوصيات</div>
+              <div class="mono bg-white rounded p-1 mb-1">Laptop → Electronics<br>→ recommend Gadgets</div>
+              <div class="text-green-700">✔ Smart recommendations<br>✔ Better search</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 border border-green-200">
+              <div class="font-black text-green-700 mb-2">🏙️ Smart City Ontology</div>
+              <div class="text-slate-600 mb-1">دمج بيانات المدينة</div>
+              <div class="mono bg-white rounded p-1 mb-1">High Traffic + Rain<br>→ Congestion Alert</div>
+              <div class="text-green-700">✔ Integrated data<br>✔ Real-time decisions</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Development Process -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('ont5',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">5</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">خطوات بناء الـ Ontology — 7 خطوات</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-yellow">⚡ مهم</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="ont5" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3">
+          <div class="grid md:grid-cols-2 gap-2 text-xs">
+            <div class="hint-row"><span class="hint-if">Step 1</span><span class="hint-arrow">→</span><span class="hint-then">Define Domain & Scope — إيه الـ domain وإيه الأسئلة</span></div>
+            <div class="hint-row"><span class="hint-if">Step 2</span><span class="hint-arrow">→</span><span class="hint-then">Identify Concepts — Patient, Disease, Doctor</span></div>
+            <div class="hint-row"><span class="hint-if">Step 3</span><span class="hint-arrow">→</span><span class="hint-then">Define Hierarchy — Disease → Viral → Flu</span></div>
+            <div class="hint-row"><span class="hint-if">Step 4</span><span class="hint-arrow">→</span><span class="hint-then">Define Relationships — hasDisease(Patient, Disease)</span></div>
+            <div class="hint-row"><span class="hint-if">Step 5</span><span class="hint-arrow">→</span><span class="hint-then">Add Axioms/Constraints — Doctor must treat ≥1 patient</span></div>
+            <div class="hint-row"><span class="hint-if">Step 6</span><span class="hint-arrow">→</span><span class="hint-then">Add Instances — John (Patient), Flu (Disease)</span></div>
+            <div class="hint-row"><span class="hint-if">Step 7</span><span class="hint-arrow">→</span><span class="hint-then">Test & Validate — logical consistency + real-world accuracy</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- REASONING UNDER UNCERTAINTY -->
+<section id="uncertainty" class="py-10 px-4 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-dice text-blue-700 ml-2"></i>Reasoning Under Uncertainty <span class="badge b-red mr-2">🔥 مهم جداً</span></h2>
+
+    <!-- Core Concept -->
+    <div class="card essay-card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('unc1',this)">
+        <div class="essay-num hot">1</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Uncertainty في AI + Certainty Factors (CF)</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">Essay</span><span class="badge b-purple">MCQ</span></div>
+          <div class="text-xs text-slate-400 mt-1">ممكن ييجي: "What is CF?" · "How to combine CFs?" · "Uncertainty in AI"</div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="unc1" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="zatoona-box">بدل "صح أو غلط" — بنقول <span class="kw-blue">درجة الإيمان بالنتيجة</span> — الـ Classical logic مش كافية للعالم الحقيقي</div>
+
+          <div class="text-xs font-black text-slate-700 mb-1">📊 أنواع عدم اليقين:</div>
+          <div class="grid md:grid-cols-2 gap-2 text-xs">
+            <div class="hint-row"><span class="hint-if">Incomplete</span><span class="hint-arrow">→</span><span class="hint-then">معلومات ناقصة — مثال: no lab results yet</span></div>
+            <div class="hint-row"><span class="hint-if">Noisy</span><span class="hint-arrow">→</span><span class="hint-then">أخطاء في البيانات — faulty temperature sensor</span></div>
+            <div class="hint-row"><span class="hint-if">Ambiguous</span><span class="hint-arrow">→</span><span class="hint-then">تفسيرات متعددة — Fever = flu? COVID?</span></div>
+            <div class="hint-row"><span class="hint-if">Probabilistic</span><span class="hint-arrow">→</span><span class="hint-then">مبني على احتمالية — 70% chance of rain</span></div>
+          </div>
+
+          <div class="text-xs font-black text-slate-700 mb-1">📐 Certainty Factors (CF) — زي MYCIN:</div>
+          <div class="bg-blue-50 rounded-lg p-3 border border-blue-200 text-xs">
+            <div class="grid md:grid-cols-3 gap-2 text-center mb-2">
+              <div class="bg-green-100 rounded p-2"><div class="font-black text-green-700">CF = +1</div><div>إيمان كامل</div></div>
+              <div class="bg-slate-100 rounded p-2"><div class="font-black text-slate-700">CF = 0</div><div>مجهول</div></div>
+              <div class="bg-red-100 rounded p-2"><div class="font-black text-red-700">CF = -1</div><div>رفض كامل</div></div>
+            </div>
+            <div class="mono bg-white rounded p-2">IF fever AND cough THEN flu (CF = 0.7)<br><span class="text-slate-500">→ "70% confidence patient has flu"</span></div>
+          </div>
+
+          <div class="text-xs font-black text-slate-700 mb-1">🔢 دمج الـ CFs — لو عندنا rule أكتر من واحدة:</div>
+          <div class="bg-amber-50 rounded-lg p-3 border border-amber-200 text-xs">
+            <div class="font-black text-amber-800 mb-1">المعادلة:</div>
+            <div class="mono bg-white rounded p-2 mb-2">CF_combined = CF1 + CF2 × (1 - CF1)</div>
+            <div class="font-bold mb-1">مثال عملي:</div>
+            <div class="mono bg-white rounded p-2">R1: IF fever → infection (CF=0.6)<br>R2: IF cough → infection (CF=0.5)<br>Combined = 0.6 + 0.5×(1-0.6) = 0.6 + 0.2 = <span class="text-green-700 font-black">0.8</span></div>
+            <div class="text-green-700 font-bold mt-1">→ Final belief in infection = 80%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bayesian Reasoning -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('unc2',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">Bayesian Reasoning — نظرية بايز</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-blue">Essay</span><span class="badge b-purple">MCQ</span></div>
+          <div class="text-xs text-slate-400 mt-1">ممكن ييجي: "Explain Bayes Theorem" · "Medical Diagnosis Bayesian"</div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="unc2" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="zatoona-box">Bayesian Reasoning = بنستخدم <span class="kw-blue">Probability Theory</span> عشان نُحدّث إيماننا بناءً على الأدلة الجديدة</div>
+
+          <div class="bg-blue-50 rounded-lg p-3 border border-blue-200 text-xs">
+            <div class="font-black text-blue-700 mb-2">📐 نظرية بايز:</div>
+            <div class="mono bg-white rounded p-2 text-center text-sm font-black">P(H|E) = P(E|H) × P(H) / P(E)</div>
+            <div class="grid grid-cols-3 gap-2 mt-2 text-center">
+              <div class="bg-blue-100 rounded p-2"><div class="font-bold text-blue-700">P(H|E)</div><div>Posterior — إيماننا بعد الدليل</div></div>
+              <div class="bg-green-100 rounded p-2"><div class="font-bold text-green-700">P(H)</div><div>Prior — إيماننا قبل</div></div>
+              <div class="bg-purple-100 rounded p-2"><div class="font-bold text-purple-700">P(E|H)</div><div>Likelihood — إحتمال الدليل لو H صح</div></div>
+            </div>
+          </div>
+
+          <div class="bg-amber-50 rounded-lg p-3 border border-amber-200 text-xs">
+            <div class="font-black text-amber-800 mb-2">🧮 مثال محلول — Medical Diagnosis:</div>
+            <div class="mono bg-white rounded p-2 mb-1">P(Flu) = 0.1  (prior)<br>P(Fever|Flu) = 0.9  (likelihood)<br>P(Fever) = 0.2  (total fever prob)</div>
+            <div class="mono bg-white rounded p-2">P(Flu|Fever) = (0.9 × 0.1) / 0.2 = 0.09 / 0.2 = <span class="text-green-700 font-black">0.45 (45%)</span></div>
+            <div class="text-green-700 font-bold mt-1">→ بعد ما عرفنا عنده fever، الاحتمال بقى 45%</div>
+          </div>
+
+          <div class="bg-slate-50 rounded p-3 text-xs border border-slate-200">
+            <div class="font-black text-slate-700 mb-1">🎯 الفكرة الأساسية:</div>
+            <div class="grid md:grid-cols-3 gap-2 text-center">
+              <div class="bg-blue-50 rounded p-2"><span class="kw-blue">Prior</span><br>إيمانك قبل الدليل</div>
+              <div class="bg-green-50 rounded p-2 font-black text-green-700">× Evidence</div>
+              <div class="bg-purple-50 rounded p-2"><span class="kw-purple">Posterior</span><br>إيمانك بعد الدليل</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CF vs Bayesian -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('unc3',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">CF vs Bayesian — المقارنة المهمة</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-purple">MCQ</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="unc3" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-3">
+          <div class="overflow-x-auto">
+            <table style="width:100%;font-size:.78rem;border-collapse:collapse;border-radius:8px;overflow:hidden">
+              <thead><tr style="background:#1e40af;color:#fff"><th style="padding:8px 10px">Feature</th><th style="padding:8px 10px">Certainty Factors</th><th style="padding:8px 10px">Bayesian Reasoning</th></tr></thead>
+              <tbody>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Basis</td><td style="padding:7px 10px;color:#1e40af">Heuristic</td><td style="padding:7px 10px;color:#15803d">Probability Theory</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:700">Output</td><td style="padding:7px 10px;color:#1e40af">Confidence score</td><td style="padding:7px 10px;color:#15803d">Probability</td></tr>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Complexity</td><td style="padding:7px 10px;color:#15803d">Low ✅</td><td style="padding:7px 10px;color:#dc2626">High ❌</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:700">Accuracy</td><td style="padding:7px 10px;color:#d97706">Moderate</td><td style="padding:7px 10px;color:#15803d">High ✅</td></tr>
+                <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Used In</td><td style="padding:7px 10px;color:#1e40af">Early Expert Systems</td><td style="padding:7px 10px;color:#15803d">Modern Probabilistic AI</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="grid md:grid-cols-2 gap-3 text-xs">
+            <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+              <div class="font-black text-blue-700 mb-1">CF يقول:</div>
+              <div class="mono bg-white rounded p-2">"أنا 0.7 واثق إن المريض عنده flu"</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 border border-green-200">
+              <div class="font-black text-green-700 mb-1">Bayesian يقول:</div>
+              <div class="mono bg-white rounded p-2">"احتمالية الـ flu = 70%"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bayesian Numerical Problems -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('unc4',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#7c3aed;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">4</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">مسائل Bayesian محلولة — أهم 5 مسائل</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-red">🔥 مهم جداً</span><span class="badge b-purple">Numerical</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="unc4" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3 space-y-4">
+
+          <div class="bg-amber-50 border border-amber-300 rounded p-3 text-xs mb-2">
+            <div class="font-black text-amber-800 mb-1">📌 الخطوات دايماً اتنين:</div>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="bg-white rounded p-2"><span class="kw-blue">Step 1:</span> احسب P(E) الإجمالية<br><span class="mono">P(E) = P(E|H)×P(H) + P(E|¬H)×P(¬H)</span></div>
+              <div class="bg-white rounded p-2"><span class="kw-green">Step 2:</span> طبق Bayes<br><span class="mono">P(H|E) = P(E|H)×P(H) / P(E)</span></div>
+            </div>
+          </div>
+
+          <!-- Problem 1 -->
+          <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+            <div class="font-black text-blue-700 mb-2 text-sm">🔷 Problem 1: Medical Diagnosis</div>
+            <div class="mono text-xs bg-white rounded p-2 mb-2">P(Flu)=0.1 | P(Fever|Flu)=0.9 | P(Fever|¬Flu)=0.2<br>Find: P(Flu|Fever)</div>
+            <div class="text-xs space-y-1 text-slate-700">
+              <div><span class="badge b-blue">Step 1</span> P(Fever) = 0.9×0.1 + 0.2×0.9 = 0.09 + 0.18 = 0.27</div>
+              <div><span class="badge b-green">Step 2</span> P(Flu|Fever) = 0.09 / 0.27 = <strong class="text-green-700">0.333 (33.3%)</strong></div>
+            </div>
+          </div>
+
+          <!-- Problem 2 -->
+          <div class="bg-green-50 rounded-lg p-4 border border-green-200">
+            <div class="font-black text-green-700 mb-2 text-sm">🟢 Problem 2: Disease Test Accuracy</div>
+            <div class="mono text-xs bg-white rounded p-2 mb-2">P(Disease)=0.05 | P(Pos|Disease)=0.95 | P(Pos|¬Disease)=0.1<br>Find: P(Disease|Positive)</div>
+            <div class="text-xs space-y-1 text-slate-700">
+              <div><span class="badge b-blue">Step 1</span> P(Pos) = 0.95×0.05 + 0.1×0.95 = 0.0475 + 0.095 = 0.1425</div>
+              <div><span class="badge b-green">Step 2</span> P(Disease|Pos) = 0.0475 / 0.1425 = <strong class="text-green-700">≈ 0.333 (33.3%)</strong></div>
+              <div class="text-amber-700 font-bold">⚠️ حتى بـ test دقيق، الـ prior منخفض يخلي النتيجة moderate!</div>
+            </div>
+          </div>
+
+          <!-- Problem 3 -->
+          <div class="bg-purple-50 rounded-lg p-4 border border-purple-200">
+            <div class="font-black text-purple-700 mb-2 text-sm">🟣 Problem 3: Spam Detection</div>
+            <div class="mono text-xs bg-white rounded p-2 mb-2">P(Spam)=0.4 | P(Keyword|Spam)=0.8 | P(Keyword|¬Spam)=0.2<br>Find: P(Spam|Keyword)</div>
+            <div class="text-xs space-y-1 text-slate-700">
+              <div><span class="badge b-blue">Step 1</span> P(Keyword) = 0.8×0.4 + 0.2×0.6 = 0.32 + 0.12 = 0.44</div>
+              <div><span class="badge b-green">Step 2</span> P(Spam|Keyword) = 0.32 / 0.44 = <strong class="text-green-700">≈ 0.727 (72.7%)</strong></div>
+            </div>
+          </div>
+
+          <!-- Problem 4 Two-Step -->
+          <div class="bg-red-50 rounded-lg p-4 border border-red-200">
+            <div class="font-black text-red-700 mb-2 text-sm">🔴 Problem 4: Two-Step Evidence Update</div>
+            <div class="mono text-xs bg-white rounded p-2 mb-2">P(Disease)=0.2 | بعد Fever → prior=0.4 | بعد Cough → ?<br>P(Cough|Disease)=0.7 | P(Cough|¬Disease)=0.2</div>
+            <div class="text-xs space-y-1 text-slate-700">
+              <div><span class="badge b-blue">Step 1</span> بعد Fever: P(Disease|Fever) = 0.4</div>
+              <div><span class="badge b-blue">Step 2</span> P(Cough) = 0.7×0.4 + 0.2×0.6 = 0.28 + 0.12 = 0.40</div>
+              <div><span class="badge b-green">Final</span> P(Disease|Fever,Cough) = 0.28/0.40 = <strong class="text-green-700">0.7 (70%)</strong></div>
+              <div class="text-green-700 font-bold">✅ كل دليل جديد بيزيد اليقين!</div>
+            </div>
+          </div>
+
+          <!-- Problem CF Conflict -->
+          <div class="bg-amber-50 rounded-lg p-4 border-2 border-amber-400">
+            <div class="font-black text-amber-800 mb-2 text-sm">⭐ Problem 5: Contradictory CF Evidence</div>
+            <div class="mono text-xs bg-white rounded p-2 mb-2">R1: symptom → disease (CF = 0.7)<br>R2: test_negative → NOT disease (CF = -0.6)</div>
+            <div class="text-xs space-y-1 text-slate-700">
+              <div><span class="badge b-yellow">Formula</span> CF = (CF1 + CF2) / (1 - min(|CF1|, |CF2|))</div>
+              <div><span class="badge b-yellow">Solve</span> = (0.7 + (-0.6)) / (1 - min(0.7, 0.6)) = 0.1 / (1 - 0.6) = 0.1/0.4</div>
+              <div class="font-black text-amber-800 text-center mt-2 bg-amber-100 rounded p-2">🎯 CF ≈ 0.25 — الأدلة المتضاربة بتقلل اليقين</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Applications -->
+    <div class="card mb-4 overflow-hidden">
+      <div class="collapse-btn flex items-center gap-3 p-4" onclick="tog('unc5',this)">
+        <div style="width:32px;height:32px;border-radius:50%;background:#1e40af;color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">5</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-sm md:text-base">تطبيقات Reasoning Under Uncertainty</div>
+          <div class="flex flex-wrap gap-1 mt-1"><span class="badge b-yellow">⚡ مهم</span><span class="badge b-blue">Essay</span></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron-icon text-slate-400 flex-shrink-0"></i>
+      </div>
+      <div class="collapse-content" id="unc5" style="max-height:0">
+        <div class="px-4 pb-4 border-t border-slate-100 pt-3">
+          <div class="grid md:grid-cols-2 gap-3 text-xs">
+            <div class="hint-row"><span class="hint-if">🏥 Medical Diagnosis</span><span class="hint-arrow">→</span><span class="hint-then">fever+cough → multiple diseases ranked by probability</span></div>
+            <div class="hint-row"><span class="hint-if">🔧 Fault Diagnosis</span><span class="hint-arrow">→</span><span class="hint-then">vibration+heat+noise → different faults with certainty</span></div>
+            <div class="hint-row"><span class="hint-if">🌤️ Weather Forecast</span><span class="hint-arrow">→</span><span class="hint-then">60% rain, 30% storm — probabilistic predictions</span></div>
+            <div class="hint-row"><span class="hint-if">💰 Financial Risk</span><span class="hint-arrow">→</span><span class="hint-then">Loan approval = probability of default</span></div>
+            <div class="hint-row"><span class="hint-if">🚗 Autonomous Cars</span><span class="hint-arrow">→</span><span class="hint-then">Is object pedestrian or shadow? → sensor uncertainty</span></div>
+            <div class="hint-row"><span class="hint-if">🛡️ Fraud Detection</span><span class="hint-arrow">→</span><span class="hint-then">large_tx + foreign_loc + unusual_time → fraud_prob=0.85</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- TRICKS -->
 <section id="tricks" class="py-10 px-4 bg-white">
   <div class="max-w-5xl mx-auto">
@@ -720,7 +2424,12 @@ body{background:var(--bg);color:#1e293b}
       <div class="trick-card card p-4"><div class="font-bold text-red-700 mb-2">⚠️ Non-Monotonic = قابل للتعديل</div><div class="text-sm">Tweety طيرة → يطير | اكتشفنا إنه بطريق → مش بيطير</div></div>
       <div class="trick-card card p-4"><div class="font-bold text-red-700 mb-2">⚠️ "explain reasoning" في السؤال</div><div class="text-sm">فوراً فكر في <span class="kw-green">Explanation Facility</span></div></div>
       <div class="trick-card card p-4"><div class="font-bold text-red-700 mb-2">⚠️ CSP مش نوع Agent</div><div class="text-sm">CSP = نوع مشكلة — مش نوع agent</div></div>
-      <div class="trick-card card p-4"><div class="font-bold text-red-700 mb-2">⚠️ Simple Reflex = بدون memory</div><div class="text-sm">بيرد على stimulus حالي فقط — عكسه <span class="kw-blue">Model-Based</span></div></div>
+      <div class="trick-card card p-4"><div class="font-bold text-red-700 mb-2">⚠️ P→Q False بس لو P=T و Q=F</div><div class="text-sm">الـ Implication بتبقى True في كل الحالات التانية — حتى لو P=F</div></div>
+      <div class="trick-card card p-4"><div class="font-bold text-red-700 mb-2">⚠️ De Morgan — اتقلبت!</div><div class="text-sm"><span class="mono text-xs">¬(A∧B) = ¬A∨¬B</span> | <span class="mono text-xs">¬(A∨B) = ¬A∧¬B</span> — الـ AND بيتحول OR والعكس</div></div>
+      <div class="trick-card card p-4"><div class="font-bold text-red-700 mb-2">⚠️ All → ∀ + →، Some → ∃ + ∧</div><div class="text-sm">"All A are B" = <span class="mono text-xs">∀x(A(x)→B(x))</span> | "Some A are B" = <span class="mono text-xs">∃x(A(x)∧B(x))</span> — استخدام ∧ مع ∀ أو → مع ∃ غلط كلاسيكي!</div></div>
+      <div class="trick-card card p-4"><div class="font-bold text-red-700 mb-2">⚠️ ترتيب Quantifiers يغير المعنى 180°</div><div class="text-sm"><span class="mono text-xs">∀x∃y Loves(x,y)</span> ≠ <span class="mono text-xs">∃x∀y Loves(x,y)</span> — الأولى: كل شخص بيحب حد | التانية: في شخص بيحب الكل</div></div>
+      <div class="trick-card card p-4"><div class="font-bold text-red-700 mb-2">⚠️ Skolemization — ∃ بعد ∀ = Function مش Constant</div><div class="text-sm"><span class="mono text-xs">∀x∃y P(x,y)</span> → <span class="mono text-xs">P(x,f(x))</span> ✅ | مش <span class="mono text-xs">P(x,a)</span> ❌ — لأن y بيعتمد على x</div></div>
+      <div class="trick-card card p-4"><div class="font-bold text-red-700 mb-2">⚠️ CNF = AND من بره، OR من جوه</div><div class="text-sm"><span class="mono text-xs">(A∨B)∧(C∨D)</span> ✅ | <span class="mono text-xs">A∨(B∧C)</span> ❌ — لازم توزع OR على AND</div></div>
     </div>
   </div>
 </section>
@@ -821,6 +2530,9 @@ body{background:var(--bg);color:#1e293b}
           <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span class="text-slate-300">Ontology أكبر من Taxonomy</span></label>
           <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span class="text-slate-300">Rational ≠ Always Correct</span></label>
           <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span class="text-slate-300">Non-Monotonic = قابل للتعديل</span></label>
+          <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span class="text-slate-300">Modus Ponens: P→Q, P ⇒ Q | Modus Tollens: P→Q, ¬Q ⇒ ¬P</span></label>
+          <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span class="text-slate-300">Tautology = دايماً T | Contradiction = دايماً F | Contingency = أحياناً</span></label>
+          <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span class="text-slate-300">P→Q False بس لو P=T و Q=F فقط</span></label>
           <label class="checklist-item cursor-pointer"><input type="checkbox" class="rounded"><span class="text-slate-300">عملت الـ MCQ Quiz وجبت فوق 10/15</span></label>
         </div>
         <div class="text-center mt-4">
@@ -849,7 +2561,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ACTIVE NAV
-const sids = ['exam-format','essays','definitions','comparisons','mcq','tricks','night'];
+const sids = ['exam-format','essays','definitions','comparisons','mcq','logic','tricks','night'];
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {

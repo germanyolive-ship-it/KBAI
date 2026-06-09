@@ -75,6 +75,65 @@ body{background:var(--bg);color:#1e293b}
 .zatoona-text{background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .fade-in{animation:fadeIn .5s ease forwards}
+@keyframes pulse-glow{0%,100%{box-shadow:0 0 0 0 rgba(245,158,11,.4)}50%{box-shadow:0 0 0 8px rgba(245,158,11,0)}}
+@keyframes slideDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+
+/* EXAM ALERT BANNER */
+.exam-alert-banner{background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 40%,#1e3a8a 100%);color:#fff;border-bottom:3px solid #f59e0b;position:relative;overflow:hidden}
+.exam-alert-banner::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.exam-type-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:16px;text-align:center;backdrop-filter:blur(4px);transition:all .2s}
+.exam-type-card:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.exam-type-card .icon{font-size:2rem;margin-bottom:6px}
+.exam-type-card .label{font-size:.95rem;font-weight:900;margin-bottom:4px}
+.exam-type-card .sub{font-size:.72rem;opacity:.7}
+.warning-announce{background:linear-gradient(135deg,#fef3c7,#fffbeb);border:2px solid #f59e0b;border-right:5px solid #d97706;border-radius:10px;padding:14px 18px;color:#92400e;animation:pulse-glow 2.5s infinite}
+.bonus-highlight{background:linear-gradient(135deg,#4f46e5,#7c3aed);border-radius:10px;padding:14px 18px;color:#fff;display:inline-flex;align-items:center;gap:10px}
+
+/* OFFICIAL ESSAY CARDS */
+.official-essay-card{border-radius:16px;overflow:hidden;border:2px solid #e2e8f0;transition:all .25s;box-shadow:0 2px 14px rgba(0,0,0,.06)}
+.official-essay-card:hover{border-color:#f59e0b;box-shadow:0 6px 28px rgba(245,158,11,.18);transform:translateY(-2px)}
+.official-essay-header{background:linear-gradient(135deg,#1e3a8a,#1e40af);padding:16px 20px;cursor:pointer;position:relative}
+.official-essay-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#f59e0b,#ef4444)}
+.official-essay-num{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#d97706);color:#000;font-weight:900;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(245,158,11,.4)}
+.priority-badge-critical{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:999px;background:linear-gradient(135deg,#dc2626,#b91c1c);color:#fff;font-size:.72rem;font-weight:900;letter-spacing:.03em;box-shadow:0 2px 6px rgba(220,38,38,.35)}
+.official-exam-badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:999px;background:linear-gradient(135deg,#f59e0b,#d97706);color:#000;font-size:.68rem;font-weight:900}
+.key-point-item{display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid #f1f5f9;font-size:.82rem}
+.key-point-item:last-child{border-bottom:none}
+.key-point-item .dot{width:7px;height:7px;border-radius:50%;background:#1e40af;margin-top:5px;flex-shrink:0}
+.mistake-item{display:flex;align-items:flex-start;gap:8px;padding:7px 0;font-size:.8rem;color:#7f1d1d}
+.mistake-item .x-dot{width:7px;height:7px;border-radius:50%;background:#dc2626;margin-top:5px;flex-shrink:0}
+.tip-item{background:#f0fdf4;border-radius:8px;padding:8px 12px;font-size:.8rem;color:#14532d;border-right:3px solid #16a34a;margin-bottom:6px}
+
+/* STRATEGY DASHBOARD */
+.strategy-dashboard{background:linear-gradient(135deg,#0f172a,#1e293b);border-radius:20px;padding:28px;color:#f1f5f9}
+.priority-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.priority-row:last-child{border-bottom:none}
+.priority-label{min-width:60px;font-size:.7rem;font-weight:900;padding:3px 10px;border-radius:999px;text-align:center}
+.p-critical{background:linear-gradient(135deg,#dc2626,#ef4444);color:#fff}
+.p-high{background:linear-gradient(135deg,#f59e0b,#d97706);color:#000}
+.p-medium{background:linear-gradient(135deg,#3b82f6,#1d4ed8);color:#fff}
+.priority-bar-bg{flex:1;background:rgba(255,255,255,.1);border-radius:999px;height:8px;overflow:hidden}
+.priority-bar-fill{height:100%;border-radius:999px;transition:width 1s cubic-bezier(.4,0,.2,1)}
+.fill-critical{background:linear-gradient(90deg,#ef4444,#f97316)}
+.fill-high{background:linear-gradient(90deg,#f59e0b,#fde68a)}
+.fill-medium{background:linear-gradient(90deg,#3b82f6,#93c5fd)}
+
+/* MCQ GUIDE */
+.mcq-guide-card{background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1.5px solid #bfdbfe;border-radius:14px;padding:18px}
+.mcq-tip-row{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(59,130,246,.15);font-size:.83rem}
+.mcq-tip-row:last-child{border-bottom:none}
+.mcq-tip-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;flex-shrink:0}
+
+/* CHECKLIST */
+.exam-checklist-card{background:#fff;border-radius:16px;border:2px solid #e2e8f0;overflow:hidden}
+.checklist-header{background:linear-gradient(135deg,#1e3a8a,#4f46e5);padding:16px 20px;color:#fff}
+.checklist-row{display:flex;align-items:center;gap:12px;padding:11px 20px;border-bottom:1px solid #f1f5f9;cursor:pointer;transition:background .15s}
+.checklist-row:last-child{border-bottom:none}
+.checklist-row:hover{background:#f8fafc}
+.checklist-row input[type=checkbox]{width:18px;height:18px;accent-color:#1e40af;cursor:pointer;flex-shrink:0}
+.checklist-row input[type=checkbox]:checked~.cl-label{text-decoration:line-through;opacity:.45}
+.cl-label{font-size:.85rem;font-weight:600;flex:1}
+.cl-badge{font-size:.68rem;font-weight:800;padding:2px 8px;border-radius:999px;flex-shrink:0}
 </style>
 </head>
 <body>
@@ -86,6 +145,7 @@ body{background:var(--bg);color:#1e293b}
   <div class="max-w-6xl mx-auto flex items-center gap-3">
     <div class="font-black text-blue-800 text-base flex-shrink-0">🧠 KBAI</div>
     <div class="nav-scroll flex gap-2 flex-1">
+      <a href="#official-exam" class="nav-pill" style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#000;font-weight:900" data-section="official-exam">📋 Official Exam</a>
       <a href="#exam-format" class="nav-pill" data-section="exam-format">📋 الامتحان</a>
       <a href="#essays" class="nav-pill" data-section="essays">✍️ Essays</a>
       <a href="#definitions" class="nav-pill" data-section="definitions">📖 Definitions</a>
@@ -115,12 +175,550 @@ body{background:var(--bg);color:#1e293b}
     <div class="flex flex-wrap justify-center gap-2 mt-5">
       <span class="badge b-yellow">⏱ 30-60 دقيقة كفاية</span>
       <span class="badge b-green">✅ Essay + MCQ + Definitions</span>
-      <span class="badge b-red">🔥 أول 6 Essays = الأهم</span>
+      <span class="badge b-red">🔥 4 Official Essay Topics Announced</span>
+      <span class="badge b-purple">🏆 5 Bonus Questions</span>
     </div>
   </div>
 </section>
 
-<!-- EXAM FORMAT -->
+<!-- OFFICIAL EXAM ALERT BANNER -->
+<section id="official-exam" class="exam-alert-banner py-12 px-4 fade-in">
+  <div class="max-w-5xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center gap-3 bg-yellow-400 text-black font-black text-xs px-4 py-2 rounded-full mb-4 uppercase tracking-widest">
+        <i class="fa-solid fa-bullhorn"></i> Instructor Announcement — Final Exam Format
+      </div>
+      <h2 class="text-3xl md:text-4xl font-black text-white mb-2">📋 Official Final Exam Structure</h2>
+      <p class="text-blue-200 text-sm max-w-lg mx-auto">تم الإعلان رسمياً من الدكتور — هذه هي أجزاء الامتحان النهائي</p>
+    </div>
+
+    <!-- Exam Type Cards -->
+    <div class="grid md:grid-cols-2 gap-5 mb-8">
+      <div class="exam-type-card">
+        <div class="icon">✍️</div>
+        <div class="label">Essay Questions</div>
+        <div class="sub">أسئلة مقالية — تحتاج شرح كامل ومفصّل</div>
+        <div class="mt-3 flex flex-wrap justify-center gap-2">
+          <span class="badge b-red">🔥 Critical</span>
+          <span class="badge b-yellow">4 Official Topics</span>
+        </div>
+      </div>
+      <div class="exam-type-card">
+        <div class="icon">🔘</div>
+        <div class="label">Multiple Choice Questions (MCQs)</div>
+        <div class="sub">تغطي جميع موضوعات المادة — فهم أهم من حفظ</div>
+        <div class="mt-3 flex flex-wrap justify-center gap-2">
+          <span class="badge b-green">All Topics</span>
+          <span class="badge b-purple">🏆 5 Bonus Qs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Official Essay Topics Grid -->
+    <div class="mb-7">
+      <div class="text-yellow-300 font-black text-sm mb-3 uppercase tracking-wider"><i class="fa-solid fa-list-check ml-2"></i>Official Essay Topics — Announced by Instructor</div>
+      <div class="grid md:grid-cols-2 gap-3">
+        <div class="exam-type-card flex items-center gap-3 text-right" style="text-align:right;justify-content:flex-start;padding:14px 16px">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#d97706);color:#000;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</div>
+          <div>
+            <div class="font-black text-sm">What is KBAI?</div>
+            <div style="font-size:.72rem;opacity:.65;margin-top:2px">Definition, components, role in AI</div>
+          </div>
+        </div>
+        <div class="exam-type-card flex items-center gap-3 text-right" style="text-align:right;justify-content:flex-start;padding:14px 16px">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#d97706);color:#000;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</div>
+          <div>
+            <div class="font-black text-sm">Components of KBAI Systems</div>
+            <div style="font-size:.72rem;opacity:.65;margin-top:2px">KB, Inference Engine, Explanation Facility</div>
+          </div>
+        </div>
+        <div class="exam-type-card flex items-center gap-3 text-right" style="text-align:right;justify-content:flex-start;padding:14px 16px">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#d97706);color:#000;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">3</div>
+          <div>
+            <div class="font-black text-sm">Knowledge Representation Formalisms</div>
+            <div style="font-size:.72rem;opacity:.65;margin-top:2px">Logic, Semantic Networks, Frames, Rules, Ontologies</div>
+          </div>
+        </div>
+        <div class="exam-type-card flex items-center gap-3 text-right" style="text-align:right;justify-content:flex-start;padding:14px 16px">
+          <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#d97706);color:#000;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0">4</div>
+          <div>
+            <div class="font-black text-sm">Reasoning Methods in KBAI</div>
+            <div style="font-size:.72rem;opacity:.65;margin-top:2px">Forward/Backward Chaining, Deduction, Induction, Abduction</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Warning box -->
+    <div class="warning-announce mb-5">
+      <div class="flex items-start gap-3">
+        <i class="fa-solid fa-triangle-exclamation text-2xl text-yellow-600 flex-shrink-0 mt-0.5"></i>
+        <div>
+          <div class="font-black text-base mb-1">⚠️ Highest Priority Warning</div>
+          <div class="text-sm font-bold">These four essay topics were officially announced by the instructor and should be considered the <u>highest-priority revision topics</u>. Start your revision with these before anything else.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bonus Questions highlight -->
+    <div class="text-center">
+      <div class="bonus-highlight inline-flex">
+        <i class="fa-solid fa-trophy text-yellow-300 text-xl"></i>
+        <div class="text-right">
+          <div class="font-black text-sm">🏆 5 Bonus Questions</div>
+          <div style="font-size:.72rem;opacity:.8">قد تظهر في قسم الـ MCQ — لا تتجاهلها!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFICIAL ESSAY QUESTIONS SECTION -->
+<section id="official-essays" class="py-10 px-4" style="background:linear-gradient(180deg,#f8fafc,#fff)">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-3 mb-6 flex-wrap">
+      <h2 class="section-title mb-0" style="border-color:#f59e0b">Official Essay Questions</h2>
+      <span class="official-exam-badge">📋 Officially Announced</span>
+      <span class="priority-badge-critical">🔥 Critical Priority</span>
+    </div>
+    <div class="warning-announce mb-7" style="background:linear-gradient(135deg,#fef3c7,#fef9c3);border-color:#f59e0b">
+      <div class="font-black text-sm"><i class="fa-solid fa-bullhorn ml-2 text-yellow-600"></i>هذه الأسئلة أُعلن عنها رسمياً من الدكتور — اقرأها أولاً وبالتفصيل قبل أي موضوع آخر.</div>
+    </div>
+
+    <!-- OE1: What is KBAI? -->
+    <div class="official-essay-card mb-5">
+      <div class="official-essay-header collapse-btn flex items-center gap-3" onclick="tog('oe1',this)">
+        <div class="official-essay-num">1</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-white text-base">What is KBAI?</div>
+          <div class="flex flex-wrap gap-2 mt-1">
+            <span class="priority-badge-critical">🔥 Critical Exam Topic</span>
+            <span class="official-exam-badge">📋 Official</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span style="background:rgba(255,255,255,.15);padding:3px 10px;border-radius:999px;font-size:.72rem;font-weight:700;color:#fde68a">~15 marks</span>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white flex-shrink-0"></i>
+        </div>
+      </div>
+      <div class="collapse-content" id="oe1" style="max-height:0">
+        <div class="p-5 space-y-4">
+          <div class="zatoona-box text-sm">KBAI = AI that uses <span class="kw-blue">explicit symbolic knowledge</span> (rules, logic, ontologies) + <span class="kw-green">reasoning</span> to solve problems — not data-driven like ML</div>
+
+          <div>
+            <div class="font-black text-sm text-blue-800 mb-2"><i class="fa-solid fa-star ml-1 text-yellow-500"></i>Key Points Must Mention:</div>
+            <div class="key-point-item"><div class="dot"></div><span>KBAI is a branch of AI that represents knowledge <span class="kw-blue">explicitly</span> using symbols (rules, logic, graphs)</span></div>
+            <div class="key-point-item"><div class="dot"></div><span>It relies on an <span class="kw-green">Inference Engine</span> to derive new knowledge from existing facts</span></div>
+            <div class="key-point-item"><div class="dot"></div><span>Unlike ML, KBAI systems are <span class="kw">explainable</span> — they can justify their decisions</span></div>
+            <div class="key-point-item"><div class="dot"></div><span>Classic example: <span class="kw-blue">MYCIN</span> — medical expert system using 600 IF-THEN rules</span></div>
+            <div class="key-point-item"><div class="dot"></div><span>KBAI ⊂ AI — it's a <span class="kw-purple">subset</span> of the broader AI field</span></div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-3">
+            <div>
+              <div class="font-black text-sm text-red-700 mb-2"><i class="fa-solid fa-xmark ml-1"></i>Common Mistakes:</div>
+              <div class="mistake-item"><div class="x-dot"></div><span>Confusing KBAI with Machine Learning (ML learns, KBAI reasons with pre-defined knowledge)</span></div>
+              <div class="mistake-item"><div class="x-dot"></div><span>Saying KBAI = AI (it's a subset, not the whole field)</span></div>
+              <div class="mistake-item"><div class="x-dot"></div><span>Forgetting the Explanation Facility as a key component</span></div>
+            </div>
+            <div>
+              <div class="font-black text-sm text-green-700 mb-2"><i class="fa-solid fa-lightbulb ml-1"></i>Exam Tips:</div>
+              <div class="tip-item">Always mention the 3 components: KB + Inference Engine + Explanation Facility</div>
+              <div class="tip-item">Compare to data-driven AI to show you understand the contrast</div>
+              <div class="tip-item">Use MYCIN as a real-world example — الدكتور بيحب المثال ده</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OE2: Components of KBAI -->
+    <div class="official-essay-card mb-5">
+      <div class="official-essay-header collapse-btn flex items-center gap-3" onclick="tog('oe2',this)">
+        <div class="official-essay-num">2</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-white text-base">Components of KBAI Systems</div>
+          <div class="flex flex-wrap gap-2 mt-1">
+            <span class="priority-badge-critical">🔥 Critical Exam Topic</span>
+            <span class="official-exam-badge">📋 Official</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span style="background:rgba(255,255,255,.15);padding:3px 10px;border-radius:999px;font-size:.72rem;font-weight:700;color:#fde68a">~15 marks</span>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white flex-shrink-0"></i>
+        </div>
+      </div>
+      <div class="collapse-content" id="oe2" style="max-height:0">
+        <div class="p-5 space-y-4">
+          <div class="zatoona-box text-sm">3 Core Components: <span class="kw-blue">Knowledge Base</span> + <span class="kw-green">Inference Engine</span> + <span class="kw-purple">Explanation Facility</span></div>
+
+          <div class="grid md:grid-cols-3 gap-3 text-sm">
+            <div class="bg-blue-50 rounded-xl p-4 border border-blue-200">
+              <div class="font-black text-blue-800 mb-2">📚 Knowledge Base</div>
+              <div class="text-xs space-y-1">
+                <div>• Stores <span class="kw-blue">facts, rules, relationships</span></div>
+                <div>• Domain-specific information</div>
+                <div>• MYCIN: 600 IF-THEN rules</div>
+                <div class="mt-2 font-bold text-blue-700">مثال: "Fever ∧ Cough → Flu"</div>
+              </div>
+            </div>
+            <div class="bg-green-50 rounded-xl p-4 border border-green-200">
+              <div class="font-black text-green-800 mb-2">⚙️ Inference Engine</div>
+              <div class="text-xs space-y-1">
+                <div>• Applies <span class="kw-green">reasoning</span> on the KB</div>
+                <div>• Forward or Backward Chaining</div>
+                <div>• Derives new conclusions</div>
+                <div class="mt-2 font-bold text-green-700">The "brain" of the system</div>
+              </div>
+            </div>
+            <div class="bg-purple-50 rounded-xl p-4 border border-purple-200">
+              <div class="font-black text-purple-800 mb-2">💬 Explanation Facility</div>
+              <div class="text-xs space-y-1">
+                <div>• Justifies <span class="kw-purple">why</span> a decision was made</div>
+                <div>• Makes system transparent</div>
+                <div>• Builds user trust</div>
+                <div class="mt-2 font-bold text-purple-700">MYCIN: "Because Fever + WBC..."</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-3">
+            <div>
+              <div class="font-black text-sm text-red-700 mb-2"><i class="fa-solid fa-xmark ml-1"></i>Common Mistakes:</div>
+              <div class="mistake-item"><div class="x-dot"></div><span>Listing only 2 components and forgetting Explanation Facility</span></div>
+              <div class="mistake-item"><div class="x-dot"></div><span>Confusing KB (storage) with Inference Engine (reasoning)</span></div>
+            </div>
+            <div>
+              <div class="font-black text-sm text-green-700 mb-2"><i class="fa-solid fa-lightbulb ml-1"></i>Exam Tips:</div>
+              <div class="tip-item">Draw a simple diagram: KB → Inference Engine → Answer + Explanation</div>
+              <div class="tip-item">Mention that without Explanation Facility, KBAI becomes a black box</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OE3: KR Formalisms -->
+    <div class="official-essay-card mb-5">
+      <div class="official-essay-header collapse-btn flex items-center gap-3" onclick="tog('oe3',this)">
+        <div class="official-essay-num">3</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-white text-base">Knowledge Representation Formalisms in KBAI</div>
+          <div class="flex flex-wrap gap-2 mt-1">
+            <span class="priority-badge-critical">🔥 Critical Exam Topic</span>
+            <span class="official-exam-badge">📋 Official</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span style="background:rgba(255,255,255,.15);padding:3px 10px;border-radius:999px;font-size:.72rem;font-weight:700;color:#fde68a">~20 marks</span>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white flex-shrink-0"></i>
+        </div>
+      </div>
+      <div class="collapse-content" id="oe3" style="max-height:0">
+        <div class="p-5 space-y-4">
+          <div class="zatoona-box text-sm">KR = the backbone of KBAI — بدون تمثيل معرفة صحيح، النظام مش هيعرف يفكر</div>
+
+          <div>
+            <div class="font-black text-sm text-blue-800 mb-2"><i class="fa-solid fa-star ml-1 text-yellow-500"></i>5 Main KR Formalisms — Must Cover All:</div>
+            <div class="overflow-x-auto">
+              <table style="width:100%;font-size:.78rem;border-collapse:collapse;border-radius:10px;overflow:hidden">
+                <thead><tr style="background:#1e40af;color:#fff"><th style="padding:8px 10px">Formalism</th><th style="padding:8px 10px">Structure</th><th style="padding:8px 10px">Expressiveness</th><th style="padding:8px 10px">Example</th></tr></thead>
+                <tbody>
+                  <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Logic (FOL)</td><td style="padding:7px 10px">Predicates + Quantifiers</td><td style="padding:7px 10px;color:#15803d">🔥 Very High</td><td style="padding:7px 10px;font-family:monospace">∀x(Human(x)→Mortal(x))</td></tr>
+                  <tr><td style="padding:7px 10px;font-weight:700">Semantic Networks</td><td style="padding:7px 10px">Nodes + Edges (graph)</td><td style="padding:7px 10px">Medium</td><td style="padding:7px 10px;font-family:monospace">Bird →is-a→ Animal</td></tr>
+                  <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Frames</td><td style="padding:7px 10px">Slots + Values</td><td style="padding:7px 10px">Medium-High</td><td style="padding:7px 10px;font-family:monospace">Car: {wheels:4}</td></tr>
+                  <tr><td style="padding:7px 10px;font-weight:700">Production Rules</td><td style="padding:7px 10px">IF condition THEN action</td><td style="padding:7px 10px">Medium</td><td style="padding:7px 10px;font-family:monospace">IF Fever→Flu</td></tr>
+                  <tr style="background:#f8fafc"><td style="padding:7px 10px;font-weight:700">Ontologies</td><td style="padding:7px 10px">Concepts + Relations + Constraints</td><td style="padding:7px 10px;color:#15803d">🔥 Very High</td><td style="padding:7px 10px;font-family:monospace">OWL, RDFS</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-3">
+            <div>
+              <div class="font-black text-sm text-red-700 mb-2"><i class="fa-solid fa-xmark ml-1"></i>Common Mistakes:</div>
+              <div class="mistake-item"><div class="x-dot"></div><span>Confusing Ontology with Taxonomy (taxonomy = hierarchy only)</span></div>
+              <div class="mistake-item"><div class="x-dot"></div><span>Not mentioning trade-offs between expressiveness and efficiency</span></div>
+            </div>
+            <div>
+              <div class="font-black text-sm text-green-700 mb-2"><i class="fa-solid fa-lightbulb ml-1"></i>Exam Tips:</div>
+              <div class="tip-item">Mention the trade-off: FOL = most expressive but slowest; Rules = fast but less expressive</div>
+              <div class="tip-item">Cover all 5 formalisms even briefly — don't skip any</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OE4: Reasoning Methods -->
+    <div class="official-essay-card mb-5">
+      <div class="official-essay-header collapse-btn flex items-center gap-3" onclick="tog('oe4',this)">
+        <div class="official-essay-num">4</div>
+        <div class="flex-1 min-w-0">
+          <div class="font-black text-white text-base">Reasoning Methods in KBAI</div>
+          <div class="flex flex-wrap gap-2 mt-1">
+            <span class="priority-badge-critical">🔥 Critical Exam Topic</span>
+            <span class="official-exam-badge">📋 Official</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span style="background:rgba(255,255,255,.15);padding:3px 10px;border-radius:999px;font-size:.72rem;font-weight:700;color:#fde68a">~20 marks</span>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white flex-shrink-0"></i>
+        </div>
+      </div>
+      <div class="collapse-content" id="oe4" style="max-height:0">
+        <div class="p-5 space-y-4">
+          <div class="zatoona-box text-sm">Reasoning = how the Inference Engine uses the KB to reach conclusions — <span class="kw-blue">the "thinking"</span> of KBAI</div>
+
+          <div class="grid md:grid-cols-2 gap-3 text-sm">
+            <div class="bg-blue-50 rounded-xl p-4 border border-blue-200">
+              <div class="font-black text-blue-800 mb-2">➡️ Forward Chaining</div>
+              <div class="text-xs space-y-1">
+                <div>• Data-driven: <span class="kw-blue">Facts → Conclusion</span></div>
+                <div>• Good for monitoring/diagnosis</div>
+                <div class="mono bg-white rounded p-1 mt-2">Facts → Rules → Conclusion</div>
+              </div>
+            </div>
+            <div class="bg-green-50 rounded-xl p-4 border border-green-200">
+              <div class="font-black text-green-800 mb-2">⬅️ Backward Chaining</div>
+              <div class="text-xs space-y-1">
+                <div>• Goal-driven: <span class="kw-green">Goal → Check Facts</span></div>
+                <div>• Good for proving a hypothesis</div>
+                <div class="mono bg-white rounded p-1 mt-2">Goal → Rules → Facts</div>
+              </div>
+            </div>
+            <div class="bg-yellow-50 rounded-xl p-4 border border-yellow-200">
+              <div class="font-black text-yellow-800 mb-2">🔬 Deduction / Induction / Abduction</div>
+              <div class="text-xs space-y-1">
+                <div><span class="kw">Deduction</span>: General → Specific (certain)</div>
+                <div><span class="kw-blue">Induction</span>: Specific → General (probable)</div>
+                <div><span class="kw-green">Abduction</span>: Best explanation for observation</div>
+              </div>
+            </div>
+            <div class="bg-purple-50 rounded-xl p-4 border border-purple-200">
+              <div class="font-black text-purple-800 mb-2">🔄 Non-Monotonic Reasoning</div>
+              <div class="text-xs space-y-1">
+                <div>• Revises conclusions with new info</div>
+                <div>• Example: Tweety is a bird → flies, then we discover it's a penguin → doesn't fly</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-3">
+            <div>
+              <div class="font-black text-sm text-red-700 mb-2"><i class="fa-solid fa-xmark ml-1"></i>Common Mistakes:</div>
+              <div class="mistake-item"><div class="x-dot"></div><span>Mixing up Forward (data-driven) vs Backward (goal-driven) chaining</span></div>
+              <div class="mistake-item"><div class="x-dot"></div><span>Forgetting Non-Monotonic Reasoning as a reasoning method</span></div>
+            </div>
+            <div>
+              <div class="font-black text-sm text-green-700 mb-2"><i class="fa-solid fa-lightbulb ml-1"></i>Exam Tips:</div>
+              <div class="tip-item">Use Tweety example for Non-Monotonic Reasoning — it's the classic</div>
+              <div class="tip-item">Cover: Forward + Backward + Deduction + Induction + Abduction + Non-Monotonic</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STRATEGY DASHBOARD -->
+    <div class="strategy-dashboard mt-8">
+      <div class="font-black text-xl mb-1 text-white">🎯 Exam Strategy Dashboard</div>
+      <div class="text-slate-400 text-xs mb-6">الأولوية الموصى بها في المراجعة — حسب الإعلان الرسمي</div>
+
+      <div class="priority-row">
+        <div class="w-44 font-bold text-sm text-white">What is KBAI</div>
+        <div class="priority-bar-bg"><div class="priority-bar-fill fill-critical" style="width:100%" id="bar1"></div></div>
+        <span class="priority-label p-critical">Critical</span>
+      </div>
+      <div class="priority-row">
+        <div class="w-44 font-bold text-sm text-white">Components of KBAI</div>
+        <div class="priority-bar-bg"><div class="priority-bar-fill fill-critical" style="width:100%" id="bar2"></div></div>
+        <span class="priority-label p-critical">Critical</span>
+      </div>
+      <div class="priority-row">
+        <div class="w-44 font-bold text-sm text-white">Knowledge Representation</div>
+        <div class="priority-bar-bg"><div class="priority-bar-fill fill-critical" style="width:100%"></div></div>
+        <span class="priority-label p-critical">Critical</span>
+      </div>
+      <div class="priority-row">
+        <div class="w-44 font-bold text-sm text-white">Reasoning Methods</div>
+        <div class="priority-bar-bg"><div class="priority-bar-fill fill-critical" style="width:100%"></div></div>
+        <span class="priority-label p-critical">Critical</span>
+      </div>
+      <div class="priority-row">
+        <div class="w-44 font-bold text-sm text-white">Definitions</div>
+        <div class="priority-bar-bg"><div class="priority-bar-fill fill-high" style="width:75%"></div></div>
+        <span class="priority-label p-high">High</span>
+      </div>
+      <div class="priority-row">
+        <div class="w-44 font-bold text-sm text-white">Comparisons</div>
+        <div class="priority-bar-bg"><div class="priority-bar-fill fill-high" style="width:70%"></div></div>
+        <span class="priority-label p-high">High</span>
+      </div>
+      <div class="priority-row">
+        <div class="w-44 font-bold text-sm text-white">Remaining Topics</div>
+        <div class="priority-bar-bg"><div class="priority-bar-fill fill-medium" style="width:45%"></div></div>
+        <span class="priority-label p-medium">Medium</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MCQ PREPARATION SECTION -->
+<section id="mcq-prep" class="py-10 px-4 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-circle-question text-blue-700 ml-2"></i>MCQ Preparation Guide <span class="badge b-blue mr-2">All Topics</span></h2>
+
+    <div class="grid md:grid-cols-2 gap-5 mb-6">
+      <div class="mcq-guide-card">
+        <div class="font-black text-blue-800 mb-4"><i class="fa-solid fa-bullseye ml-2"></i>استراتيجية الـ MCQ</div>
+        <div class="mcq-tip-row">
+          <div class="mcq-tip-icon bg-blue-100"><i class="fa-solid fa-brain text-blue-700"></i></div>
+          <div><strong>فهم مش حفظ</strong> — الأسئلة بصياغة غير مباشرة، لو فاهم الفكرة هتجاوب</div>
+        </div>
+        <div class="mcq-tip-row">
+          <div class="mcq-tip-icon bg-green-100"><i class="fa-solid fa-book text-green-700"></i></div>
+          <div><strong>راجع التعريفات</strong> — definitions بتظهر كتير في الـ MCQ بشكل غير مباشر</div>
+        </div>
+        <div class="mcq-tip-row">
+          <div class="mcq-tip-icon bg-yellow-100"><i class="fa-solid fa-not-equal text-yellow-700"></i></div>
+          <div><strong>راجع المقارنات</strong> — Forward vs Backward, Symbolic vs Data-driven</div>
+        </div>
+        <div class="mcq-tip-row">
+          <div class="mcq-tip-icon bg-purple-100"><i class="fa-solid fa-diagram-project text-purple-700"></i></div>
+          <div><strong>راجع طرق الـ Reasoning</strong> — الأسئلة بتيجي عليها كتير</div>
+        </div>
+        <div class="mcq-tip-row">
+          <div class="mcq-tip-icon bg-red-100"><i class="fa-solid fa-network-wired text-red-700"></i></div>
+          <div><strong>راجع تقنيات الـ KR</strong> — Semantic Networks, Frames, Rules, Ontologies</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="bg-gradient-to-br from-purple-600 to-indigo-700 rounded-2xl p-5 text-white mb-4">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="text-3xl">🏆</div>
+            <div>
+              <div class="font-black text-lg">5 Bonus Questions</div>
+              <div class="text-purple-200 text-xs">May appear in the MCQ section</div>
+            </div>
+          </div>
+          <div class="text-sm text-purple-100 mb-3">قد تظهر أسئلة bonus في الامتحان — لا تتجاهلها!</div>
+          <div class="bg-white/10 rounded-xl p-3 text-xs space-y-2">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-star text-yellow-300"></i><span>قد تغطي موضوعات متقدمة أو تطبيقية</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-star text-yellow-300"></i><span>الفهم العميق للـ KB Systems يساعد جداً</span></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-star text-yellow-300"></i><span>أجب عليها — أسوأ حالة ما بتخسرش</span></div>
+          </div>
+        </div>
+
+        <div class="card p-4 bg-amber-50 border-2 border-amber-300">
+          <div class="font-black text-amber-800 mb-2"><i class="fa-solid fa-triangle-exclamation ml-1"></i>MCQs Cover All Topics</div>
+          <div class="text-xs text-amber-700 space-y-1">
+            <div>• Expert Systems · Ontologies · Logic</div>
+            <div>• Knowledge Acquisition · Knowledge Engineering</div>
+            <div>• Uncertainty · Rule-Based Systems</div>
+            <div>• Agent Types · Reasoning Methods</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXAM NIGHT CHECKLIST -->
+<section id="exam-checklist" class="py-10 px-4" style="background:#f8fafc">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="section-title"><i class="fa-solid fa-clipboard-check text-blue-700 ml-2"></i>Exam Night Checklist <span class="badge b-green mr-2">✅ ليلة الامتحان</span></h2>
+
+    <div class="exam-checklist-card">
+      <div class="checklist-header">
+        <div class="font-black text-lg">📋 Final Revision Checklist</div>
+        <div class="text-blue-200 text-xs mt-1">ضع علامة ✓ على كل عنصر بعد مراجعته</div>
+      </div>
+
+      <!-- Critical group -->
+      <div style="background:#fef2f2;padding:8px 20px;font-size:.73rem;font-weight:900;color:#dc2626;letter-spacing:.05em;text-transform:uppercase">🔥 Critical — Official Essay Topics</div>
+      <label class="checklist-row">
+        <input type="checkbox">
+        <span class="cl-label">Review Essay 1: What is KBAI? (Definition, role, components, MYCIN example)</span>
+        <span class="cl-badge" style="background:#fee2e2;color:#dc2626">🔥 Critical</span>
+      </label>
+      <label class="checklist-row">
+        <input type="checkbox">
+        <span class="cl-label">Review Essay 2: Components of KBAI (KB + Inference Engine + Explanation Facility)</span>
+        <span class="cl-badge" style="background:#fee2e2;color:#dc2626">🔥 Critical</span>
+      </label>
+      <label class="checklist-row">
+        <input type="checkbox">
+        <span class="cl-label">Review Essay 3: KR Formalisms (Logic, Semantic Networks, Frames, Rules, Ontologies)</span>
+        <span class="cl-badge" style="background:#fee2e2;color:#dc2626">🔥 Critical</span>
+      </label>
+      <label class="checklist-row">
+        <input type="checkbox">
+        <span class="cl-label">Review Essay 4: Reasoning Methods (Forward/Backward Chaining, Deduction, Induction, Abduction)</span>
+        <span class="cl-badge" style="background:#fee2e2;color:#dc2626">🔥 Critical</span>
+      </label>
+
+      <!-- High priority group -->
+      <div style="background:#fefce8;padding:8px 20px;font-size:.73rem;font-weight:900;color:#b45309;letter-spacing:.05em;text-transform:uppercase">⭐ High Priority</div>
+      <label class="checklist-row">
+        <input type="checkbox">
+        <span class="cl-label">Review Key Definitions (KB, Inference Engine, Expert System, Forward/Backward Chaining)</span>
+        <span class="cl-badge" style="background:#fef9c3;color:#b45309">⭐ High</span>
+      </label>
+      <label class="checklist-row">
+        <input type="checkbox">
+        <span class="cl-label">Review Comparisons (Symbolic vs Neural AI, Logic vs Semantic Networks vs Frames)</span>
+        <span class="cl-badge" style="background:#fef9c3;color:#b45309">⭐ High</span>
+      </label>
+      <label class="checklist-row">
+        <input type="checkbox">
+        <span class="cl-label">Review KBAI Components in detail with examples</span>
+        <span class="cl-badge" style="background:#fef9c3;color:#b45309">⭐ High</span>
+      </label>
+
+      <!-- MCQ group -->
+      <div style="background:#eff6ff;padding:8px 20px;font-size:.73rem;font-weight:900;color:#1e40af;letter-spacing:.05em;text-transform:uppercase">🎯 MCQ Preparation</div>
+      <label class="checklist-row">
+        <input type="checkbox">
+        <span class="cl-label">Solve all MCQ practice questions in this guide</span>
+        <span class="cl-badge" style="background:#dbeafe;color:#1e40af">🎯 MCQ</span>
+      </label>
+      <label class="checklist-row">
+        <input type="checkbox">
+        <span class="cl-label">Review Agent Types (Simple Reflex, Model-Based, Goal-Based, Utility-Based)</span>
+        <span class="cl-badge" style="background:#dbeafe;color:#1e40af">🎯 MCQ</span>
+      </label>
+      <label class="checklist-row">
+        <input type="checkbox">
+        <span class="cl-label">Review Expert Systems & MYCIN example</span>
+        <span class="cl-badge" style="background:#dbeafe;color:#1e40af">🎯 MCQ</span>
+      </label>
+
+      <!-- Bonus group -->
+      <div style="background:#f5f3ff;padding:8px 20px;font-size:.73rem;font-weight:900;color:#7c3aed;letter-spacing:.05em;text-transform:uppercase">🏆 Bonus Questions — Don't Skip!</div>
+      <label class="checklist-row">
+        <input type="checkbox">
+        <span class="cl-label">Identify likely bonus question areas (advanced reasoning, hybrid AI, ontology differences)</span>
+        <span class="cl-badge" style="background:#ede9fe;color:#7c3aed">🏆 Bonus</span>
+      </label>
+      <label class="checklist-row" style="border-bottom:none">
+        <input type="checkbox">
+        <span class="cl-label">Review Ontology vs Taxonomy — classic trick question for bonus</span>
+        <span class="cl-badge" style="background:#ede9fe;color:#7c3aed">🏆 Bonus</span>
+      </label>
+    </div>
+
+    <!-- Progress counter -->
+    <div class="mt-4 text-center">
+      <div class="text-slate-500 text-sm" id="checklist-progress">0 / 12 مكتملة</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXISTING EXAM FORMAT -->
+
 <section id="exam-format" class="py-10 px-4">
   <div class="max-w-5xl mx-auto">
     <h2 class="section-title"><i class="fa-solid fa-clipboard-list text-blue-700 ml-2"></i>شكل الامتحان</h2>

@@ -3148,6 +3148,430 @@ body{background:var(--bg);color:#1e293b}
   </div>
 </section>
 
+
+<!-- ===== DEFINITIONS MASTER SHEET ===== -->
+<section id="defs-master" class="py-10 px-4" style="background:linear-gradient(180deg,#f5f3ff,#ede9fe)">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-3 mb-2 flex-wrap">
+      <h2 class="section-title mb-0" style="border-color:#7c3aed">📖 Definitions in One Page</h2>
+      <span class="badge b-purple">All-in-One Sheet</span>
+    </div>
+    <p class="text-slate-500 text-sm mb-6">كل تعريف مهم في سطر أو سطرين — مُحسَّن للحفظ السريع</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div class="card def-card p-4" style="border-top-color:#7c3aed"><div class="flex items-center gap-2 mb-2"><span class="badge b-purple">KBAI</span></div><div class="text-sm text-slate-700">A branch of AI using <span class="kw-purple">explicit symbolic knowledge</span> (rules, logic, ontologies) + Inference Engine to reason — not data-driven like ML.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#1e40af"><div class="flex items-center gap-2 mb-2"><span class="badge b-blue">Knowledge</span></div><div class="text-sm text-slate-700"><span class="kw-blue">Information + Context + Meaning</span>. Justified beliefs enabling intelligent action. More than raw data — includes relationships and rules.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#0d9488"><div class="flex items-center gap-2 mb-2"><span class="badge b-green">Knowledge Representation</span></div><div class="text-sm text-slate-700">Structuring knowledge so a computer can <span class="kw-green">store, access, and reason</span> with it (logic, frames, semantic networks, ontologies).</div></div>
+      <div class="card def-card p-4" style="border-top-color:#1e40af"><div class="flex items-center gap-2 mb-2"><span class="badge b-blue">Knowledge Base (KB)</span></div><div class="text-sm text-slate-700">Storage component of KBAI. Contains <span class="kw-blue">facts, rules, and relationships</span> about the domain. Example: MYCIN's 600 IF-THEN rules.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#dc2626"><div class="flex items-center gap-2 mb-2"><span class="badge b-red">Rule Base</span></div><div class="text-sm text-slate-700">The KB subset storing <span class="kw-red">IF-THEN production rules</span> only. A subset of the Knowledge Base focused on conditional logic.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#f59e0b"><div class="flex items-center gap-2 mb-2"><span class="badge b-yellow">Fact Base</span></div><div class="text-sm text-slate-700">KB subset storing <span class="kw">asserted facts</span> about the current world state — the known truths the inference engine operates on.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#16a34a"><div class="flex items-center gap-2 mb-2"><span class="badge b-green">Inference Engine</span></div><div class="text-sm text-slate-700">The "brain" of KBAI. Applies <span class="kw-green">Forward or Backward Chaining</span> to derive new conclusions from facts and rules in the KB.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#7c3aed"><div class="flex items-center gap-2 mb-2"><span class="badge b-purple">Expert System</span></div><div class="text-sm text-slate-700">KBAI system replicating <span class="kw-purple">human expert decision-making</span> via KB + Inference Engine + Explanation Facility. Classic: MYCIN (medical diagnosis).</div></div>
+      <div class="card def-card p-4" style="border-top-color:#0d9488"><div class="flex items-center gap-2 mb-2"><span class="badge b-green">Ontology</span></div><div class="text-sm text-slate-700">Formal representation of <span class="kw-green">concepts, relationships, constraints, and axioms</span>. Richer than taxonomy — includes properties and restrictions (OWL, RDFS).</div></div>
+      <div class="card def-card p-4" style="border-top-color:#f59e0b"><div class="flex items-center gap-2 mb-2"><span class="badge b-yellow">Knowledge Acquisition</span></div><div class="text-sm text-slate-700"><span class="kw">Process of gathering knowledge</span> from domain experts and converting it into KB format. The most challenging bottleneck in building expert systems.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#1e40af"><div class="flex items-center gap-2 mb-2"><span class="badge b-blue">Knowledge Engineering</span></div><div class="text-sm text-slate-700">The <span class="kw-blue">discipline of designing and building KBAI systems</span>. Knowledge Engineers bridge domain experts and AI systems.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#16a34a"><div class="flex items-center gap-2 mb-2"><span class="badge b-green">Validation</span></div><div class="text-sm text-slate-700">Checks the system <span class="kw-green">solves the RIGHT problem</span> — "Are we building the right system?" Confirms KB matches real-world expert knowledge.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#dc2626"><div class="flex items-center gap-2 mb-2"><span class="badge b-red">Verification</span></div><div class="text-sm text-slate-700">Checks the system is <span class="kw-red">built CORRECTLY</span> — "Are we building the system right?" Confirms no logical errors or rule conflicts.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#7c3aed"><div class="flex items-center gap-2 mb-2"><span class="badge b-purple">Certainty Factor (CF)</span></div><div class="text-sm text-slate-700"><span class="kw-purple">Heuristic confidence score</span> from -1 to +1 used in MYCIN. CF=+1 certain, CF=0 unknown, CF=-1 certain NOT.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#1e40af"><div class="flex items-center gap-2 mb-2"><span class="badge b-blue">Bayesian Reasoning</span></div><div class="text-sm text-slate-700">Uses <span class="kw-blue">probability theory</span> to update beliefs given evidence. P(H|E) = P(E|H)×P(H) / P(E). Mathematically rigorous.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#f59e0b"><div class="flex items-center gap-2 mb-2"><span class="badge b-yellow">Propositional Logic</span></div><div class="text-sm text-slate-700">Formal logic using <span class="kw">True/False propositions</span> and connectives (¬,∧,∨,→). Simple but <span class="kw-red">no variables or quantifiers</span>.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#16a34a"><div class="flex items-center gap-2 mb-2"><span class="badge b-green">First Order Logic (FOL)</span></div><div class="text-sm text-slate-700">Extends propositional logic with <span class="kw-green">predicates, variables, constants, functions, and quantifiers (∀,∃)</span>. Much more expressive.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#7c3aed"><div class="flex items-center gap-2 mb-2"><span class="badge b-purple">Predicate</span></div><div class="text-sm text-slate-700">A <span class="kw-purple">function returning True or False</span> based on its arguments. Example: <span class="mono text-xs">Human(Socrates)</span> = True.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#dc2626"><div class="flex items-center gap-2 mb-2"><span class="badge b-red">Variable</span></div><div class="text-sm text-slate-700">In FOL, a symbol <span class="kw-red">representing any object</span> in the domain (lowercase: x,y,z). Used with quantifiers: <span class="mono text-xs">∀x Human(x)</span>.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#1e40af"><div class="flex items-center gap-2 mb-2"><span class="badge b-blue">Constant</span></div><div class="text-sm text-slate-700">In FOL, a symbol referring to a <span class="kw-blue">specific fixed object</span>. Typically capitalized: Socrates, Cairo. Single fixed interpretation.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#0d9488"><div class="flex items-center gap-2 mb-2"><span class="badge b-green">Function</span></div><div class="text-sm text-slate-700">In FOL, maps objects to objects. Returns an <span class="kw-green">object (not T/F)</span>. Example: <span class="mono text-xs">MotherOf(John)</span> → a person.</div></div>
+      <div class="card def-card p-4" style="border-top-color:#1e40af"><div class="flex items-center gap-2 mb-2"><span class="badge b-blue">Forward Chaining</span></div><div class="text-sm text-slate-700"><span class="kw-blue">Data-driven</span> reasoning. Starts from known facts, applies rules until goal reached. "What can I conclude from this data?"</div></div>
+      <div class="card def-card p-4" style="border-top-color:#16a34a"><div class="flex items-center gap-2 mb-2"><span class="badge b-green">Backward Chaining</span></div><div class="text-sm text-slate-700"><span class="kw-green">Goal-driven</span> reasoning. Starts from a goal, works backward to find supporting facts. Used in Prolog.</div></div>
+
+      <div class="card def-card p-4" style="border-top-color:#1e40af"><div class="flex items-center gap-2 mb-2"><span class="badge b-blue">Deduction</span></div><div class="text-sm text-slate-700"><span class="kw-blue">General → Specific</span>. Derives a certain conclusion from premises. If the premises are true the conclusion <em>must</em> be true. Example: All humans are mortal; Socrates is human → Socrates is mortal.</div></div>
+
+      <div class="card def-card p-4" style="border-top-color:#d97706"><div class="flex items-center gap-2 mb-2"><span class="badge b-yellow">Induction</span></div><div class="text-sm text-slate-700"><span class="kw">Specific → General</span>. Derives a probable general rule from specific observations. Conclusion is likely but <em>not guaranteed</em>. Basis of Machine Learning.</div></div>
+
+      <div class="card def-card p-4" style="border-top-color:#7c3aed"><div class="flex items-center gap-2 mb-2"><span class="badge b-purple">Abduction</span></div><div class="text-sm text-slate-700">Infers the <span class="kw-purple">best explanation</span> for an observation. Given a result and a rule, guesses the most plausible cause. Example: Patient has fever → best guess is flu. Conclusion is plausible, not certain.</div></div>
+
+      <div class="card def-card p-4" style="border-top-color:#dc2626"><div class="flex items-center gap-2 mb-2"><span class="badge b-red">Semantic Network</span></div><div class="text-sm text-slate-700">A <span class="kw-red">graph-based KR</span> using nodes (concepts) and labeled edges (relationships). Example: Bird →is-a→ Animal. Simple and intuitive but limited expressiveness.</div></div>
+
+      <div class="card def-card p-4" style="border-top-color:#0d9488"><div class="flex items-center gap-2 mb-2"><span class="badge b-green">Frame</span></div><div class="text-sm text-slate-700">A <span class="kw-green">structured KR</span> using slots (attributes) and fillers (values) to describe an object or concept. Example: Car: {type: vehicle, wheels: 4, color: red}. Supports inheritance.</div></div>
+
+      <div class="card def-card p-4" style="border-top-color:#7c3aed"><div class="flex items-center gap-2 mb-2"><span class="badge b-purple">Production Rule</span></div><div class="text-sm text-slate-700">An <span class="kw-purple">IF-THEN</span> statement encoding domain knowledge. IF condition(s) are met THEN perform action or conclude fact. The core of rule-based expert systems like MYCIN.</div></div>
+
+      <div class="card def-card p-4" style="border-top-color:#1e40af"><div class="flex items-center gap-2 mb-2"><span class="badge b-blue">Modus Ponens</span></div><div class="text-sm text-slate-700">Core inference rule: <span class="kw-blue">P→Q, P ⊢ Q</span>. If the implication holds and P is true, then Q must be true. The most widely used rule in Forward Chaining.</div></div>
+
+      <div class="card def-card p-4" style="border-top-color:#dc2626"><div class="flex items-center gap-2 mb-2"><span class="badge b-red">Modus Tollens</span></div><div class="text-sm text-slate-700">Inference rule: <span class="kw-red">P→Q, ¬Q ⊢ ¬P</span>. If the implication holds and Q is false, then P must be false. Used in Backward Chaining and proof by contradiction.</div></div>
+
+      <div class="card def-card p-4" style="border-top-color:#f59e0b"><div class="flex items-center gap-2 mb-2"><span class="badge b-yellow">Non-Monotonic Reasoning</span></div><div class="text-sm text-slate-700">Reasoning where <span class="kw">conclusions can be revised</span> when new information arrives. Contrast with monotonic logic where conclusions only grow. Example: Tweety is a bird → flies; new info: Tweety is a penguin → doesn't fly.</div></div>
+
+      <div class="card def-card p-4" style="border-top-color:#16a34a"><div class="flex items-center gap-2 mb-2"><span class="badge b-green">Explanation Facility</span></div><div class="text-sm text-slate-700">Component of KBAI that <span class="kw-green">justifies how and why</span> a decision was reached. Makes the system transparent and trustworthy. Essential difference from black-box ML.</div></div>
+
+      <div class="card def-card p-4" style="border-top-color:#1e40af"><div class="flex items-center gap-2 mb-2"><span class="badge b-blue">CNF (Conjunctive Normal Form)</span></div><div class="text-sm text-slate-700">A standard logical form: <span class="kw-blue">AND of OR-clauses</span>. Example: (A∨B) ∧ (C∨¬D). Required for Resolution-based theorem proving. Every FOL sentence can be converted to CNF.</div></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPARISON MASTER TABLE ===== -->
+<section id="cmp-master" class="py-10 px-4" style="background:linear-gradient(180deg,#f0fdfa,#ccfbf1)">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-3 mb-2 flex-wrap">
+      <h2 class="section-title mb-0" style="border-color:#0d9488">🔄 Ultimate Comparisons Sheet</h2>
+      <span class="badge b-green">Click to Expand</span>
+    </div>
+    <p class="text-slate-500 text-sm mb-6">المقارنات الأكثر احتمالاً في الامتحان</p>
+    <div class="space-y-4">
+
+      <div class="cmp-card card">
+        <div class="cmp-header collapse-btn flex items-center justify-between" onclick="tog('cm1',this)" style="background:linear-gradient(135deg,#1e3a8a,#1e40af)">
+          <span>⚡ Forward Chaining vs Backward Chaining</span>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white"></i>
+        </div>
+        <div class="collapse-content" id="cm1" style="max-height:0">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#334155;color:#fff;font-size:.73rem;font-weight:800;padding:6px 12px"><span>Feature</span><span>Forward Chaining</span><span>Backward Chaining</span></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Direction</div><div>Facts → Goal (bottom-up)</div><div>Goal → Facts (top-down)</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Type</div><div>Data-Driven ✅</div><div>Goal-Driven ✅</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Best for</div><div>Monitoring, Diagnosis</div><div>Hypothesis Proving</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Used in</div><div>Production Systems</div><div>Prolog, Planning</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Example</div><div>If fever+cough → flu</div><div>Prove "patient has flu" ← what facts?</div></div>
+          <div class="p-3 bg-amber-50 text-xs text-amber-800 font-bold border-t">🎯 Forward = بدأ من DATA | Backward = بدأ من GOAL</div>
+        </div>
+      </div>
+
+      <div class="cmp-card card">
+        <div class="cmp-header collapse-btn flex items-center justify-between" onclick="tog('cm2',this)" style="background:linear-gradient(135deg,#7c3aed,#6d28d9)">
+          <span>🔣 Propositional Logic vs First Order Logic</span>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white"></i>
+        </div>
+        <div class="collapse-content" id="cm2" style="max-height:0">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#334155;color:#fff;font-size:.73rem;font-weight:800;padding:6px 12px"><span>Feature</span><span>Propositional Logic</span><span>First Order Logic</span></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Basic Unit</div><div>Proposition (T/F)</div><div>Predicate + Arguments</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Variables</div><div>❌ None</div><div>✅ Yes (x, y, z)</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Quantifiers</div><div>❌ None</div><div>✅ ∀ and ∃</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Expressiveness</div><div>Low — fixed facts only</div><div>High — general statements</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Example</div><div>P = "Socrates is human"</div><div>∀x(Human(x)→Mortal(x))</div></div>
+          <div class="p-3 bg-purple-50 text-xs text-purple-800 font-bold border-t">🎯 FOL أقوى بكتير — لكن أصعب computationally</div>
+        </div>
+      </div>
+
+      <div class="cmp-card card">
+        <div class="cmp-header collapse-btn flex items-center justify-between" onclick="tog('cm3',this)" style="background:linear-gradient(135deg,#dc2626,#b91c1c)">
+          <span>✅ Verification vs Validation</span>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white"></i>
+        </div>
+        <div class="collapse-content" id="cm3" style="max-height:0">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#334155;color:#fff;font-size:.73rem;font-weight:800;padding:6px 12px"><span>Feature</span><span>Verification</span><span>Validation</span></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Question</div><div>"Building it RIGHT?"</div><div>"Building the RIGHT thing?"</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Focus</div><div>Technical correctness</div><div>User/domain needs</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Who does it</div><div>Developers/Engineers</div><div>Domain Experts/Users</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Checks</div><div>No logical errors/bugs</div><div>KB matches expert knowledge</div></div>
+          <div class="p-3 bg-red-50 text-xs text-red-800 font-bold border-t">🎯 Verification = correctness of BUILD | Validation = correctness of PURPOSE</div>
+        </div>
+      </div>
+
+      <div class="cmp-card card">
+        <div class="cmp-header collapse-btn flex items-center justify-between" onclick="tog('cm4',this)" style="background:linear-gradient(135deg,#0d9488,#0f766e)">
+          <span>🧲 Knowledge Acquisition vs Knowledge Engineering</span>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white"></i>
+        </div>
+        <div class="collapse-content" id="cm4" style="max-height:0">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#334155;color:#fff;font-size:.73rem;font-weight:800;padding:6px 12px"><span>Feature</span><span>Knowledge Acquisition</span><span>Knowledge Engineering</span></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Definition</div><div>Gathering from experts</div><div>Designing and building KB system</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Focus</div><div>WHAT to capture</div><div>HOW to structure it</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Main challenge</div><div>Knowledge bottleneck</div><div>Formal representation</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Sequence</div><div>✅ Step 1 (first)</div><div>✅ Step 2+ (after)</div></div>
+          <div class="p-3 bg-teal-50 text-xs text-teal-800 font-bold border-t">🎯 Acquisition = حصل على المعرفة | Engineering = بنى النظام</div>
+        </div>
+      </div>
+
+      <div class="cmp-card card">
+        <div class="cmp-header collapse-btn flex items-center justify-between" onclick="tog('cm5',this)" style="background:linear-gradient(135deg,#1e40af,#2563eb)">
+          <span>📚 Knowledge Base vs Rule Base</span>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white"></i>
+        </div>
+        <div class="collapse-content" id="cm5" style="max-height:0">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#334155;color:#fff;font-size:.73rem;font-weight:800;padding:6px 12px"><span>Feature</span><span>Knowledge Base</span><span>Rule Base</span></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Scope</div><div>Broad — all knowledge types</div><div>Narrow — IF-THEN rules only</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Contains</div><div>Facts + Rules + Relations + Ontologies</div><div>Only production rules</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Relationship</div><div>The whole</div><div>A subset/part of KB</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Example</div><div>Complete MYCIN knowledge</div><div>MYCIN's 600 IF-THEN rules only</div></div>
+          <div class="p-3 bg-blue-50 text-xs text-blue-800 font-bold border-t">🎯 Rule Base ⊂ Knowledge Base — الـ Rule Base جزء من الـ KB</div>
+        </div>
+      </div>
+
+      <div class="cmp-card card">
+        <div class="cmp-header collapse-btn flex items-center justify-between" onclick="tog('cm6',this)" style="background:linear-gradient(135deg,#d97706,#b45309)">
+          <span>📊 Certainty Factors vs Bayesian Reasoning</span>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white"></i>
+        </div>
+        <div class="collapse-content" id="cm6" style="max-height:0">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;background:#334155;color:#fff;font-size:.73rem;font-weight:800;padding:6px 12px"><span>Feature</span><span>Certainty Factors</span><span>Bayesian Reasoning</span></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Basis</div><div>Heuristic/Empirical</div><div>Probability Theory</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Scale</div><div>-1 to +1</div><div>0 to 1 (probability)</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Rigorous?</div><div>❌ No</div><div>✅ Yes</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Complexity</div><div>Low ✅</div><div>Higher ⚠️</div></div>
+          <div class="cmp-row" style="grid-template-columns:1fr 1fr 1fr"><div>Used in</div><div>MYCIN (early expert sys)</div><div>Modern probabilistic AI</div></div>
+          <div class="p-3 bg-amber-50 text-xs text-amber-800 font-bold border-t">🎯 CF = fast heuristic | Bayesian = principled probability — both handle uncertainty</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== MCQ TRAPS ===== -->
+<section id="mcq-traps" class="py-10 px-4" style="background:linear-gradient(180deg,#fff1f2,#ffe4e6)">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-3 mb-2 flex-wrap">
+      <h2 class="section-title mb-0" style="border-color:#dc2626;color:#b91c1c">⚠️ Top MCQ Traps</h2>
+      <span class="badge b-red">20 High-Probability Facts</span>
+    </div>
+    <p class="text-slate-500 text-sm mb-6">الأخطاء الكلاسيكية في الـ MCQ — اعرفها قبل ما تقع فيها</p>
+    <div class="grid md:grid-cols-2 gap-3">
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">Forward Chaining = DATA-DRIVEN</div><div class="text-xs text-slate-500 mt-1">Starts from known facts → fires rules → conclusion</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">Goal-Driven ← that's Backward Chaining</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">Backward Chaining = GOAL-DRIVEN</div><div class="text-xs text-slate-500 mt-1">Starts from goal → works backward → supporting facts</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">Data-Driven ← that's Forward Chaining</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">Ontology = Concepts + Relations + Constraints + Axioms</div><div class="text-xs text-slate-500 mt-1">Richer than taxonomy — includes restrictions and properties</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">Just a hierarchy ← that's a Taxonomy</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">∀x uses → (Implication)</div><div class="mono text-xs mt-1">∀x(Human(x) → Mortal(x)) ✅</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">∀x(Human(x) ∧ Mortal(x)) ← WRONG! ∀ uses →</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">∃x uses ∧ (AND)</div><div class="mono text-xs mt-1">∃x(Human(x) ∧ Rich(x)) ✅</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">∃x(Human(x) → Rich(x)) ← WRONG! ∃ uses ∧</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">MYCIN = Expert System / Knowledge-Based System</div><div class="text-xs text-slate-500 mt-1">Medical diagnosis, ~600 IF-THEN rules, CF scores</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">A neural network or machine learning model</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">Knowledge Acquisition = the BOTTLENECK</div><div class="text-xs text-slate-500 mt-1">Hardest phase — tacit knowledge is hard to articulate</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">The easiest phase / the building phase ← that's Engineering</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">Validation = "Are we building the RIGHT system?"</div><div class="text-xs text-slate-500 mt-1">Matches system to user needs and expert knowledge</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">Technical correctness check ← that's Verification</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">Verification = "Are we building it correctly?"</div><div class="text-xs text-slate-500 mt-1">No logical errors, no rule conflicts</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">User needs check ← that's Validation</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">Bayesian = probability theory, rigorous</div><div class="mono text-xs mt-1">P(H|E) = P(E|H)×P(H) / P(E)</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">A heuristic score ← that's Certainty Factors</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">Certainty Factor range = -1 to +1</div><div class="text-xs text-slate-500 mt-1">CF=+1 certain, CF=0 unknown, CF=-1 certain NOT</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">Range 0 to 1 ← that's probability (Bayesian)</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">P→Q is FALSE only when P=T and Q=F</div><div class="text-xs text-slate-500 mt-1">F→anything = TRUE always!</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">False when P=F ← Implication is TRUE when P is false!</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">De Morgan: ¬(A∧B) = ¬A ∨ ¬B</div><div class="text-xs text-slate-500 mt-1">AND flips to OR when negation moves in</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">¬(A∧B) = ¬A ∧ ¬B ← WRONG! Operator flips!</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">Skolemization: ∃ after ∀ → Skolem FUNCTION</div><div class="mono text-xs mt-1">∀x∃y P(x,y) → P(x, f(x))</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">→ P(x,a) ← WRONG! y depends on x → needs function</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">Rule Base ⊂ Knowledge Base</div><div class="text-xs text-slate-500 mt-1">Rule Base = subset of KB (IF-THEN part only)</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">Same as Knowledge Base ← KB is broader</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">KBAI ⊂ AI — KBAI is a subset of AI</div><div class="text-xs text-slate-500 mt-1">Deep Learning, ML, Planning are AI but not KBAI</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">KBAI = all of AI ← AI is much broader</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">Non-Monotonic = conclusions can be REVISED</div><div class="text-xs text-slate-500 mt-1">Tweety bird → new info can invalidate old conclusions</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">Monotonic = conclusions only grow, never change</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">CNF = AND of ORs → (A∨B) ∧ (C∨D)</div><div class="text-xs text-slate-500 mt-1">Conjunctive Normal Form — outer AND, inner OR</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">A∨(B∧C) ← NOT CNF! Need to distribute OR over AND</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">Knowledge Engineering = designing + building the KB system</div><div class="text-xs text-slate-500 mt-1">Role: Knowledge Engineer bridges expert and AI system</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">Gathering knowledge ← that's Knowledge Acquisition</div></div></div>
+
+      <div class="card p-4" style="border-right:4px solid #dc2626"><div class="flex items-start gap-3"><span class="badge b-green flex-shrink-0">✅ IS</span><div><div class="font-black text-sm text-green-700">CF_combined = CF1 + CF2 × (1 - CF1)</div><div class="mono text-xs mt-1">For combining supporting evidence in same direction</div></div></div><div class="flex items-start gap-3 mt-2"><span class="badge b-red flex-shrink-0">❌ NOT</span><div class="font-bold text-sm text-red-700">CF_combined = CF1 + CF2 ← WRONG! Missing (1-CF1) factor</div></div></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ESSAY TEMPLATES ===== -->
+<section id="essay-templates" class="py-10 px-4" style="background:linear-gradient(180deg,#eff6ff,#dbeafe)">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-3 mb-2 flex-wrap">
+      <h2 class="section-title mb-0" style="border-color:#1e40af">✍️ Ready-Made Essay Answers</h2>
+      <span class="badge b-blue">Exam Templates</span>
+    </div>
+    <p class="text-slate-500 text-sm mb-6">نماذج إجابة جاهزة — اكتب عليها في الامتحان بثقة</p>
+    <div class="space-y-4">
+
+      <div class="official-essay-card">
+        <div class="official-essay-header collapse-btn flex items-center gap-3" onclick="tog('et1',this)">
+          <div class="official-essay-num">1</div>
+          <div class="flex-1"><div class="font-black text-white">What is KBAI?</div></div>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white"></i>
+        </div>
+        <div class="collapse-content" id="et1" style="max-height:0">
+          <div class="p-5 space-y-3">
+            <div class="bg-blue-50 rounded-xl p-4 border border-blue-200"><div class="font-black text-blue-800 mb-1 text-sm">📌 Introduction</div><div class="text-sm">Knowledge-Based AI (KBAI) is a branch of AI using <strong>explicit symbolic knowledge</strong> — rules, logic, ontologies — + an Inference Engine to reason intelligently. Unlike ML, KBAI can explain its decisions.</div></div>
+            <div class="bg-green-50 rounded-xl p-4 border border-green-200"><div class="font-black text-green-800 mb-2 text-sm">🔑 Key Points</div><div class="space-y-1 text-sm"><div class="key-point-item"><div class="dot"></div><span><strong>3 Core Components:</strong> KB (facts+rules) + Inference Engine (reasoning) + Explanation Facility (justification)</span></div><div class="key-point-item"><div class="dot"></div><span><strong>KR forms:</strong> Logic (FOL), Semantic Networks, Frames, Production Rules, Ontologies</span></div><div class="key-point-item"><div class="dot"></div><span><strong>Key advantage:</strong> Transparent and explainable — unlike black-box neural networks</span></div></div></div>
+            <div class="bg-purple-50 rounded-xl p-4 border border-purple-200"><div class="font-black text-purple-800 mb-1 text-sm">🌍 Applications</div><div class="text-sm">Medical diagnosis (MYCIN), legal advisory, financial fraud detection, autonomous systems requiring explainable decisions.</div></div>
+            <div class="bg-amber-50 rounded-xl p-4 border border-amber-200"><div class="font-black text-amber-800 mb-1 text-sm">📝 Conclusion</div><div class="text-sm">KBAI provides transparent AI where reasoning can be traced and justified — invaluable in high-stakes domains requiring accountability.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="official-essay-card">
+        <div class="official-essay-header collapse-btn flex items-center gap-3" onclick="tog('et2',this)">
+          <div class="official-essay-num">2</div>
+          <div class="flex-1"><div class="font-black text-white">Expert Systems</div></div>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white"></i>
+        </div>
+        <div class="collapse-content" id="et2" style="max-height:0">
+          <div class="p-5 space-y-3">
+            <div class="bg-blue-50 rounded-xl p-4 border border-blue-200"><div class="font-black text-blue-800 mb-1 text-sm">📌 Introduction</div><div class="text-sm">An Expert System is a KBAI application that replicates <strong>human expert decision-making</strong> in a specific domain using IF-THEN rules and inference.</div></div>
+            <div class="bg-green-50 rounded-xl p-4 border border-green-200"><div class="font-black text-green-800 mb-2 text-sm">🔑 Key Points</div><div class="space-y-1 text-sm"><div class="key-point-item"><div class="dot"></div><span><strong>Architecture:</strong> KB + Inference Engine + Explanation Facility + User Interface + Knowledge Acquisition Module</span></div><div class="key-point-item"><div class="dot"></div><span><strong>MYCIN:</strong> ~600 IF-THEN rules, Certainty Factors (CF=0.7 = 70% confidence), diagnoses bacterial infections</span></div><div class="key-point-item"><div class="dot"></div><span><strong>Strengths:</strong> Consistent, available 24/7, can explain reasoning</span></div><div class="key-point-item"><div class="dot"></div><span><strong>Limitations:</strong> Knowledge bottleneck, brittle outside domain, no common sense</span></div></div></div>
+            <div class="bg-purple-50 rounded-xl p-4 border border-purple-200"><div class="font-black text-purple-800 mb-1 text-sm">🌍 Applications</div><div class="text-sm">MYCIN (medicine), DENDRAL (chemistry), tax advisory, legal expert systems, financial risk assessment.</div></div>
+            <div class="bg-amber-50 rounded-xl p-4 border border-amber-200"><div class="font-black text-amber-800 mb-1 text-sm">📝 Conclusion</div><div class="text-sm">Expert Systems democratize expert-level decisions, making scarce expertise widely available. Essential in regulated domains requiring explainability.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="official-essay-card">
+        <div class="official-essay-header collapse-btn flex items-center gap-3" onclick="tog('et3',this)">
+          <div class="official-essay-num">3</div>
+          <div class="flex-1"><div class="font-black text-white">Ontologies in KBAI</div></div>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white"></i>
+        </div>
+        <div class="collapse-content" id="et3" style="max-height:0">
+          <div class="p-5 space-y-3">
+            <div class="bg-blue-50 rounded-xl p-4 border border-blue-200"><div class="font-black text-blue-800 mb-1 text-sm">📌 Introduction</div><div class="text-sm">An Ontology is a formal specification of <strong>concepts, relationships, and constraints</strong> in a domain. Goes beyond taxonomy by including axioms and logical restrictions.</div></div>
+            <div class="bg-green-50 rounded-xl p-4 border border-green-200"><div class="font-black text-green-800 mb-2 text-sm">🔑 Key Points</div><div class="space-y-1 text-sm"><div class="key-point-item"><div class="dot"></div><span><strong>Components:</strong> Classes, Properties, Instances, Axioms</span></div><div class="key-point-item"><div class="dot"></div><span><strong>vs Taxonomy:</strong> Taxonomy = hierarchy only. Ontology = hierarchy + relationships + constraints + rules</span></div><div class="key-point-item"><div class="dot"></div><span><strong>Languages:</strong> OWL, RDFS, RDF — used in Semantic Web</span></div></div></div>
+            <div class="bg-purple-50 rounded-xl p-4 border border-purple-200"><div class="font-black text-purple-800 mb-1 text-sm">🌍 Applications</div><div class="text-sm">Semantic Web, bioinformatics (Gene Ontology), medical informatics (SNOMED CT), enterprise knowledge management, NLP systems.</div></div>
+            <div class="bg-amber-50 rounded-xl p-4 border border-amber-200"><div class="font-black text-amber-800 mb-1 text-sm">📝 Conclusion</div><div class="text-sm">Ontologies enable semantic interoperability — different AI systems can share and understand knowledge consistently, critical for large-scale KBAI.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="official-essay-card">
+        <div class="official-essay-header collapse-btn flex items-center gap-3" onclick="tog('et4',this)">
+          <div class="official-essay-num">4</div>
+          <div class="flex-1"><div class="font-black text-white">Knowledge Acquisition</div></div>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white"></i>
+        </div>
+        <div class="collapse-content" id="et4" style="max-height:0">
+          <div class="p-5 space-y-3">
+            <div class="bg-blue-50 rounded-xl p-4 border border-blue-200"><div class="font-black text-blue-800 mb-1 text-sm">📌 Introduction</div><div class="text-sm">Knowledge Acquisition = <strong>extracting and organizing knowledge</strong> from domain experts to encode into a KB. The <em>bottleneck</em> of expert system development.</div></div>
+            <div class="bg-green-50 rounded-xl p-4 border border-green-200"><div class="font-black text-green-800 mb-2 text-sm">🔑 Key Points</div><div class="space-y-1 text-sm"><div class="key-point-item"><div class="dot"></div><span><strong>Methods:</strong> Interviews, Think-aloud protocols, Case analysis, Repertory Grids</span></div><div class="key-point-item"><div class="dot"></div><span><strong>Main challenge:</strong> Tacit knowledge — experts know things they can't easily articulate</span></div><div class="key-point-item"><div class="dot"></div><span><strong>Output:</strong> Structured rules, facts, constraints fed to KB</span></div></div></div>
+            <div class="bg-purple-50 rounded-xl p-4 border border-purple-200"><div class="font-black text-purple-800 mb-1 text-sm">🌍 Applications</div><div class="text-sm">Capturing medical protocols, legal rules, engineering know-how for encoding into KBAI systems.</div></div>
+            <div class="bg-amber-50 rounded-xl p-4 border border-amber-200"><div class="font-black text-amber-800 mb-1 text-sm">📝 Conclusion</div><div class="text-sm">Solving the KA bottleneck is key to scalable KBAI. Modern approaches combine traditional elicitation with ML-assisted extraction.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="official-essay-card">
+        <div class="official-essay-header collapse-btn flex items-center gap-3" onclick="tog('et5',this)">
+          <div class="official-essay-num">5</div>
+          <div class="flex-1"><div class="font-black text-white">Knowledge Engineering</div></div>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white"></i>
+        </div>
+        <div class="collapse-content" id="et5" style="max-height:0">
+          <div class="p-5 space-y-3">
+            <div class="bg-blue-50 rounded-xl p-4 border border-blue-200"><div class="font-black text-blue-800 mb-1 text-sm">📌 Introduction</div><div class="text-sm">Knowledge Engineering = the <strong>discipline of designing, building, and maintaining KBAI systems</strong>. KEs translate expert knowledge into formal machine-processable representations.</div></div>
+            <div class="bg-green-50 rounded-xl p-4 border border-green-200"><div class="font-black text-green-800 mb-2 text-sm">🔑 Key Points</div><div class="space-y-1 text-sm"><div class="key-point-item"><div class="dot"></div><span><strong>Process:</strong> Requirements → KA → KR → Implementation → Validation → Verification → Maintenance</span></div><div class="key-point-item"><div class="dot"></div><span><strong>KE vs KA:</strong> KA = gathering knowledge (WHAT). KE = building the system (HOW)</span></div><div class="key-point-item"><div class="dot"></div><span><strong>Quality:</strong> Verification (correct build?) + Validation (right system?)</span></div></div></div>
+            <div class="bg-purple-50 rounded-xl p-4 border border-purple-200"><div class="font-black text-purple-800 mb-1 text-sm">🌍 Applications</div><div class="text-sm">Building medical expert systems, legal advisory AIs, engineering diagnostic tools, financial risk systems.</div></div>
+            <div class="bg-amber-50 rounded-xl p-4 border border-amber-200"><div class="font-black text-amber-800 mb-1 text-sm">📝 Conclusion</div><div class="text-sm">KE ensures KBAI systems are technically correct and practically useful through a rigorous lifecycle connecting domain expertise to deployed AI.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="official-essay-card">
+        <div class="official-essay-header collapse-btn flex items-center gap-3" onclick="tog('et6',this)">
+          <div class="official-essay-num">6</div>
+          <div class="flex-1"><div class="font-black text-white">Reasoning Under Uncertainty</div></div>
+          <i class="fa-solid fa-chevron-down chevron-icon text-white"></i>
+        </div>
+        <div class="collapse-content" id="et6" style="max-height:0">
+          <div class="p-5 space-y-3">
+            <div class="bg-blue-50 rounded-xl p-4 border border-blue-200"><div class="font-black text-blue-800 mb-1 text-sm">📌 Introduction</div><div class="text-sm">In real-world KBAI, knowledge is rarely complete. <strong>Reasoning Under Uncertainty</strong> provides mechanisms to reach conclusions even when evidence is partial or probabilistic.</div></div>
+            <div class="bg-green-50 rounded-xl p-4 border border-green-200"><div class="font-black text-green-800 mb-2 text-sm">🔑 Key Points</div><div class="space-y-1 text-sm"><div class="key-point-item"><div class="dot"></div><span><strong>CF:</strong> Heuristic scores -1 to +1. MYCIN. CF_combined = CF1 + CF2×(1-CF1)</span></div><div class="key-point-item"><div class="dot"></div><span><strong>Bayesian:</strong> P(H|E) = P(E|H)×P(H) / P(E). Updates prior with evidence → posterior</span></div><div class="key-point-item"><div class="dot"></div><span><strong>Difference:</strong> CF = heuristic confidence; Bayesian = mathematical probability</span></div></div></div>
+            <div class="bg-purple-50 rounded-xl p-4 border border-purple-200"><div class="font-black text-purple-800 mb-1 text-sm">🌍 Applications</div><div class="text-sm">Medical diagnosis (MYCIN+CF), spam detection (Bayesian), weather forecasting, fraud detection, autonomous vehicle sensor fusion.</div></div>
+            <div class="bg-amber-50 rounded-xl p-4 border border-amber-200"><div class="font-black text-amber-800 mb-1 text-sm">📝 Conclusion</div><div class="text-sm">Uncertainty reasoning makes KBAI practical for real-world deployment. Choice between CF and Bayesian depends on speed vs. mathematical accuracy requirements.</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOL & CNF CHEAT SHEET ===== -->
+<section id="fol-cheatsheet" class="py-10 px-4" style="background:linear-gradient(180deg,#fffbeb,#fef3c7)">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-3 mb-2 flex-wrap">
+      <h2 class="section-title mb-0" style="border-color:#d97706">🔣 FOL &amp; CNF Quick Sheet</h2>
+      <span class="badge b-yellow">Infographic Card</span>
+    </div>
+    <p class="text-slate-500 text-sm mb-6">كل الرموز + خطوات CNF في مكان واحد</p>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="card p-0 overflow-hidden" style="border-top:4px solid #d97706">
+        <div style="background:linear-gradient(135deg,#1e3a8a,#1e40af);padding:14px 18px;color:#fff"><div class="font-black text-base">📐 FOL Symbols Reference</div><div class="text-blue-200 text-xs mt-1">First Order Logic — الرموز الأساسية</div></div>
+        <div class="p-4 space-y-2">
+          <div class="flex items-center gap-3 p-2 rounded-lg bg-blue-50 border border-blue-200"><div class="mono font-black text-blue-700 text-lg w-8 text-center">∀</div><div class="flex-1"><div class="font-black text-sm">For All (Universal)</div><div class="text-xs text-slate-500">∀x Human(x)→Mortal(x)</div></div><span class="badge b-blue">Quantifier</span></div>
+          <div class="flex items-center gap-3 p-2 rounded-lg bg-green-50 border border-green-200"><div class="mono font-black text-green-700 text-lg w-8 text-center">∃</div><div class="flex-1"><div class="font-black text-sm">There Exists (Existential)</div><div class="text-xs text-slate-500">∃x Human(x) ∧ Rich(x)</div></div><span class="badge b-green">Quantifier</span></div>
+          <div class="flex items-center gap-3 p-2 rounded-lg bg-red-50 border border-red-200"><div class="mono font-black text-red-700 text-lg w-8 text-center">¬</div><div class="flex-1"><div class="font-black text-sm">NOT (Negation)</div><div class="text-xs text-slate-500">¬Human(x) = not human</div></div><span class="badge b-red">Logical</span></div>
+          <div class="flex items-center gap-3 p-2 rounded-lg bg-slate-50 border border-slate-200"><div class="mono font-black text-slate-700 text-lg w-8 text-center">∧</div><div class="flex-1"><div class="font-black text-sm">AND (Conjunction)</div><div class="text-xs text-slate-500">Fever ∧ Cough = both true</div></div><span class="badge b-blue">Logical</span></div>
+          <div class="flex items-center gap-3 p-2 rounded-lg bg-slate-50 border border-slate-200"><div class="mono font-black text-slate-700 text-lg w-8 text-center">∨</div><div class="flex-1"><div class="font-black text-sm">OR (Disjunction)</div><div class="text-xs text-slate-500">Fever ∨ Cough = at least one</div></div><span class="badge b-blue">Logical</span></div>
+          <div class="flex items-center gap-3 p-2 rounded-lg bg-amber-50 border border-amber-200"><div class="mono font-black text-amber-700 text-lg w-8 text-center">→</div><div class="flex-1"><div class="font-black text-sm">Implication (IF-THEN)</div><div class="text-xs text-slate-500">False ONLY when P=T, Q=F</div></div><span class="badge b-yellow">Logical</span></div>
+          <div class="flex items-center gap-3 p-2 rounded-lg bg-purple-50 border border-purple-200"><div class="mono font-black text-purple-700 text-lg w-8 text-center">↔</div><div class="flex-1"><div class="font-black text-sm">Biconditional (IFF)</div><div class="text-xs text-slate-500">True when both have same value</div></div><span class="badge b-purple">Logical</span></div>
+        </div>
+      </div>
+      <div class="card p-0 overflow-hidden" style="border-top:4px solid #7c3aed">
+        <div style="background:linear-gradient(135deg,#7c3aed,#6d28d9);padding:14px 18px;color:#fff"><div class="font-black text-base">🧩 FOL Building Blocks</div><div class="text-purple-200 text-xs mt-1">Predicate · Variable · Constant · Function</div></div>
+        <div class="p-4 space-y-3">
+          <div class="bg-blue-50 rounded-xl p-3 border border-blue-200"><div class="font-black text-blue-800 text-sm mb-1">📌 Predicate</div><div class="text-xs text-slate-600 mb-1">Returns True/False based on arguments</div><div class="mono text-xs bg-white rounded p-2">Human(Socrates) → TRUE<br>Flies(Penguin) → FALSE</div></div>
+          <div class="bg-green-50 rounded-xl p-3 border border-green-200"><div class="font-black text-green-800 text-sm mb-1">📌 Variable</div><div class="text-xs text-slate-600 mb-1">Represents any object — used with quantifiers</div><div class="mono text-xs bg-white rounded p-2">∀x Human(x) — x is lowercase<br>Typically: x, y, z</div></div>
+          <div class="bg-amber-50 rounded-xl p-3 border border-amber-200"><div class="font-black text-amber-800 text-sm mb-1">📌 Constant</div><div class="text-xs text-slate-600 mb-1">Refers to a specific fixed object</div><div class="mono text-xs bg-white rounded p-2">Human(Socrates) — Socrates = constant<br>Capitalized: John, Cairo, Egypt</div></div>
+          <div class="bg-purple-50 rounded-xl p-3 border border-purple-200"><div class="font-black text-purple-800 text-sm mb-1">📌 Function</div><div class="text-xs text-slate-600 mb-1">Maps objects to objects — returns an OBJECT not T/F</div><div class="mono text-xs bg-white rounded p-2">MotherOf(John) → a person<br>AgeOf(x) → a number</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card mt-5 p-0 overflow-hidden" style="border-top:4px solid #dc2626">
+      <div style="background:linear-gradient(135deg,#dc2626,#b91c1c);padding:14px 18px;color:#fff"><div class="font-black text-base">🔄 CNF Conversion Steps — Conjunctive Normal Form</div><div class="text-red-200 text-xs mt-1">AND of ORs — 6 خطوات لازم تعرفهم بالترتيب</div></div>
+      <div class="p-5">
+        <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div class="text-center"><div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#1e40af,#3b82f6);color:#fff;font-weight:900;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">1</div><div class="font-black text-sm text-blue-800 mb-1">Remove Implications</div><div class="mono text-xs bg-blue-50 rounded p-2 border border-blue-200">P→Q<br>↓<br>¬P ∨ Q</div></div>
+          <div class="text-center"><div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#fff;font-weight:900;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">2</div><div class="font-black text-sm text-purple-800 mb-1">Move ¬ Inward</div><div class="mono text-xs bg-purple-50 rounded p-2 border border-purple-200">¬(P∧Q)<br>↓<br>¬P ∨ ¬Q</div></div>
+          <div class="text-center"><div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#dc2626,#ef4444);color:#fff;font-weight:900;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">3</div><div class="font-black text-sm text-red-800 mb-1">Standardize Vars</div><div class="mono text-xs bg-red-50 rounded p-2 border border-red-200">∀x P(x) ∀x Q(x)<br>↓<br>∀x P(x) ∀y Q(y)</div></div>
+          <div class="text-center"><div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#d97706,#b45309);color:#fff;font-weight:900;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">4</div><div class="font-black text-sm text-amber-800 mb-1">Skolemization</div><div class="mono text-xs bg-amber-50 rounded p-2 border border-amber-200">∃x P(x) → P(a)<br>∀x∃y R(x,y)<br>→ R(x,f(x))</div></div>
+          <div class="text-center"><div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#0d9488,#0f766e);color:#fff;font-weight:900;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">5</div><div class="font-black text-sm text-teal-800 mb-1">Drop ∀ Quantifiers</div><div class="mono text-xs bg-teal-50 rounded p-2 border border-teal-200">∀x Human(x)<br>↓<br>Human(x)</div></div>
+          <div class="text-center"><div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#1e3a8a,#1e40af);color:#fff;font-weight:900;font-size:1.1rem;display:flex;align-items:center;justify-content:center;margin:0 auto 8px">6</div><div class="font-black text-sm text-blue-800 mb-1">Distribute ∨ over ∧</div><div class="mono text-xs bg-blue-50 rounded p-2 border border-blue-200">A∨(B∧C)<br>↓<br>(A∨B)∧(A∨C)</div></div>
+        </div>
+        <div class="mt-4 bg-amber-50 border-2 border-amber-300 rounded-xl p-3 text-xs text-amber-800 font-bold text-center">🎯 CNF Result = (literal ∨ literal) ∧ (literal ∨ literal) — AND of clauses, each clause is OR of literals</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LAST 10 MINUTES ===== -->
+<section id="last10" class="py-10 px-4" style="background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 40%,#7c2d12 100%)">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-7">
+      <div class="text-5xl mb-3" style="animation:pulse-glow 1.5s infinite;display:inline-block">🔥</div>
+      <h2 class="text-2xl md:text-3xl font-black text-white">Last 10 Minutes Before Exam</h2>
+      <p class="text-slate-400 text-sm mt-2">20 حقيقة لازم تعرفها قبل ما تدخل قاعة الامتحان</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-3">
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(239,68,68,.4)"><span class="badge b-red flex-shrink-0">1</span><div class="text-sm text-white">KBAI = <span class="kw-blue">KB</span> + <span class="kw-green">Inference Engine</span> + <span class="kw-purple">Explanation Facility</span> — الـ 3 مع بعض لازم</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(239,68,68,.4)"><span class="badge b-red flex-shrink-0">2</span><div class="text-sm text-white">Forward = <span class="kw-blue">DATA-driven</span> | Backward = <span class="kw-green">GOAL-driven</span> — الفرق ده بييجي كل سنة</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(245,158,11,.4)"><span class="badge b-yellow flex-shrink-0">3</span><div class="text-sm text-white">MYCIN = <span class="kw-blue">Expert System</span> — medical, 600 IF-THEN rules, Certainty Factors</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(245,158,11,.4)"><span class="badge b-yellow flex-shrink-0">4</span><div class="text-sm text-white">Ontology ≠ Taxonomy — Taxonomy = hierarchy only | Ontology = + <span class="kw-purple">constraints + axioms + relations</span></div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(239,68,68,.4)"><span class="badge b-red flex-shrink-0">5</span><div class="text-sm text-white">∀x uses <span class="kw">→</span> | ∃x uses <span class="kw-green">∧</span> — الخلط ده غلطة كلاسيكية في FOL</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(239,68,68,.4)"><span class="badge b-red flex-shrink-0">6</span><div class="text-sm text-white">P→Q is <span class="kw-red">FALSE only when P=T and Q=F</span>. F→anything = TRUE!</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(124,58,237,.4)"><span class="badge b-purple flex-shrink-0">7</span><div class="text-sm text-white">De Morgan: ¬(A∧B) = <span class="kw-purple">¬A ∨ ¬B</span> | ¬(A∨B) = <span class="kw-purple">¬A ∧ ¬B</span></div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(124,58,237,.4)"><span class="badge b-purple flex-shrink-0">8</span><div class="text-sm text-white">CNF = <span class="kw-purple">AND of ORs</span> — (A∨B) ∧ (C∨D) — outer AND, inner OR</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(16,163,74,.4)"><span class="badge b-green flex-shrink-0">9</span><div class="text-sm text-white">Validation = "Right system?" | Verification = "<span class="kw-green">Built correctly?</span>"</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(16,163,74,.4)"><span class="badge b-green flex-shrink-0">10</span><div class="text-sm text-white">CF range = <span class="kw-green">-1 to +1</span> | Bayesian range = <span class="kw-blue">0 to 1</span> — مش نفس الحاجة!</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(245,158,11,.4)"><span class="badge b-yellow flex-shrink-0">11</span><div class="text-sm text-white">Bayesian: P(H|E) = P(E|H)×P(H) / P(E) — <span class="kw">Prior</span> × Evidence = <span class="kw-green">Posterior</span></div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(245,158,11,.4)"><span class="badge b-yellow flex-shrink-0">12</span><div class="text-sm text-white">Knowledge Acquisition = <span class="kw">BOTTLENECK</span> — tacit knowledge is hard to extract</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(239,68,68,.4)"><span class="badge b-red flex-shrink-0">13</span><div class="text-sm text-white">Rule Base ⊂ Knowledge Base — Rule Base is a <span class="kw-red">subset</span> of KB</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(239,68,68,.4)"><span class="badge b-red flex-shrink-0">14</span><div class="text-sm text-white">KBAI ⊂ AI — KBAI is a <span class="kw-red">subset</span>. Deep Learning ≠ KBAI</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(124,58,237,.4)"><span class="badge b-purple flex-shrink-0">15</span><div class="text-sm text-white">Skolem: ∃ alone → <span class="kw-purple">Constant</span> (a) | ∃ after ∀ → <span class="kw-purple">Function</span> f(x)</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(124,58,237,.4)"><span class="badge b-purple flex-shrink-0">16</span><div class="text-sm text-white">Non-Monotonic = conclusions <span class="kw-purple">can be revised</span> (Tweety penguin example)</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(16,163,74,.4)"><span class="badge b-green flex-shrink-0">17</span><div class="text-sm text-white">FOL has: <span class="kw-green">Predicates, Variables, Constants, Functions, Quantifiers</span> — Propositional Logic has NONE</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(16,163,74,.4)"><span class="badge b-green flex-shrink-0">18</span><div class="text-sm text-white">Modus Ponens: P→Q, P ⊢ <span class="kw-green">Q</span> | Modus Tollens: P→Q, ¬Q ⊢ <span class="kw-green">¬P</span></div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(245,158,11,.4)"><span class="badge b-yellow flex-shrink-0">19</span><div class="text-sm text-white">KA comes FIRST → then KE builds the system. KA ≠ KE, different roles!</div></div>
+      <div class="p-4 rounded-xl flex items-start gap-3" style="background:rgba(255,255,255,.07);border:1px solid rgba(239,68,68,.5)"><span class="badge b-red flex-shrink-0">20</span><div class="text-sm text-white font-bold">CF_combined = CF1 + CF2 × (1 - CF1) — for <span class="kw">supporting evidence</span>. Don't forget!</div></div>
+    </div>
+    <div class="text-center mt-8">
+      <div class="text-3xl font-black text-white mb-1">🎓 You've Got This!</div>
+      <div class="text-slate-400 text-sm">انت قريت كل حاجة — روح الامتحان بثقة وهدوء 💪</div>
+      <div class="flex flex-wrap justify-center gap-2 mt-4">
+        <span class="badge b-green">✅ Definitions ✓</span>
+        <span class="badge b-blue">✅ Comparisons ✓</span>
+        <span class="badge b-red">✅ MCQ Traps ✓</span>
+        <span class="badge b-purple">✅ Essays ✓</span>
+        <span class="badge b-yellow">✅ FOL/CNF ✓</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <footer class="py-6 px-4 text-center text-xs text-slate-400 border-t">
   <div>KBAI Quick Revision — مبني على ملفات المحاضرات والمراجعة</div>
   <div class="mt-1">Knowledge Base · Inference Engine · Explainable AI · بالتوفيق يا بطل 🍋</div>
